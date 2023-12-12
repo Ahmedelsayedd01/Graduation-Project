@@ -290,10 +290,10 @@ body::-webkit-scrollbar-thumb {
 
 .lawyer {
        position: absolute;
-       top: -30%;
+       top: 92%;
        width: 10px;
        height: 10px;
-       background: red;
+       background: rgb(0, 255, 81);
 }
 
 
@@ -415,7 +415,6 @@ body::-webkit-scrollbar-thumb {
        flex-direction: column;
        align-items: center;
        justify-content: center;
-       /* background: red; */
 }
 
 .container .container-wrapper .service-section .service-wrapper .content-section {
@@ -459,6 +458,16 @@ body::-webkit-scrollbar-thumb {
        left: 50%;
        background-color: var(--second-clr);
        transform: translate(-50%, -60%);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card::before {
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 3px;
+       bottom: -1.5px;
+       left: 0;
+       background-color: var(--second-clr);
 }
 
 .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card img {
@@ -538,6 +547,124 @@ body::-webkit-scrollbar-thumb {
        color: #fff;
 }
 
+/* ////////////// End Services Section */
+.container .container-wrapper .lawyers-section .lawyers-wrapper {
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section {
+       width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-around;
+       gap: 30px 15px;
+       /* background-color: red; */
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       /* row-gap: 10px; */
+       border-radius: 20px;
+       overflow: hidden;
+       background-color: #fff;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .top-card {
+       position: relative;
+       width: 100%;
+       height: 200px;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .top-card::after {
+       content: url('asstes/logo.svg');
+       position: absolute;
+       width: 35px;
+       border-radius: 50%;
+       padding: 4px;
+       top: 100%;
+       left: 50%;
+       background-color: var(--second-clr);
+       transform: translate(-50%, -55%);
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .top-card::before {
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 3px;
+       bottom: -1.5px;
+       left: 0;
+       background-color: var(--second-clr);
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .top-card img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding: 15px 0;
+       row-gap: 8px;
+       font-family: var(--main-font);
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card h3 {
+       font-size: 1.4rem;
+       color: var(--main-clr);
+       font-weight: var(--fw700);
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card>span {
+       font-size: 1.1rem;
+       color: #999999;
+       margin-bottom: 5px;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card .stars {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       column-gap: 5px;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card .stars>i {
+       color: rgb(255, 221, 0);
+       font-size: 1.2rem;
+       margin-bottom: 5px;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card button {
+       padding: 15px 0;
+       width: 100%;
+       background-color: var(--main-clr);
+       border-radius: 10px;
+       transition: 0.3s ease-in-out;
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card button:hover {
+       background-color: var(--hover-clr);
+}
+
+.container .container-wrapper .lawyers-section .lawyers-wrapper .content-section .card-lawyer .content-card button>a {
+       font-size: 1.2rem;
+       color: #fff;
+       font-family: var(--main-font);
+}
 
 
 
@@ -576,6 +703,18 @@ body::-webkit-scrollbar-thumb {
               align-items: center;
               justify-content: center;
               margin-top: 30px;
+       }
+
+       .container .container-wrapper .lawyers-section .lawyers-wrapper .content-section {
+              margin-top: 30px;
+       }
+
+       .lawyer {
+              position: absolute;
+              top: 98%;
+              width: 10px;
+              height: 10px;
+              background: rgb(0, 255, 81);
        }
 
        .container .container-wrapper .about-section .about-wrapper .content-section .left {
