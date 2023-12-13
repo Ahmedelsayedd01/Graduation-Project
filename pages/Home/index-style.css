@@ -77,7 +77,6 @@ body::-webkit-scrollbar-thumb {
        align-items: center;
        justify-content: space-between;
        column-gap: 10px;
-       /* background: red; */
 }
 
 .container .container-wrapper header .header-wrapper .nav-des .left-sid {
@@ -259,8 +258,7 @@ body::-webkit-scrollbar-thumb {
 .container .container-wrapper .about-section,
 .service-section,
 .lawyers-section,
-.fq-section,
-.contact-section {
+.fq-sectio {
        position: relative;
        width: 100%;
        height: auto;
@@ -277,7 +275,6 @@ body::-webkit-scrollbar-thumb {
        bottom: -60%;
        width: 10px;
        height: 10px;
-       background: red;
 }
 
 .service {
@@ -285,7 +282,6 @@ body::-webkit-scrollbar-thumb {
        bottom: 10%;
        width: 10px;
        height: 10px;
-       background: red;
 }
 
 .lawyer {
@@ -293,7 +289,7 @@ body::-webkit-scrollbar-thumb {
        top: 92%;
        width: 10px;
        height: 10px;
-       background: rgb(0, 255, 81);
+       /* background: rgb(0, 255, 81); */
 }
 
 
@@ -689,8 +685,7 @@ body::-webkit-scrollbar-thumb {
        .container .container-wrapper .about-section,
        .service-section,
        .lawyers-section,
-       .fq-section,
-       .contact-section {
+       .fq-section {
               padding-bottom: 20px;
        }
 
@@ -714,7 +709,7 @@ body::-webkit-scrollbar-thumb {
               top: 98%;
               width: 10px;
               height: 10px;
-              background: rgb(0, 255, 81);
+              /* background: rgb(0, 255, 81); */
        }
 
        .container .container-wrapper .about-section .about-wrapper .content-section .left {
@@ -799,7 +794,9 @@ body::-webkit-scrollbar-thumb {
               margin-bottom: 10px;
        }
 
-
+       .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card{
+              height: 300px;
+       }
 }
 
 
