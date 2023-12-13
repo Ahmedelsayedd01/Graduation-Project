@@ -34,8 +34,8 @@
 
                   // If The Register Is Lawyer
          if(isset($_POST['lawyer'])){
-   $role= $_POST['lawyer'];
-          $firstName =htmlspecialchars($_POST['firstName']);
+           $role= $_POST['lawyer'];
+           $firstName =htmlspecialchars($_POST['firstName']);
            $lastName =htmlspecialchars($_POST['lastName']);
            $email =htmlspecialchars($_POST['email']);
            $lawyer_categry = $_POST['lawyer_categry'];
@@ -58,9 +58,7 @@
                    'user_number'=>$user_number,
                    'Role'=>$role,
                ];
-          
-              //  echo " <script>alert('Data Inserted')</script>";
-                   header('Location:../Lawyers Page/lawyers.php');
+                header('Location:../Lawyers Page/lawyers.php');
 
          }
         }
@@ -101,7 +99,8 @@
             method="POST"
             id="signup-form"
           >
-            <div class="full-name">
+          <!-- Section to set First && Last Name -->
+            <div class="full-name"> 
               <div class="user-fn-box">
                 <input
                   type="text"
@@ -129,6 +128,7 @@
                 <label>اسم العائلة</label>
               </div>
             </div>
+            <!-- Section to set email && chose the type -->
             <div class="email-name">
               <div class="email-name-box">
                 <input
@@ -137,14 +137,13 @@
                   id="email-btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
-                  oninput="this,setCustomValidity('')"
-                />
+                  oninput="this,setCustomValidity('')"/>
                 <span id="email-valid"
                   >ادخل علامة "@" بعد اسم البريد الالكترونى</span
                 >
-                <?php if(isset( $error['email'])){  echo "<sapn>" .  $error['email']."</sapn>" ;}; ?> <!-- This Is Error If Email Exists -->
+                <!-- This Is Error If Email Exists -->
+                <?php if(isset( $error['email'])){  echo "<sapn>" .  $error['email']."</sapn>" ;}; ?> 
                 <label>عنوان البريد الالكترونى</label>
-
               </div>
             </div>
             <div class="user-kind">
@@ -155,8 +154,7 @@
                   name="user"
                   id="user-kind"
                   value="مواطن"
-                  readonly
-                />
+                  readonly/>
                 <input id="lawyer-kind" value="محامى" readonly />
               </div>
               <div class="lawyer-categry">
@@ -177,7 +175,7 @@
                 </select>
               </div>
             </div>
-
+            <!-- Section to set Mobile Number && Idintity Number  -->
             <div class="user-num">
               <div class="user-num-box">
                 <input
@@ -187,13 +185,11 @@
                   id="num-btn"
                   required
                   oninvalid="this.setCustomValidity('ادخل رقم الهاتف')"
-                  oninput="this,setCustomValidity('')"
-                />
+                  oninput="this,setCustomValidity('')"/>
                 <span id="num-valid">ادخل رقم الهاتف</span>
                 <label>رقم الهاتف</label>
               </div>
             </div>
-
             <div class="user-id">
               <div class="user-id-box">
                 <input
@@ -203,8 +199,7 @@
                   id="idintity-btn"
                   required
                   oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')"
-                  oninput="this,setCustomValidity('')"
-                />
+                  oninput="this,setCustomValidity('')"/>
                 <span id="idintity-valid">ادخل رقم الهوية الشخصية</span>
                 <label>رقم الهوية الشخصية</label>
               </div>
@@ -220,8 +215,7 @@
                   id="password_sign"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
-                  oninput="this,setCustomValidity('')"
-                />
+                  oninput="this,setCustomValidity('')"/>
                 <i class="fa-regular fa-eye" id="show_pass_sign"></i>
                 <i
                   class="fa-regular fa-eye-slash"
@@ -234,13 +228,13 @@
                 <label>كلمة السر</label>
               </div>
             </div>
+            <!-- Section to make registration && send Data  -->
             <div class="user-submit">
               <button type="submit" id="sub-signBtn">انشاء حساب</button>
               <span class="spa-rt"
                 >هل أنت مشترك بالفعل في Lawyer Case ؟<span id="spa-login">
-                  تسجيل الدخول</span
-                ></span
-              >
+                  تسجيل الدخول</span>
+              </span>
             </div>
           </form>
 
@@ -257,11 +251,9 @@
                   id="email_login_btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
-                  oninput="this,setCustomValidity('')"
-                />
+                  oninput="this,setCustomValidity('')"/>
                 <span id="email_login_valid"
-                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span
-                >
+                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span>
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
