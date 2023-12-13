@@ -1,5 +1,8 @@
+
+//Varibel to select element li in home page;
 const lin_nav = document.querySelectorAll(".li-nav");
 
+//Event to set||remove attribute in element at homepage;
 lin_nav.forEach(function (ele) {
   ele.addEventListener("click", function () {
     lin_nav.forEach(function (elr) {
