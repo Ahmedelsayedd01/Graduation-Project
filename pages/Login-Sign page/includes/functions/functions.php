@@ -1,7 +1,7 @@
 
 
 <?php
-include('../../config/conf.php');
+include('conf.php');
             // This Page About All Functions I use it In any Page Globaly
 
 /**
@@ -40,6 +40,15 @@ else
                                 $statement->execute(array($value));
                                 $count=$statement->rowCount();
                                 return $count;
+
+                            }
+                            function checkedLogin($select,$from,$value){
+                               global $con ;
+                                $statement =$con->prepare("SELECT $select,`Role`,`password` FROM $from WHERE $select =?");
+                                $statement->execute(array($value));
+                                $data = $statement->fetch();
+                                // $count=$statement->rowCount();
+                                return  $data;
 
                             }
 

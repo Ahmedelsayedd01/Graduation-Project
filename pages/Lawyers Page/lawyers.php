@@ -2,6 +2,8 @@
 session_start();
 if(isset($_SESSION['lawyer'])){
     $dataJson =  json_encode($_SESSION['lawyer']); // Your Data Json
+
+    echo $dataJson;
 ?>
 
 <!DOCTYPE html>

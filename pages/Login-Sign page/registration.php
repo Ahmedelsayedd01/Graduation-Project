@@ -245,7 +245,7 @@
           </form>
 
           <form
-            action="includes/functions/login.php"
+            action="includes/functions/validation.php"
             method="POST"
             id="login-form"
           >
@@ -272,7 +272,7 @@
                   type="password"
                   minlength="8"
                   name="password_login"
-                  name="user-pass-login"
+                 
                   id="password_login"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
