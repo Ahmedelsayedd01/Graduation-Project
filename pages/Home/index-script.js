@@ -1,4 +1,3 @@
-
 //Varibel to select element li in home page;
 const lin_nav = document.querySelectorAll(".li-nav");
 
@@ -31,7 +30,7 @@ const clos_btn = document.getElementById("clos-btn");
 menu_btn.addEventListener("click", function () {
   clos_btn.style.display = "block";
   this.style.display = "none";
-  nav_phone.style.top = "330%";
+  nav_phone.style.top = "250%";
 });
 clos_btn.addEventListener("click", closeMenu);
 
@@ -40,3 +39,15 @@ function closeMenu() {
   clos_btn.style.display = "none";
   nav_phone.style.top = "-200%";
 }
+
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+accordionItems.forEach((item) =>
+  item.addEventListener("click", () => {
+    const isItemOpen = item.classList.contains("open");
+    accordionItems.forEach((item) => item.classList.remove("open"));
+    if (!isItemOpen) {
+      item.classList.toggle("open");
+    }
+  })
+);
