@@ -30,24 +30,31 @@ const clos_btn = document.getElementById("clos-btn");
 menu_btn.addEventListener("click", function () {
   clos_btn.style.display = "block";
   this.style.display = "none";
-  nav_phone.style.top = "250%";
+  nav_phone.classList.add("nav_ft");
 });
 clos_btn.addEventListener("click", closeMenu);
 
 function closeMenu() {
   menu_btn.style.display = "block";
   clos_btn.style.display = "none";
-  nav_phone.style.top = "-200%";
+  nav_phone.classList.remove("nav_ft");
 }
 
-const accordionItems = document.querySelectorAll(".accordion-item");
+const collapsibleBtns = document.querySelectorAll(".collaps-row");
+const collapsibleContents = document.querySelectorAll(".collapsible-content");
 
-accordionItems.forEach((item) =>
-  item.addEventListener("click", () => {
-    const isItemOpen = item.classList.contains("open");
-    accordionItems.forEach((item) => item.classList.remove("open"));
-    if (!isItemOpen) {
-      item.classList.toggle("open");
+collapsibleBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const content = this.nextElementSibling;
+    const isContentVisible = content.classList.contains("show");
+
+    // Close all collapsible elements
+    collapsibleContents.forEach(function (content) {
+      content.classList.remove("show");
+    });
+
+    if (!isContentVisible) {
+      content.classList.add("show");
     }
-  })
-);
+  });
+});
