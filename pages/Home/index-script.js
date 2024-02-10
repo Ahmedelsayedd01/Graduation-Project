@@ -1,4 +1,3 @@
-
 //Varibel to select element li in home page;
 const lin_nav = document.querySelectorAll(".li-nav");
 
@@ -31,12 +30,31 @@ const clos_btn = document.getElementById("clos-btn");
 menu_btn.addEventListener("click", function () {
   clos_btn.style.display = "block";
   this.style.display = "none";
-  nav_phone.style.top = "330%";
+  nav_phone.classList.add("nav_ft");
 });
 clos_btn.addEventListener("click", closeMenu);
 
 function closeMenu() {
   menu_btn.style.display = "block";
   clos_btn.style.display = "none";
-  nav_phone.style.top = "-200%";
+  nav_phone.classList.remove("nav_ft");
 }
+
+const collapsibleBtns = document.querySelectorAll(".collaps-row");
+const collapsibleContents = document.querySelectorAll(".collapsible-content");
+
+collapsibleBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const content = this.nextElementSibling;
+    const isContentVisible = content.classList.contains("show");
+
+    // Close all collapsible elements
+    collapsibleContents.forEach(function (content) {
+      content.classList.remove("show");
+    });
+
+    if (!isContentVisible) {
+      content.classList.add("show");
+    }
+  });
+});

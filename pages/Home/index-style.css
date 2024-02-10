@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb {
        --fw700: 700;
 }
 
+.nav_ft {
+       top: 250% !important;
+}
+
 .container {
        width: 100%;
        display: flex;
@@ -258,7 +262,7 @@ body::-webkit-scrollbar-thumb {
 .container .container-wrapper .about-section,
 .service-section,
 .lawyers-section,
-.fq-sectio {
+.fq-section {
        position: relative;
        width: 100%;
        height: auto;
@@ -285,6 +289,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .lawyer {
+       position: absolute;
+       top: 92%;
+       width: 10px;
+       height: 10px;
+       /* background: rgb(0, 255, 81); */
+}
+
+.fq {
        position: absolute;
        top: 92%;
        width: 10px;
@@ -662,12 +674,204 @@ body::-webkit-scrollbar-thumb {
        font-family: var(--main-font);
 }
 
+/* ////////////// End Lawyers Section */
 
 
+.container .container-wrapper .fq-section .fq-wrapper {
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
 
+.container .container-wrapper .fq-section .fq-wrapper .title-section>span {
+       position: absolute;
+       top: 120%;
+       width: 180%;
+       right: -25%;
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       text-align: right;
+       color: #427064;
+}
+
+.container .container-wrapper .fq-section .fq-wrapper .content-section {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       align-items: center;
+       margin-top: 10px;
+       overflow: hidden;
+       gap: 10px;
+}
+
+.container .container-wrapper .fq-section .fq-wrapper .content-section .collapsible {
+       width: 100%;
+}
+
+.container .container-wrapper .fq-section .fq-wrapper .content-section .collapsible .collaps-row {
+       display: flex;
+       flex-direction: row-reverse;
+       width: 100%;
+       justify-content: space-between;
+       cursor: pointer;
+       background-color: #48605a;
+       border-radius: 4px;
+}
+
+
+.collapsible-content {
+       display: none;
+       padding: 10px;
+       background-color: #f5f5f5;
+       border: 1px solid #ccc;
+       border-top: none;
+       font-size: 14px;
+       text-align: right;
+}
+
+.collapsible-btn {
+       color: #fff;
+       padding: 15px;
+       border: none;
+       text-align: right;
+       width: 95%;
+       column-gap: 3px;
+       font-family: var(--main-font);
+       font-size: 1.1rem;
+       word-spacing: 2px;
+       display: flex;
+       align-items: baseline;
+       justify-content: flex-end;
+       flex-wrap: wrap-reverse;
+}
+
+.collapsible-btn>strong {
+       letter-spacing: 1px;
+}
+
+.arrow {
+       margin-left: 18px;
+       margin-top: 20px;
+       width: 10px;
+       height: 10px;
+       border: solid #fff;
+       border-width: 0 2px 2px 0;
+       transform: rotate(45deg);
+       transition: transform 0.3s ease;
+}
+
+.collapsible-content.show {
+       display: flex;
+       flex-direction: row-reverse;
+       column-gap: 3px;
+       font-family: var(--main-font);
+       font-size: 1.1rem;
+       word-spacing: 1px;
+       line-height: 30px;
+}
+
+.collapsible-content.show .arrow {
+       transform: rotate(225deg);
+}
+
+/* ////////////// End FQ Section */
+.container .container-wrapper .footer-section {
+       background: #48605a;
+       display: flex;
+       width: 100%;
+       color: #fff;
+       justify-content: center;
+}
+
+.container .container-wrapper .footer-section .footer-wrapper {
+       width: 90%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 15px 0;
+}
+
+.container .container-wrapper .footer-section .footer-wrapper .copyright .copyright-text {
+       font-family: var(--main-font);
+       text-align: center;
+}
+
+.copyright-text>a {
+       margin-left: 5px;
+       color: #c69774;
+       font-weight: 700;
+       letter-spacing: 0.5px;
+}
+
+.social-icons {
+       padding-left: 0;
+       margin-bottom: 0;
+       list-style: none
+}
+
+.social-icons li {
+       display: inline-block;
+}
+
+
+.social-icons a {
+       background-color: #48605a;
+       color: #f5f5f5;
+       font-size: 16px;
+       display: inline-block;
+       line-height: 44px;
+       width: 44px;
+       height: 44px;
+       text-align: center;
+       border: 1px solid;
+       margin-right: 8px;
+       border-radius: 100%;
+       -webkit-transition: all .2s linear;
+       -o-transition: all .2s linear;
+       transition: all .2s linear;
+}
+
+.social-icons a:hover {
+       color: #48605a;
+       background-color: #f5f5f5;
+}
+
+/* ////////  End Footer  */
+
+@media (max-width:767px) {
+       .social-icons li.title {
+              display: block;
+              margin-right: 0;
+              font-weight: 600
+       }
+
+       .container .container-wrapper .footer-section .footer-wrapper {
+              display: flex;
+              flex-direction: column-reverse;
+              row-gap: 10px;
+              padding-bottom: 20px;
+       }
+
+       .copyright .copyright-text {
+              display: flex;
+              flex-direction: column;
+       }
+}
 
 
 @media (max-width: 900px) {
+       .container .container-wrapper .hero-section {
+              min-height: 94vh;
+              margin-top: 58px;
+       }
+
+       .nav_ft {
+              top: 300% !important;
+       }
+
        .container .container-wrapper .hero-section {
               background-position: right;
        }
@@ -690,7 +894,6 @@ body::-webkit-scrollbar-thumb {
        }
 
 
-
        .container .container-wrapper .about-section .about-wrapper .content-section {
               width: 100%;
               display: flex;
@@ -705,6 +908,14 @@ body::-webkit-scrollbar-thumb {
        }
 
        .lawyer {
+              position: absolute;
+              top: 98%;
+              width: 10px;
+              height: 10px;
+              /* background: rgb(0, 255, 81); */
+       }
+
+       .fq {
               position: absolute;
               top: 98%;
               width: 10px;
@@ -797,17 +1008,20 @@ body::-webkit-scrollbar-thumb {
        .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card {
               height: 300px;
        }
+
+       .container .container-wrapper .fq-section .fq-wrapper .content-section {
+              margin-top: 50px;
+       }
+
+       .container .container-wrapper .fq-section .fq-wrapper .title-section>span {
+              right: -20%;
+              font-size: 0.9rem;
+       }
+
 }
 
 
-
-
-
-
-
-/* Responsive Nav Bar in Screen > laptop */
 @media (max-width: 1400px) {
-
        .container .container-wrapper header {
               z-index: 10;
        }
@@ -912,20 +1126,5 @@ body::-webkit-scrollbar-thumb {
        .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li:hover a {
               color: #fff;
               font-size: 1.3rem;
-
        }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* Large Phone And Tablets */
-@media (max-width: 992px) {}
