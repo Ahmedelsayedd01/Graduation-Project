@@ -85,6 +85,20 @@ header .header-wrapper .logo a img {
        overflow-y: scroll;
 }
 
+.result_search::-webkit-scrollbar {
+       width: 7px;
+}
+
+.result_search::-webkit-scrollbar-track {
+       background-color: rgb(241, 241, 241);
+       border-radius: 20px;
+}
+
+.result_search::-webkit-scrollbar-thumb {
+       background-color: rgb(191, 191, 191);
+       border-radius: 20px;
+}
+
 .result_search>a {
        width: 100%;
        border-bottom: 1px solid #a7a7a7aa !important;
@@ -168,7 +182,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-header .header-wrapper .add-post button {
+header .header-wrapper .add-post>button {
        font-size: 1.4rem;
        font-family: var(--main-font);
        text-align: center;
@@ -179,12 +193,77 @@ header .header-wrapper .add-post button {
        transition: all 0.3s ease-in-out;
 }
 
-header .header-wrapper .add-post:hover button {
+header .header-wrapper .add-post:hover>button {
        color: var(--main-clr);
        background-color: #fff;
        border: 2px solid var(--main-clr) !important;
 
 }
+
+/* Header modal */
+header .header-wrapper .add-post .modal .modal-title-case {
+       font-family: var(--main-font);
+       font-size: 2rem;
+}
+
+header .header-wrapper .add-post .modal .close-header span {
+       color: var(--main-clr);
+}
+
+header .header-wrapper .add-post .modal .close-header {
+       background: none;
+       font-size: 2.2rem;
+       font-weight: 600;
+       margin-top: -15px;
+}
+/* Content Modal */
+header .header-wrapper .add-post .modal .content-case{
+       
+}
+
+/* Footer Modal */
+header .header-wrapper .add-post .modal .add-modal-footer {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       column-gap: 10px;
+       margin-bottom: 5px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button {
+
+       width: calc(100% / 2.3);
+       font-size: 1.4rem;
+       font-family: var(--main-font);
+       text-align: center;
+       padding: 7px 0;
+       transition: all 0.3s ease-in-out;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(1) {
+       color: #fff;
+       background-color: var(--main-clr);
+       border-radius: 7px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(1):hover {
+       color: var(--main-clr);
+       background-color: #fff;
+       outline: 2px solid var(--main-clr) !important;
+
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2) {
+       color: var(--main-clr);
+       border-radius: 7px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):hover {
+       color: #fff;
+       background-color: var(--main-clr);
+}
+
 
 header .header-wrapper .profile a img {
        width: 55px;

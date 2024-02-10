@@ -112,8 +112,8 @@
                 </div>
               </a>
 
-              <span class="d-none" id="noFound">لا يوجد نتائج</span>
-              <!-- <a href="profileLawyer.html">
+              <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
+              <a href="profileLawyer.html">
                 <div class="res_lawyer">
                   <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                   <div class="detail">
@@ -121,7 +121,61 @@
                     <span>القضاية العسكرية </span>
                   </div>
                 </div>
-              </a> -->
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           <!-- center section in mobile and left start from taplate to post case -->
@@ -145,30 +199,34 @@
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+                  <!-- Header modal -->
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                      نشر قضيتى
-                    </h5>
+                    <span class="modal-title-case" id="exampleModalLongTitle">
+                      قضيتى
+                    </span>
                     <button
                       type="button"
-                      class="close"
+                      class="close close-header"
                       data-dismiss="modal"
                       aria-label="Close"
                     >
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">...</div>
-                  <div class="modal-footer">
+                  <!-- Content Modal -->
+                  <div class="content-case">
+
+                    
+                  </div>
+                  <!-- Footer Modal -->
+                  <div class="add-modal-footer">
+                    <button type="button" class="btn-add-case">نشر</button>
                     <button
                       type="button"
-                      class="btn btn-secondary"
+                      class="btn-remove-case"
                       data-dismiss="modal"
                     >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
+                      الغاء
                     </button>
                   </div>
                 </div>
@@ -184,7 +242,7 @@
         </div>
       </header>
       <!-- Content Page -->
-      <main><h3>home postes</h3></main>
+      <main></main>
       <!-- menu-bottom -->
       <div class="menu-bottom">
         <div class="menu-bottom-wrapper">
@@ -221,6 +279,26 @@
       </div>
     </div>
 
-    <script src="userPage.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#search_lawyer").mousedown(() => {
+          $(".result_search").removeClass("d-none");
+        });
+
+        $("#search_lawyer").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+
+          $("#result_search a").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+
+        $("#search_lawyer").blur(() => {
+          setTimeout(() => {
+            $(".result_search").addClass("d-none");
+          }, 200);
+        });
+      });
+    </script>
   </body>
 </html>
