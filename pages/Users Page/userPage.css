@@ -85,6 +85,20 @@ header .header-wrapper .logo a img {
        overflow-y: scroll;
 }
 
+.result_search::-webkit-scrollbar {
+       width: 7px;
+}
+
+.result_search::-webkit-scrollbar-track {
+       background-color: rgb(241, 241, 241);
+       border-radius: 20px;
+}
+
+.result_search::-webkit-scrollbar-thumb {
+       background-color: rgb(191, 191, 191);
+       border-radius: 20px;
+}
+
 .result_search>a {
        width: 100%;
        border-bottom: 1px solid #a7a7a7aa !important;
@@ -168,7 +182,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-header .header-wrapper .add-post button {
+header .header-wrapper .add-post>button {
        font-size: 1.4rem;
        font-family: var(--main-font);
        text-align: center;
@@ -179,12 +193,174 @@ header .header-wrapper .add-post button {
        transition: all 0.3s ease-in-out;
 }
 
-header .header-wrapper .add-post:hover button {
+header .header-wrapper .add-post:hover>button {
        color: var(--main-clr);
        background-color: #fff;
        border: 2px solid var(--main-clr) !important;
 
 }
+
+/* Header modal */
+header .header-wrapper .add-post .modal .modal-title-case {
+       font-family: var(--main-font);
+       color: var(--main-clr);
+       font-size: 2rem;
+}
+
+header .header-wrapper .add-post .modal .close-header span {
+       color: var(--main-clr);
+}
+
+header .header-wrapper .add-post .modal .close-header {
+       background: none;
+       font-size: 2.2rem;
+       font-weight: 600;
+       margin-top: -15px;
+}
+
+/* Content Modal */
+header .header-wrapper .add-post .modal .content-case {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       width: 94%;
+       margin: auto;
+       margin-bottom: 10px;
+}
+
+/* Type Case */
+header .header-wrapper .add-post .modal .content-case .type-case,
+header .header-wrapper .add-post .modal .content-case .num-case,
+header .header-wrapper .add-post .modal .content-case .location-case,
+header .header-wrapper .add-post .modal .content-case .fill-case,
+header .header-wrapper .add-post .modal .content-case .image-case {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 5px;
+}
+
+header .header-wrapper .add-post .modal .content-case .type-case>label,
+header .header-wrapper .add-post .modal .content-case .num-case>label,
+header .header-wrapper .add-post .modal .content-case .location-case>label,
+header .header-wrapper .add-post .modal .content-case .fill-case>label,
+header .header-wrapper .add-post .modal .content-case .image-case>label {
+       font-size: 1.1rem;
+       font-family: var(--main-font);
+}
+
+header .header-wrapper .add-post .modal .content-case .type-case>select,
+header .header-wrapper .add-post .modal .content-case .num-case>input,
+header .header-wrapper .add-post .modal .content-case .location-case>select,
+header .header-wrapper .add-post .modal .content-case .fill-case>input,
+header .header-wrapper .add-post .modal .content-case .image-case>input {
+       width: 80%;
+       padding: 7px 8px 7px 6px;
+       font-size: 1.1rem;
+       font-family: var(--main-font);
+       border-radius: 10px;
+       color: #9f9f9f;
+       outline: 2px solid #b8b8b8 !important;
+       cursor: pointer;
+}
+
+/* Description Case */
+header .header-wrapper .add-post .modal .content-case .description-case {
+       width: 100%;
+       font-size: 1.2rem;
+       font-family: var(--main-font);
+       border-radius: 8px;
+       outline: 2px solid #afafaf !important;
+}
+
+/* Date Case */
+header .header-wrapper .add-post .modal .content-case .date-case {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 5px;
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case .date-case-dmy {
+       width: 58%;
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case .date-case-dmy>input {
+       width: 53% !important;
+       direction: ltr !important;
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case .date-case-hm {
+       width: 41%;
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case .date-case-hm>input {
+       width: 65% !important;
+       direction: ltr !important;
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case div>label {
+       font-size: 1.1rem;
+       font-family: var(--main-font);
+}
+
+header .header-wrapper .add-post .modal .content-case .date-case div>input {
+       padding: 7px 8px 7px 6px;
+       font-size: 1.1rem;
+       font-family: var(--main-font);
+       border-radius: 10px;
+       color: #9f9f9f;
+       border: 2px solid #b8b8b8 !important;
+       cursor: pointer;
+}
+
+
+/* Footer Modal */
+header .header-wrapper .add-post .modal .add-modal-footer {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       column-gap: 10px;
+       margin-bottom: 5px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button {
+
+       width: calc(100% / 2.3);
+       font-size: 1.4rem;
+       font-family: var(--main-font);
+       text-align: center;
+       padding: 7px 0;
+       transition: all 0.3s ease-in-out;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(1) {
+       color: #fff;
+       background-color: var(--main-clr);
+       border-radius: 7px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(1):hover {
+       color: var(--main-clr);
+       background-color: #fff;
+       outline: 2px solid var(--main-clr) !important;
+
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2) {
+       color: var(--main-clr);
+       border-radius: 7px;
+}
+
+header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):hover {
+       color: #fff;
+       background-color: var(--main-clr);
+}
+
 
 header .header-wrapper .profile a img {
        width: 55px;

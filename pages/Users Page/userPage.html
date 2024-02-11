@@ -112,8 +112,8 @@
                 </div>
               </a>
 
-              <span class="d-none" id="noFound">لا يوجد نتائج</span>
-              <!-- <a href="profileLawyer.html">
+              <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
+              <a href="profileLawyer.html">
                 <div class="res_lawyer">
                   <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                   <div class="detail">
@@ -121,7 +121,61 @@
                     <span>القضاية العسكرية </span>
                   </div>
                 </div>
-              </a> -->
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           <!-- center section in mobile and left start from taplate to post case -->
@@ -145,32 +199,176 @@
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                      نشر قضيتى
-                    </h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">...</div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
-                  </div>
+                  <form action="post">
+                    <!-- Header modal -->
+                    <div class="modal-header">
+                      <span class="modal-title-case" id="exampleModalLongTitle">
+                        قضيتى
+                      </span>
+                      <button
+                        type="button"
+                        class="close close-header"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- Content Modal -->
+                    <div class="content-case">
+                      <!-- Type Case -->
+                      <div class="type-case">
+                        <label for="type-case">نوع القضية:</label>
+                        <select
+                          class="sel-type-case"
+                          name="type-case"
+                          id="type-case"
+                          required
+                        >
+                          <option value="0" selected>اختر نوع القضية</option>
+                          <option value="جنائى">جنائى</option>
+                          <option value="مدنى">مدنى</option>
+                          <option value="مجلس الدولة">مجلس الدولة</option>
+                          <option value="عمال">عمال</option>
+                          <option value="اسرة">اسرة</option>
+                          <option value="تجاري و شركات">تجاري و شركات</option>
+                          <option value="جرائم ألكترونية">
+                            جرائم ألكترونية
+                          </option>
+                          <option value="قضاء عسكري">قضاء عسكري</option>
+                        </select>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                        "
+                      />
+                      <!-- Number Case -->
+                      <div class="num-case">
+                        <label for="num-case">رقم القضية:</label>
+                        <input
+                          type="number"
+                          class="sel-num-case"
+                          name="num-case"
+                          id="num-case"
+                          placeholder="ادخل رقم القضية"
+                          required
+                        />
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                        "
+                      />
+                      <!-- Location Case -->
+                      <div class="location-case">
+                        <label for="location-case">مكان القضية:</label>
+                        <select
+                          class="sel-location-case"
+                          name="location-case"
+                          style="width: 78% !important"
+                          id="location-case"
+                          required
+                        >
+                          <option value="0" selected>اختر مكان القضية</option>
+                          <option value="اسكندرية">اسكندرية</option>
+                          <option value="القاهرة">القاهرة</option>
+                        </select>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                        "
+                      />
+                      <!-- Date Case -->
+                      <div class="date-case">
+                        <div class="date-case-dmy">
+                          <label for="date-case">ميعاد القضية:</label>
+                          <input
+                            type="date"
+                            class="sel-date-case"
+                            name="date-case"
+                            id="date-case"
+                            required
+                          />
+                        </div>
+                        <div class="date-case-hm">
+                          <label for="date-case">الساعة:</label>
+                          <input
+                            type="time"
+                            class="sel-date-case"
+                            name="date-case"
+                            id="date-case"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                        "
+                      />
+
+                      <!-- Description Case -->
+                      <textarea
+                        name="description-case"
+                        id="description-case"
+                        class="description-case"
+                        cols="15"
+                        rows="4"
+                      ></textarea>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                        "
+                      />
+                      <!-- Fill Case -->
+                      <div class="fill-case">
+                        <label for="fill-case">ارفاق ملف للقضية:</label>
+                        <input
+                          type="file"
+                          class="sel-fill-case"
+                          style="width: 70% !important; direction: ltr"
+                          name="fill-case"
+                          id="fill-case"
+                          accept="application/pdf, application/vnd.ms-excel"
+                          required
+                        />
+                      </div>
+                      <!-- <hr
+                      style="border: 1px solid #d5d5d5 !important; width: 100%"
+                    /> -->
+                      <!-- Image Case -->
+                      <div class="image-case mt-3">
+                        <label for="image-case">ارفاق صور للقضية:</label>
+                        <input
+                          type="file"
+                          class="sel-image-case"
+                          style="width: 70% !important; direction: ltr"
+                          name="image-case"
+                          id="image-case"
+                          accept="image/gif, image/jpeg"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="add-modal-footer">
+                      <button type="submit" class="btn-add-case">نشر</button>
+                      <button
+                        type="button"
+                        class="btn-remove-case"
+                        data-dismiss="modal"
+                      >
+                        الغاء
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -184,7 +382,7 @@
         </div>
       </header>
       <!-- Content Page -->
-      <main><h3>home postes</h3></main>
+      <main></main>
       <!-- menu-bottom -->
       <div class="menu-bottom">
         <div class="menu-bottom-wrapper">
@@ -221,6 +419,26 @@
       </div>
     </div>
 
-    <script src="userPage.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#search_lawyer").mousedown(() => {
+          $(".result_search").removeClass("d-none");
+        });
+
+        $("#search_lawyer").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+
+          $("#result_search a").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+
+        $("#search_lawyer").blur(() => {
+          setTimeout(() => {
+            $(".result_search").addClass("d-none");
+          }, 200);
+        });
+      });
+    </script>
   </body>
 </html>
