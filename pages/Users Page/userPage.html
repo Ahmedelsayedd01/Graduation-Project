@@ -273,7 +273,7 @@
                           required
                         >
                           <option value="0" selected>اختر مكان القضية</option>
-                          <option value="اسكندرية">اسكندرية</option>
+                          <option value="الاسكندرية">الاسكندرية</option>
                           <option value="القاهرة">القاهرة</option>
                         </select>
                       </div>
@@ -314,13 +314,22 @@
                       />
 
                       <!-- Description Case -->
-                      <textarea
-                        name="description-case"
-                        id="description-case"
+                      <div
                         class="description-case"
-                        cols="15"
-                        rows="4"
-                      ></textarea>
+                        style="
+                          flex-direction: column !important;
+                          row-gap: 10px !important;
+                        "
+                      >
+                        <label for="description-case">الموضوع</label>
+                        <textarea
+                          name="description-case"
+                          id="description-case"
+                          class="description-case"
+                          cols="15"
+                          rows="4"
+                        ></textarea>
+                      </div>
                       <hr
                         style="
                           border: 1px solid #d5d5d5 !important;
@@ -382,7 +391,238 @@
         </div>
       </header>
       <!-- Content Page -->
-      <main></main>
+      <main>
+        <div class="main-wrapper">
+          <!-- Request Side -->
+          <div class="right-side"></div>
+          <!-- Postes Section  -->
+          <div class="content-page-user">
+            <div class="add-post-section">
+              <div class="profile">
+                <a href="profileUser.html">
+                  <img src="asstesUser/lawyer3.jpg" alt="user"
+                /></a>
+              </div>
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+              >
+                نشر قضية جديدة ؟
+              </button>
+
+              <div class="add-post">
+                <button
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                  نشر
+                </button>
+              </div>
+            </div>
+            <!-- My Postes -->
+            <div class="postes">
+              <div class="postes-wrapper">
+                <div class="post">
+                  <div class="header-post">
+                    <div class="profile">
+                      <a href="profileUser.html">
+                        <img src="asstesUser/lawyer3.jpg" alt="user"
+                      /></a>
+                    </div>
+                    <div class="name-user"><h1>احمد احمد احمد</h1></div>
+                  </div>
+                  <hr
+                    style="
+                      margin: 0.5rem !important;
+                      border: 1px solid #d5d5d5 !important;
+                      width: 100%;
+                    "
+                  />
+                  <div class="content-post">
+                    <div class="content-header">
+                      <!-- type case -->
+                      <div class="post-type-case">
+                        <h3>نوع القضية:</h3>
+                        <span>تجاري و شركات .</span>
+                      </div>
+                      <!-- location case -->
+                      <div class="post-location-case">
+                        <h3>مكان القضية:</h3>
+                        <span>الاسكندرية .</span>
+                      </div>
+                    </div>
+                    <!-- date case -->
+                    <div class="post-date-case">
+                      <div class="date-dm">
+                        <h3>تاريخ القضية:</h3>
+                        <span>01/12/2024</span>
+                      </div>
+                      <span><strong>-</strong></span>
+                      <div class="date-houre">
+                        <h3>الميعاد:</h3>
+                        <span>3:30</span>
+                      </div>
+                    </div>
+                    <hr
+                      style="
+                        margin: 0.5rem !important;
+                        border: 1px solid #d5d5d5 !important;
+                        width: 100%;
+                      "
+                    />
+                    <!-- description case -->
+                    <div class="post-description-case">
+                      <p>
+                        تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
+                        الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
+                        مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
+                        السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
+                        السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
+                        يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="footer-post">
+                    <span>الغاء القضية</span>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="header-post">
+                    <div class="profile">
+                      <a href="profileUser.html">
+                        <img src="asstesUser/lawyer3.jpg" alt="user"
+                      /></a>
+                    </div>
+                    <div class="name-user"><h1>احمد احمد احمد</h1></div>
+                  </div>
+                  <hr
+                    style="
+                      margin: 0.5rem !important;
+                      border: 1px solid #d5d5d5 !important;
+                      width: 100%;
+                    "
+                  />
+                  <div class="content-post">
+                    <div class="content-header">
+                      <!-- type case -->
+                      <div class="post-type-case">
+                        <h3>نوع القضية:</h3>
+                        <span>تجاري و شركات .</span>
+                      </div>
+                      <!-- location case -->
+                      <div class="post-location-case">
+                        <h3>مكان القضية:</h3>
+                        <span>الاسكندرية .</span>
+                      </div>
+                    </div>
+                    <!-- date case -->
+                    <div class="post-date-case">
+                      <div class="date-dm">
+                        <h3>تاريخ القضية:</h3>
+                        <span>01/12/2024</span>
+                      </div>
+                      <span><strong>-</strong></span>
+                      <div class="date-houre">
+                        <h3>الميعاد:</h3>
+                        <span>3:30</span>
+                      </div>
+                    </div>
+                    <hr
+                      style="
+                        margin: 0.5rem !important;
+                        border: 1px solid #d5d5d5 !important;
+                        width: 100%;
+                      "
+                    />
+                    <!-- description case -->
+                    <div class="post-description-case">
+                      <p>
+                        تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
+                        الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
+                        مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
+                        السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
+                        السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
+                        يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="footer-post">
+                    <span>الغاء القضية</span>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="header-post">
+                    <div class="profile">
+                      <a href="profileUser.html">
+                        <img src="asstesUser/lawyer3.jpg" alt="user"
+                      /></a>
+                    </div>
+                    <div class="name-user"><h1>احمد احمد احمد</h1></div>
+                  </div>
+                  <hr
+                    style="
+                      margin: 0.5rem !important;
+                      border: 1px solid #d5d5d5 !important;
+                      width: 100%;
+                    "
+                  />
+                  <div class="content-post">
+                    <div class="content-header">
+                      <!-- type case -->
+                      <div class="post-type-case">
+                        <h3>نوع القضية:</h3>
+                        <span>تجاري و شركات .</span>
+                      </div>
+                      <!-- location case -->
+                      <div class="post-location-case">
+                        <h3>مكان القضية:</h3>
+                        <span>الاسكندرية .</span>
+                      </div>
+                    </div>
+                    <!-- date case -->
+                    <div class="post-date-case">
+                      <div class="date-dm">
+                        <h3>تاريخ القضية:</h3>
+                        <span>01/12/2024</span>
+                      </div>
+                      <span><strong>-</strong></span>
+                      <div class="date-houre">
+                        <h3>الميعاد:</h3>
+                        <span>3:30</span>
+                      </div>
+                    </div>
+                    <hr
+                      style="
+                        margin: 0.5rem !important;
+                        border: 1px solid #d5d5d5 !important;
+                        width: 100%;
+                      "
+                    />
+                    <!-- description case -->
+                    <div class="post-description-case">
+                      <p>
+                        تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
+                        الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
+                        مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
+                        السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
+                        السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
+                        يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="footer-post">
+                    <span>الغاء القضية</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Best lawyer Side  -->
+          <div class="left-side"></div>
+        </div>
+      </main>
       <!-- menu-bottom -->
       <div class="menu-bottom">
         <div class="menu-bottom-wrapper">
