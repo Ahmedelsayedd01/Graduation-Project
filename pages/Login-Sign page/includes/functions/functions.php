@@ -1,5 +1,3 @@
-
-
 <?php
 include('conf.php');
             // This Page About All Functions I use it In any Page Globaly
@@ -42,9 +40,9 @@ else
                                 return $count;
 
                             }
-                            function checkedLogin($select,$from,$value){
+                            function checkedLogin($select,$from,$value,$email){
                                global $con ;
-                                $statement =$con->prepare("SELECT $select,`Role`,`password` FROM $from WHERE $select =?");
+                                $statement =$con->prepare("SELECT $select FROM $from WHERE $email =?");
                                 $statement->execute(array($value));
                                 $data = $statement->fetch();
                                 // $count=$statement->rowCount();
