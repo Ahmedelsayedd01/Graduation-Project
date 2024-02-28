@@ -11,6 +11,10 @@
        scroll-behavior: smooth !important;
 }
 
+body {
+       background-color: #efefef !important;
+}
+
 body::-webkit-scrollbar {
        width: 0.4rem;
 }
@@ -37,11 +41,14 @@ body::-webkit-scrollbar-thumb {
 
 /* Header page */
 header {
+       position: sticky;
+       top: 0;
+       z-index: 10000;
        width: 100%;
        display: flex;
        align-items: center;
        justify-content: center;
-       /* background-color: red; */
+       background-color: #fff;
        padding: 10px 0;
        -webkit-box-shadow: 0px 8px 16px -1px rgba(235, 235, 235, 0.85);
        -moz-box-shadow: 0px 8px 16px -1px rgba(235, 235, 235, 0.85);
@@ -182,7 +189,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-header .header-wrapper .add-post>button {
+.add-post>button {
        font-size: 1.4rem;
        font-family: var(--main-font);
        text-align: center;
@@ -193,7 +200,7 @@ header .header-wrapper .add-post>button {
        transition: all 0.3s ease-in-out;
 }
 
-header .header-wrapper .add-post:hover>button {
+.add-post:hover>button {
        color: var(--main-clr);
        background-color: #fff;
        border: 2px solid var(--main-clr) !important;
@@ -233,6 +240,7 @@ header .header-wrapper .add-post .modal .content-case {
 header .header-wrapper .add-post .modal .content-case .type-case,
 header .header-wrapper .add-post .modal .content-case .num-case,
 header .header-wrapper .add-post .modal .content-case .location-case,
+header .header-wrapper .add-post .modal .content-case .description-case,
 header .header-wrapper .add-post .modal .content-case .fill-case,
 header .header-wrapper .add-post .modal .content-case .image-case {
        width: 100%;
@@ -245,6 +253,7 @@ header .header-wrapper .add-post .modal .content-case .image-case {
 header .header-wrapper .add-post .modal .content-case .type-case>label,
 header .header-wrapper .add-post .modal .content-case .num-case>label,
 header .header-wrapper .add-post .modal .content-case .location-case>label,
+header .header-wrapper .add-post .modal .content-case .description-case>label,
 header .header-wrapper .add-post .modal .content-case .fill-case>label,
 header .header-wrapper .add-post .modal .content-case .image-case>label {
        font-size: 1.1rem;
@@ -267,11 +276,12 @@ header .header-wrapper .add-post .modal .content-case .image-case>input {
 }
 
 /* Description Case */
-header .header-wrapper .add-post .modal .content-case .description-case {
+header .header-wrapper .add-post .modal .content-case .description-case>textarea {
        width: 100%;
        font-size: 1.2rem;
        font-family: var(--main-font);
        border-radius: 8px;
+       padding: 5px 8px;
        outline: 2px solid #afafaf !important;
 }
 
@@ -325,7 +335,7 @@ header .header-wrapper .add-post .modal .add-modal-footer {
        align-items: center;
        justify-content: center;
        column-gap: 10px;
-       margin-bottom: 5px;
+       margin-bottom: 10px;
 }
 
 header .header-wrapper .add-post .modal .add-modal-footer button {
@@ -361,8 +371,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        background-color: var(--main-clr);
 }
 
-
-header .header-wrapper .profile a img {
+.profile a img {
        width: 55px;
        height: 55px;
        object-fit: cover;
@@ -375,26 +384,492 @@ header .header-wrapper .profile a img {
 
 /* ////Header page */
 
+/* content page */
+.containerr main {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 10px;
+}
+
+.containerr main .main-wrapper {
+       position: relative;
+       width: 96%;
+       display: flex;
+       align-items: flex-start;
+       justify-content: center;
+       column-gap: 10px;
+
+}
 
 
 
 
+/* Right Side */
+.containerr main .main-wrapper .right-side {
+       position: sticky;
+       top: 100px;
+       width: 25%;
+       display: none;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper {
+       width: 100%;
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       row-gap: 10px;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .header-requests {
+       width: 100%;
+       text-align: center;
+       background: #517970;
+       color: #fff;
+       padding-bottom: 17px;
+       border-radius: 20px;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .header-requests>.count-lawyer {
+       margin-right: 10px;
+       text-align: center;
+       display: inline-block;
+       padding: 6px;
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       font-family: var(--main-font);
+       font-weight: 600;
+       color: var(--main-clr);
+       background-color: #fff;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .header-requests span {
+       font-size: 1.7rem;
+       font-family: var(--main-font);
+       margin-top: 20px;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       row-gap: 10px;
+       margin-bottom: 10px;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request {
+       width: 100%;
+       padding: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       background-color: #fff;
+       border-radius: 20px;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request {
+       position: relative;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 10px;
+       /* background-color: red; */
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .profile>a>img {
+       width: 60px;
+       height: 60px;
+       border: none !important;
+       padding: 0 !important;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       row-gap: 2px;
+       max-width: 75%;
+       overflow: hidden;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer span {
+       width: 100%;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       font-size: 1.3rem;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer span:nth-child(2) {
+       font-size: 1.1rem;
+       color: #a8a8a8;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request .details-case {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-type,
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-number {
+       display: flex;
+       align-items: center;
+       column-gap: 5px;
+       font-size: 1.1rem;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-number span:nth-child(2) {
+       padding: 6px;
+       border-radius: 8px;
+       letter-spacing: 1px;
+       color: #fff;
+       background: #517970;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-top: 15px;
+       font-size: 1.2rem;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span {
+       padding: 8px 60px;
+       background: #1db593;
+       border-radius: 30px;
+       color: #fff;
+       cursor: pointer;
+       transition: all 0.3s ease-in-out;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(1):hover {
+       background-color: #17d0a7;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2):hover {
+       background-color: #d60000;
+}
+
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2) {
+       background: #ff0000;
+}
+
+/* Content Page User  */
+.containerr main .main-wrapper .content-page-user {
+       width: 100%;
+       margin-bottom: 80px;
+}
+
+.containerr main .main-wrapper .content-page-user .add-post-section {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       background-color: #fff;
+       border-radius: 20px;
+       padding: 10px 8px;
+}
+
+.containerr main .main-wrapper .content-page-user .add-post-section>button {
+       font-size: 1.3rem;
+       font-family: var(--main-font);
+       width: 70%;
+       color: #000;
+       text-align: start;
+       background-color: #fff;
+}
+
+/* content page -> Postes */
+.containerr main .main-wrapper .content-page-user .postes {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       row-gap: 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       border-radius: 20px;
+       background-color: #fff;
+       overflow: hidden;
+
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .header-post {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: start;
+       column-gap: 10px;
+       padding: 10px 10px 0 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .header-post .profile>a>img {
+       width: 70px;
+       height: 70px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .header-post .name-user>h1 {
+       font-size: 1.8rem !important;
+       font-weight: 400 !important;
+       font-family: var(--main-font);
+       margin-bottom: 0 !important;
+       line-height: 1 !important;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       row-gap: 5px;
+       padding: 0 10px 0 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case,
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case {
+       display: flex;
+       align-items: baseline;
+       justify-content: center;
+       column-gap: 5px;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case span,
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case span {
+       font-size: 1rem;
+       padding-right: 2px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .post-date-case {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 20px;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .post-date-case .date-dm,
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .post-date-case .date-houre {
+       display: flex;
+       align-items: baseline;
+       justify-content: center;
+       column-gap: 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .post-description-case {
+       height: 150px;
+       padding: 0 10px;
+       overflow-y: scroll;
+       margin-bottom: 5px;
+}
+
+.post-description-case::-webkit-scrollbar {
+       width: 0.4rem;
+}
+
+.post-description-case::-webkit-scrollbar-track {
+       background-color: #fff;
+}
+
+.post-description-case::-webkit-scrollbar-thumb {
+       background-color: var(--main-clr);
+       border-radius: 10px;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .post-description-case p {
+       font-family: var(--main-font);
+       font-size: 1.2rem;
+       line-height: 33px;
+
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post span {
+       width: 100%;
+       font-family: var(--main-font);
+       font-size: 1.5rem;
+       font-weight: 500;
+       padding: 20px;
+       text-align: center;
+       color: #fff;
+       background-color: red;
+       cursor: pointer;
+       transition: all 0.3s ease-in-out;
+}
+
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
+       background-color: rgb(214, 34, 34);
+
+}
+
+/* ///content page -> Postes */
+/* Left Side  */
+
+.containerr main .main-wrapper .left-side {
+       position: sticky;
+       top: 100px;
+       width: 25%;
+       display: none;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper {
+       width: 100%;
+       display: flex;
+       align-items: flex-start;
+       flex-direction: column;
+       row-gap: 10px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .header-bestLawyers {
+       width: 100%;
+       text-align: center;
+       background: #517970;
+       color: #fff;
+       padding: 17px 0;
+       border-radius: 20px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .header-bestLawyers span {
+       font-size: 1.7rem;
+       font-family: var(--main-font);
+       margin-top: 20px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       row-gap: 10px;
+       margin-bottom: 10px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer {
+       width: 100%;
+       padding: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       background-color: #fff;
+       border-radius: 20px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 10px;
+       /* background-color: red; */
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .profile>a>img {
+       width: 70px;
+       height: 70px;
+       border: none !important;
+       padding: 0 !important;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       row-gap: 2px;
+       max-width: 75%;
+       overflow: hidden;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer span {
+       width: 100%;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       font-size: 1.3rem;
+       font-family: var(--main-font);
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .title-lawyer {
+       font-size: 1.1rem;
+       color: #a8a8a8;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .stars {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       column-gap: 5px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .stars>i {
+       color: rgb(255, 221, 0);
+       font-size: 1.2rem;
+       margin-bottom: 5px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .loca-lawyer {
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 7px;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .loca-lawyer>i {
+       color: #208972;
+}
+
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .details-lawyer .loca-lawyer>span {
+       color: #666666;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* //////content page */
 
 /* Bottom Bar */
 .containerr .menu-bottom {
@@ -444,6 +919,26 @@ header .header-wrapper .profile a img {
        padding: 8px 0;
 }
 
+.containerr .menu-bottom .menu-bottom-wrapper ul .request-tap {
+       position: relative;
+}
+
+.containerr .menu-bottom .menu-bottom-wrapper ul .request-tap>a .count-request {
+       position: absolute;
+       top: -25%;
+       right: 0;
+       width: 40px;
+       height: 40px;
+       text-align: center;
+       padding: 5px 0;
+       border-radius: 50%;
+       font-family: var(--main-font);
+       font-weight: 600;
+       color: #fff;
+       background-color: var(--main-clr);
+       z-index: 10;
+}
+
 .containerr .menu-bottom .menu-bottom-wrapper ul li a {
        display: flex;
        align-items: center;
@@ -469,6 +964,10 @@ header .header-wrapper .profile a img {
        body {
               background-color: yellow;
        }
+
+       .containerr main .main-wrapper .content-page-user .add-post-section>button {
+              width: auto;
+       }
 }
 
 @media (min-width:990px) {
@@ -493,10 +992,42 @@ header .header-wrapper .profile a img {
        .menu-bottom {
               display: none;
        }
+
+       .containerr main .main-wrapper .content-page-user {
+              width: 50%;
+              margin-bottom: 10px;
+       }
+
+
+       .containerr main .main-wrapper .right-side,
+       .containerr main .main-wrapper .left-side {
+              display: flex;
+       }
+
+       .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header {
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              column-gap: 30px;
+       }
+
+       .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case,
+       .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case {
+              column-gap: 10px;
+       }
+
+       .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case span,
+       .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case span {
+              font-size: 1.1rem;
+       }
+
 }
 
 @media (min-width:1400px) {
        body {
               background-color: orange;
+       }
+
+       .containerr main .main-wrapper .content-page-user .add-post-section>button {
+              width: 65%;
        }
 }
