@@ -1,9 +1,12 @@
 <?php
 session_start();
 if(isset($_SESSION['lawyer'])){
-    $dataJson =  json_encode($_SESSION['lawyer']); // Your Data Json
+  $dataJson =  json_encode(['data',$_SESSION['lawyer']]);
+} 
 
-    echo $dataJson;
+else{ // This Else IF Any One Don't Login Redirect Login
+header("Location:../Login-Sign page/registration.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +16,9 @@ if(isset($_SESSION['lawyer'])){
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lawyer Case</title>
-  <link rel="stylesheet" href="users-style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="lawyerPage.css" />
 </head>
 
 <body>
@@ -51,14 +56,20 @@ if(isset($_SESSION['lawyer'])){
   </h1>
   <?php
       }
+      
       ?>
 
-
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        type: 'GET',
+        url: 'lawyers.php',
+        success: function (response) {
+          console.log(response.data);
+        }
+      })
+    });
+  </script>
 </body>
 
 </html>
-<?php 
-}else{ // This Else IF Any One Don't Login Redirect Login
-    header("Location:../Login-Sign page/registration.php");
-}
-?>
