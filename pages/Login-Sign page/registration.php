@@ -60,7 +60,7 @@
                 VALUES
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
                 $dataInsert->execute();
-                $_SESSION['user'] = [
+                $_SESSION['lawyer'] = [
                 'userName'=>$firstName,
                 'lastName'=>$lastName,
                 'email'=>$email,
@@ -71,7 +71,7 @@
                 ];
                 // Email :'lawyer@case.org'
                 // password: Makemesmile123
-                header('Location:../Lawyers Page/lawyers.php');
+                   header('Location:../../pages/Lawyers Page/lawyers.php');
 
            }
                   }

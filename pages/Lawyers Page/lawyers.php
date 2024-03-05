@@ -62,7 +62,7 @@ header("Location:../Login-Sign page/registration.php");
   <script>
     $(document).ready(function () {
       $.ajax({
-        type: 'GET',
+        type: 'post',
         url: 'lawyers.php',
         success: function (response) {
           console.log(response.data);
