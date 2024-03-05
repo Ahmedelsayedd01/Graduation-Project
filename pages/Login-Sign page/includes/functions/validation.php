@@ -61,6 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   ];
 
                    header('Location:../../../Lawyers Page/lawyers.php');
+      $dataJson = json_encode(['dataJson'=>$data]);
+                     return $dataJson;
                   // Start Session With User
               
             }
