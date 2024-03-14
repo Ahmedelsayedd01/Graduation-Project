@@ -24,8 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             // Validate Email and Password With User
                 // Start Session With User
-
+              
       $_SESSION['user'] = [
+        'id' => $data['id'],
         'userName' => $data['userName'],
         'lastName' => $data['lastName'],
         'email' => $data['email'],
@@ -34,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'Role' => $data['Role'],
       ];
                 
-                   header('Location:../../../Users Page/users.php');
+                   header('Location:../../../Users Page/userPage.php');
                   // Start Session With User
               
             }
@@ -51,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Validate Email and Password With User
                 // Start Session With User              
                   $_SESSION['lawyer'] = [
+                    'id' => $data['id'],
                     'userName' => $data['userName'],
                     'lastName' => $data['lastName'],
                     'email' => $data['email'],

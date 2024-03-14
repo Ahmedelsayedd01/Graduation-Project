@@ -4,7 +4,7 @@ if(isset($_SESSION['user'])){
   $user = json_encode(['userData' => $_SESSION['user']],200);
 
 
-  echo $user;
+ 
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ if(isset($_SESSION['user'])){
       if (this.readyState === 4 && this.status === 200) {
         // console.log(this.responseText);
         // console.log(this.readyState);
-        // console.log(this.status);
+        // console. (this.status);
         let data = JSON.parse(this.responseText);
         //console.log(data);
         div = document.getElementById('data');

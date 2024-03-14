@@ -33,7 +33,7 @@
                    'Role'=>$role,
                    'type'=>Null,
                ];
-                   header('Location:../Users Page/users.php');
+                   header('Location:../Users Page/userPage.php');
          }
         }
 
@@ -61,6 +61,7 @@
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
                 $dataInsert->execute();
                 $_SESSION['lawyer'] = [
+                'userName'=>$firstName,
                 'userName'=>$firstName,
                 'lastName'=>$lastName,
                 'email'=>$email,
