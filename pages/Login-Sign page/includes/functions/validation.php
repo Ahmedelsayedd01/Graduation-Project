@@ -2,7 +2,7 @@
 
 include('../functions/functions.php');
 
-// session_start();
+session_start();
 
 $error = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -35,38 +35,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
 
 
-                // Check Login Layer We Should Send Sesson with data Thanks Hamada <3 ;
-     $dataLawyer = checkedLogin('email', 'lawyer', $email);
-  
-if ($dataLawyer) {
-    if ($dataLawyer['Role'] == 'مواطن') {
-      if ($dataLawyer['email'] != $email) {
-        $error['email_wrong'] = "Email or Password Wrong";
-      } else {
+    // Check Login Layer We Should Send Sesson with data Thanks Hamada <3 ;
+    $dataLawyer = checkedLogin('email', 'lawyer', $email);
 
-        if ($dataLawyer['password'] != md5($password)) {
-          header('Location:../registration.php');
-          $error['wrong_password'] = "Email or Password Wrong";
+    if ($dataLawyer) {
+      if ($dataLawyer['Role'] == 'مواطن') {
+        if ($dataLawyer['email'] != $email) {
+          $error['email_wrong'] = "Email or Password Wrong";
         } else {
-          $_SESSION['user'] = [
-            'userName' => $firstName,
-            'lastName' => $lastName,
-            'email' => $email,
-            'idintityUser' => $idintityUser,
-            'user_number' => $user_number,
-            'Role' => $role,
-          ];
-          header('Location:../../../Users Page/users.php');
+
+          if ($dataLawyer['password'] != md5($password)) {
+            header('Location:../registration.php');
+            $error['wrong_password'] = "Email or Password Wrong";
+          } else {
+            $_SESSION['user'] = [
+              'userName' => $firstName,
+              'lastName' => $lastName,
+              'email' => $email,
+              'idintityUser' => $idintityUser,
+              'user_number' => $user_number,
+              'Role' => $role,
+            ];
+            header('Location:../../../Users Page/users.php');
+          }
         }
       }
     }
-  }
     // header('Location:../../registration.php');
     // $error['wrong_password'] = "Email or Password Wrong";
   }
-
-
-
-
-  
 }

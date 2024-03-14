@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="userPage.css" />
+    <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
     <!-- Icons Liberary -->
     <script
@@ -413,7 +413,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -455,7 +455,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -497,7 +497,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -539,7 +539,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -581,7 +581,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -624,7 +624,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -902,7 +902,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -931,7 +931,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -960,7 +960,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -989,7 +989,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -1044,7 +1044,7 @@
               </a>
             </li>
             <li>
-              <a href="profileUser.html">
+              <a href="profileLawyer.html">
                 <i class="fa-solid fa-user"></i>
                 <span>الحساب</span>
               </a>
@@ -1053,27 +1053,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(() => {
-        $("#search_lawyer").mousedown(() => {
-          $(".result_search").removeClass("d-none");
-        });
-
-        $("#search_lawyer").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-
-          $("#result_search a").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-          });
-        });
-
-        $("#search_lawyer").blur(() => {
-          setTimeout(() => {
-            $(".result_search").addClass("d-none");
-          }, 200);
-        });
-      });
-    </script>
+    <script src="./Scripts/userPage.js"></script>
   </body>
 </html>
