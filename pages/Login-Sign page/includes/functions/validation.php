@@ -6,62 +6,72 @@ session_start();
 
 $error = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  echo $email = $_POST['email_login'];
-  echo $password = $_POST['password_login'];
-  echo "<br>";
-  $data = checkedLogin('email', 'users', $email);
+   $email = $_POST['email_login'];
+   $password = $_POST['password_login'];
+   "<br>";
+  $data = checkedLogin('*', 'users', $email,'email');
+  echo $data['Role'];
   if ($data) {
-    if ($data['Role'] == 'مواطن') {
-      if ($data['email'] != $email) {
-        $error['email_wrong'] = "Email or Password Wrong";
-      } else {
+   
+    if ($data['Role'] == 'user') {
+            // Validate Email and Password With User
+            if ($data['email'] != $email) {
+              $error['email_wrong'] = "Email or Password Wrong";
+              
+            }elseif($data['password'] != md5($password)){
+              $error['password_wrong'] = "Email or Password Wrong";
+              
+            }
+            // Validate Email and Password With User
+                // Start Session With User
 
-        if ($data['password'] != md5($password)) {
-          header('Location:../registration.php');
-          $error['wrong_password'] = "Email or Password Wrong";
-        } else {
-          $_SESSION['user'] = [
-            'userName' => $firstName,
-            'lastName' => $lastName,
-            'email' => $email,
-            'idintityUser' => $idintityUser,
-            'user_number' => $user_number,
-            'Role' => $role,
-          ];
-          header('Location:../../../Users Page/users.php');
-        }
-      }
-    }
-  } else {
+      $_SESSION['user'] = [
+        'userName' => $data['userName'],
+        'lastName' => $data['lastName'],
+        'email' => $data['email'],
+        'idintityUser' => $data['idintity'],
+        'user_number' => $data['phoneNumber'],
+        'Role' => $data['Role'],
+      ];
+                
+                   header('Location:../../../Users Page/users.php');
+                  // Start Session With User
+              
+            }
+    if ($data['Role'] == 'lawyer') {
+
+            // Validate Email and Password With User
+            if ($data['email'] != $email) {
+              $error['email_wrong'] = "Email or Password Wrong";
+              
+            }elseif($data['password'] != md5($password)){
+              $error['password_wrong'] = "Email or Password Wrong";
+              
+            }
+            // Validate Email and Password With User
+                // Start Session With User              
+                  $_SESSION['lawyer'] = [
+                    'userName' => $data['userName'],
+                    'lastName' => $data['lastName'],
+                    'email' => $data['email'],
+                    'idintityUser' => $data['idintity'],
+                    'user_number' => $data['phoneNumber'],
+                    'Role' => $data['Role'],
+                    'type' => $data['type'],
+                  ];
+
+                   header('Location:../../../Lawyers Page/lawyers.php');
+      $dataJson = json_encode(['dataJson'=>$data]);
+                     return $dataJson;
+                  // Start Session With User
+              
+            }
+  } 
 
 
-    // Check Login Layer We Should Send Sesson with data Thanks Hamada <3 ;
-    $dataLawyer = checkedLogin('email', 'lawyer', $email);
 
-    if ($dataLawyer) {
-      if ($dataLawyer['Role'] == 'مواطن') {
-        if ($dataLawyer['email'] != $email) {
-          $error['email_wrong'] = "Email or Password Wrong";
-        } else {
-
-          if ($dataLawyer['password'] != md5($password)) {
-            header('Location:../registration.php');
-            $error['wrong_password'] = "Email or Password Wrong";
-          } else {
-            $_SESSION['user'] = [
-              'userName' => $firstName,
-              'lastName' => $lastName,
-              'email' => $email,
-              'idintityUser' => $idintityUser,
-              'user_number' => $user_number,
-              'Role' => $role,
-            ];
-            header('Location:../../../Users Page/users.php');
-          }
-        }
-      }
-    }
-    // header('Location:../../registration.php');
-    // $error['wrong_password'] = "Email or Password Wrong";
-  }
+    
+  
 }
+
+// ziadm57@yahoo.com
