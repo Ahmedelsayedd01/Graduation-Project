@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./Style Pages/requstPage.css" />
+    <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
     <!-- Icons Liberary -->
     <script
@@ -1021,19 +1021,20 @@
       <div class="menu-bottom">
         <div class="menu-bottom-wrapper">
           <ul>
-            <li>
+            <li class="active-tap">
               <a href="userPage.html">
                 <i class="fa-solid fa-house"></i>
                 <span>الرئيسية</span>
               </a>
             </li>
-            <li class="active-tap">
+            <li class="request-tap">
               <a href="requstPage.html">
                 <i
                   style="transform: rotate(90deg)"
                   class="fa-solid fa-arrow-right-arrow-left"
                 ></i>
                 <span>الطلبات</span>
+                <span class="count-request">10</span>
               </a>
             </li>
             <li>
@@ -1043,7 +1044,7 @@
               </a>
             </li>
             <li>
-              <a href="profileUser.html">
+              <a href="profileLawyer.html">
                 <i class="fa-solid fa-user"></i>
                 <span>الحساب</span>
               </a>
@@ -1053,26 +1054,5 @@
       </div>
     </div>
     <script src="./Scripts/userPage.js"></script>
-    <!-- <script>
-      $(document).ready(() => {
-        $("#search_lawyer").mousedown(() => {
-          $(".result_search").removeClass("d-none");
-        });
-
-        $("#search_lawyer").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-
-          $("#result_search a").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-          });
-        });
-
-        $("#search_lawyer").blur(() => {
-          setTimeout(() => {
-            $(".result_search").addClass("d-none");
-          }, 200);
-        });
-      });
-    </script> -->
   </body>
 </html>
