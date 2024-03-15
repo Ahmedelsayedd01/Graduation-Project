@@ -60,8 +60,8 @@
                 VALUES
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
                 $dataInsert->execute();
+      echo $con->lastInsertId();
                 $_SESSION['lawyer'] = [
-                'userName'=>$firstName,
                 'userName'=>$firstName,
                 'lastName'=>$lastName,
                 'email'=>$email,
