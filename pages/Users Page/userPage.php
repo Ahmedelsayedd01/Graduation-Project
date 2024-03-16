@@ -1,10 +1,11 @@
 <?php
 
 session_start();
-// print_r( $_SESSION['user']);
+print_r( $_SESSION['user']);
+
+
 if(!isset($_SESSION['user'])){
     header("Location:../Login-Sign page/registration.php");
-
 }
 ?>
 
@@ -15,7 +16,7 @@ if(!isset($_SESSION['user'])){
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="userPage.css" />
+  <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>

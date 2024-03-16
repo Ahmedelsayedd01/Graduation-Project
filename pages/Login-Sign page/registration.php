@@ -24,7 +24,9 @@
                $dataInsert=$con->prepare("INSERT INTO `users`( `userName`, `lastName`, `email`, `phoneNumber`, `idintity`, `password`, `Role`) 
                VALUES ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role')");
                $dataInsert->execute();
+      $user_id =$con->lastInsertId();
                  $_SESSION['user'] = [
+                  'id'=>$user_id,
                    'userName'=>$firstName,
                    'lastName'=>$lastName,
                    'email'=>$email,
@@ -60,8 +62,13 @@
                 VALUES
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
                 $dataInsert->execute();
-      echo $con->lastInsertId();
+               
+       $user_id =$con->lastInsertId($dataInsert);
+      echo ' <script>
+        alert($user_id);
+      </script>';
                 $_SESSION['lawyer'] = [
+                'user_id'=>$id,
                 'userName'=>$firstName,
                 'lastName'=>$lastName,
                 'email'=>$email,
