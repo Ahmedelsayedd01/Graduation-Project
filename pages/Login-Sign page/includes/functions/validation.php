@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    $password = $_POST['password_login'];
    "<br>";
   $data = checkedLogin('*', 'users', $email,'email');
-  echo $data['Role'];
+  $data['Role'];
   if ($data) {
    
     if ($data['Role'] == 'user') {
