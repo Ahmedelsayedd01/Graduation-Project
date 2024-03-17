@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-print_r( $_SESSION['user']);
+// print_r( $_SESSION['user']);
 
 
-if(!isset($_SESSION['user'])){
-    header("Location:../Login-Sign page/registration.php");
+if (!isset($_SESSION['user'])) {
+  header("Location:../Login-Sign page/registration.php");
 }
 ?>
 
@@ -936,7 +936,7 @@ if(!isset($_SESSION['user'])){
       type: "GET",
       // data: data,
       success: function(data) {
-        console.log("data", data[0]);
+        console.log("data", data.posts);
         console.log("GET", data);
       }
     })

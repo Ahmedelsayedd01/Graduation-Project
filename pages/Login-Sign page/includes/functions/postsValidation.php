@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           'houerCase' => $timeCase,
           'status' => '0',
      ];
-     print_r($dataInsert);
+     // print_r($dataInsert);
      $checkData = checkedData('numberCase', 'posts', $numberCase);
      if ($checkData > 0) {
           $successMesg = 'The Number Case Is Exists';
