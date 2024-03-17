@@ -1008,7 +1008,7 @@ if (!isset($_SESSION['user'])) {
         });
 
 
-        console.log(data)
+        // console.log(data)
 
 
       });
