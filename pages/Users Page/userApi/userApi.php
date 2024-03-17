@@ -9,10 +9,10 @@ if(isset($_SESSION['user'])){
       'userData' => $_SESSION['user'],  // This Daata Where user Login
       'posts'=>$posts,                 // This is Data Posts From User
     ],
-    ); // Data Send Successflly 
+    200); // Data Send Successflly 
 
   
-  echo $user ;
+  echo $user;
 
 }
 if(!isset($_SESSION['user'])){
