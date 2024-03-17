@@ -1,4 +1,3 @@
-<!--  This DataBase Connection -->
 <?php
 $dsn = 'mysql:host=localhost;dbname=layerCase';
 $user = 'root';

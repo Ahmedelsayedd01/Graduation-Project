@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="userPage.css" />
+    <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
     <!-- Icons Liberary -->
     <script
@@ -299,12 +299,12 @@
                           />
                         </div>
                         <div class="date-case-hm">
-                          <label for="date-case">الساعة:</label>
+                          <label for="hour-case">الساعة:</label>
                           <input
                             type="time"
                             class="sel-date-case"
                             name="date-case"
-                            id="date-case"
+                            id="hour-case"
                             required
                           />
                         </div>
@@ -413,7 +413,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -455,7 +455,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -497,7 +497,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -539,7 +539,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -581,7 +581,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -624,7 +624,7 @@
                   <div class="header-request">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -902,7 +902,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -931,7 +931,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -960,7 +960,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -989,7 +989,7 @@
                   <div class="header-bestLawyer">
                     <!-- Photo lawyer Request -->
                     <div class="profile">
-                      <a href="profileUser.html">
+                      <a href="profileLawyer.html">
                         <img src="asstesUser/lawyer3.jpg" alt="lawyer"
                       /></a>
                     </div>
@@ -1044,7 +1044,7 @@
               </a>
             </li>
             <li>
-              <a href="profileUser.html">
+              <a href="profileLawyer.html">
                 <i class="fa-solid fa-user"></i>
                 <span>الحساب</span>
               </a>
@@ -1053,27 +1053,33 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(() => {
-        $("#search_lawyer").mousedown(() => {
-          $(".result_search").removeClass("d-none");
-        });
-
-        $("#search_lawyer").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-
-          $("#result_search a").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-          });
-        });
-
-        $("#search_lawyer").blur(() => {
-          setTimeout(() => {
-            $(".result_search").addClass("d-none");
-          }, 200);
-        });
-      });
-    </script>
+    <script src="./Scripts/userPage.js"></script>
   </body>
 </html>
+
+<script>
+  $(document).ready(() => {
+    $(".btn-add-case").click(() => {
+      var type_case = $("#type-case").val();
+      var num_case = $("#num-case").val();
+      var location_case = $("#location-case").val();
+      var date_case = $("#date-case").val();
+      var hour_case = $("#hour-case").val();
+      var description_case = $("#description-case").val();
+      var fill_case = $("#fill-case").val();
+      var image_case = $("#image-case").val();
+
+      var data = {
+        case_Type: type_case,
+        case_Num: JSON.parse(num_case),
+        case_Location: location_case,
+        case_Date: (date_case),
+        case_Hour: hour_case,
+        description_case: description_case,
+        fill_case: fill_case,
+        image_case: image_case,
+      };
+      console.log("data", data);
+    });
+  });
+</script>

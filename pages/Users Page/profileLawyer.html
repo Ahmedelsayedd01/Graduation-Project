@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="userPage.css" />
+    <link rel="stylesheet" href="./Style Pages/profileLawyer.css" />
 
     <!-- Icons Liberary -->
     <script
@@ -56,11 +56,81 @@
           </div>
           <!-- center section (search bar about lawyer) -->
           <div class="search-bar">
-            <input type="search" placeholder="بحث عن محامى" />
+            <input
+              type="search"
+              id="search_lawyer"
+              placeholder="بحث عن محامى"
+            />
             <button type="button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <div class="result_search">
+
+            <div class="result_search d-none" id="result_search">
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>احمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد احمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>ذياد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العامة </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
+              <a href="profileLawyer.html">
+                <div class="res_lawyer">
+                  <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
+                  <div class="detail">
+                    <span>محمد محمد</span>
+                    <span>القضاية العسكرية </span>
+                  </div>
+                </div>
+              </a>
               <a href="profileLawyer.html">
                 <div class="res_lawyer">
                   <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
@@ -129,32 +199,190 @@
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                      Modal title
-                    </h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">...</div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
-                  </div>
+                  <form action="post">
+                    <!-- Header modal -->
+                    <div class="modal-header">
+                      <span class="modal-title-case" id="exampleModalLongTitle">
+                        قضيتى
+                      </span>
+                      <button
+                        type="button"
+                        class="close close-header"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- Content Modal -->
+                    <div class="content-case">
+                      <!-- Type Case -->
+                      <div class="type-case">
+                        <label for="type-case">نوع القضية:</label>
+                        <select
+                          class="sel-type-case"
+                          name="type-case"
+                          id="type-case"
+                          required
+                        >
+                          <option value="0" selected>اختر نوع القضية</option>
+                          <option value="جنائى">جنائى</option>
+                          <option value="مدنى">مدنى</option>
+                          <option value="مجلس الدولة">مجلس الدولة</option>
+                          <option value="عمال">عمال</option>
+                          <option value="اسرة">اسرة</option>
+                          <option value="تجاري و شركات">تجاري و شركات</option>
+                          <option value="جرائم ألكترونية">
+                            جرائم ألكترونية
+                          </option>
+                          <option value="قضاء عسكري">قضاء عسكري</option>
+                        </select>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                          margin: 0.7rem 0;
+                        "
+                      />
+                      <!-- Number Case -->
+                      <div class="num-case">
+                        <label for="num-case">رقم القضية:</label>
+                        <input
+                          type="number"
+                          class="sel-num-case"
+                          name="num-case"
+                          id="num-case"
+                          placeholder="ادخل رقم القضية"
+                          required
+                        />
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                          margin: 0.7rem 0;
+                        "
+                      />
+                      <!-- Location Case -->
+                      <div class="location-case">
+                        <label for="location-case">مكان القضية:</label>
+                        <select
+                          class="sel-location-case"
+                          name="location-case"
+                          style="width: 78% !important"
+                          id="location-case"
+                          required
+                        >
+                          <option value="0" selected>اختر مكان القضية</option>
+                          <option value="الاسكندرية">الاسكندرية</option>
+                          <option value="القاهرة">القاهرة</option>
+                        </select>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                          margin: 0.7rem 0;
+                        "
+                      />
+                      <!-- Date Case -->
+                      <div class="date-case">
+                        <div class="date-case-dmy">
+                          <label for="date-case">ميعاد القضية:</label>
+                          <input
+                            type="date"
+                            class="sel-date-case"
+                            name="date-case"
+                            id="date-case"
+                            required
+                          />
+                        </div>
+                        <div class="date-case-hm">
+                          <label for="date-case">الساعة:</label>
+                          <input
+                            type="time"
+                            class="sel-date-case"
+                            name="date-case"
+                            id="date-case"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                          margin: 0.7rem 0;
+                        "
+                      />
+
+                      <!-- Description Case -->
+                      <div
+                        class="description-case"
+                        style="
+                          flex-direction: column !important;
+                          row-gap: 10px !important;
+                        "
+                      >
+                        <label for="description-case">الموضوع</label>
+                        <textarea
+                          name="description-case"
+                          id="description-case"
+                          class="description-case"
+                          cols="15"
+                          rows="4"
+                        ></textarea>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px solid #d5d5d5 !important;
+                          width: 100%;
+                          margin: 0.7rem 0;
+                        "
+                      />
+                      <!-- Fill Case -->
+                      <div class="fill-case">
+                        <label for="fill-case">ارفاق ملف للقضية:</label>
+                        <input
+                          type="file"
+                          class="sel-fill-case"
+                          style="width: 70% !important; direction: ltr"
+                          name="fill-case"
+                          id="fill-case"
+                          accept="application/pdf, application/vnd.ms-excel"
+                          required
+                        />
+                      </div>
+                      <!-- <hr
+                      style="border: 1px solid #d5d5d5 !important; width: 100%"
+                    /> -->
+                      <!-- Image Case -->
+                      <div class="image-case mt-3">
+                        <label for="image-case">ارفاق صور للقضية:</label>
+                        <input
+                          type="file"
+                          class="sel-image-case"
+                          style="width: 70% !important; direction: ltr"
+                          name="image-case"
+                          id="image-case"
+                          accept="image/gif, image/jpeg"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="add-modal-footer">
+                      <button type="submit" class="btn-add-case">نشر</button>
+                      <button
+                        type="button"
+                        class="btn-remove-case"
+                        data-dismiss="modal"
+                      >
+                        الغاء
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -173,19 +401,20 @@
       <div class="menu-bottom">
         <div class="menu-bottom-wrapper">
           <ul>
-            <li class="active-tap">
+            <li>
               <a href="userPage.html">
                 <i class="fa-solid fa-house"></i>
                 <span>الرئيسية</span>
               </a>
             </li>
-            <li>
+            <li class="request-tap">
               <a href="requstPage.html">
                 <i
                   style="transform: rotate(90deg)"
                   class="fa-solid fa-arrow-right-arrow-left"
                 ></i>
                 <span>الطلبات</span>
+                <span class="count-request">10</span>
               </a>
             </li>
             <li>
@@ -195,7 +424,7 @@
               </a>
             </li>
             <li>
-              <a href="profileUser.html">
+              <a href="profileLawyer.html">
                 <i class="fa-solid fa-user"></i>
                 <span>الحساب</span>
               </a>
@@ -204,7 +433,6 @@
         </div>
       </div>
     </div>
-
-    <script src="userPage.js"></script>
+    <script src="./Scripts/userPage.js"></script>
   </body>
 </html>
