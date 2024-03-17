@@ -2,9 +2,8 @@
 
 session_start();
 // print_r( $_SESSION['user']);
-if(!isset($_SESSION['user'])){
-    header("Location:../Login-Sign page/registration.php");
-
+if (!isset($_SESSION['user'])) {
+  header("Location:../Login-Sign page/registration.php");
 }
 ?>
 
@@ -15,26 +14,20 @@ if(!isset($_SESSION['user'])){
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="userPage.css" />
+  <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Liberary -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <!-- Jquery Liberary -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>User Page</title>
 </head>
@@ -179,12 +172,11 @@ if(!isset($_SESSION['user'])){
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post"
-                  enctype="multipart/form-data">
+                <!-- <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data"> -->
+                <form action="" method="" enctype="multipart/form-data">
                   <!-- Header modal -->
                   <div class="modal-header">
                     <span class="modal-title-case" id="exampleModalLongTitle">
@@ -221,8 +213,7 @@ if(!isset($_SESSION['user'])){
                     <!-- Number Case -->
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="num-case" id="num-case"
-                        placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="num-case" id="num-case" placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -232,8 +223,7 @@ if(!isset($_SESSION['user'])){
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="location-case" style="width: 78% !important"
-                        id="location-case" required>
+                      <select class="sel-location-case" name="location-case" style="width: 78% !important" id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -252,7 +242,7 @@ if(!isset($_SESSION['user'])){
                       </div>
                       <div class="date-case-mh">
                         <label for="date-case">الساعة:</label>
-                        <input type="time" class="sel-date-case" name="date-case-time" id="date-case" required />
+                        <input type="time" class="sel-date-case" name="date-case-time" id="hour-case" required />
                       </div>
                     </div>
                     <hr style="
@@ -267,8 +257,7 @@ if(!isset($_SESSION['user'])){
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="description-case" id="description-case" class="description-case" cols="15"
-                        rows="4"></textarea>
+                      <textarea name="description-case" id="description-case" class="description-case" cols="15" rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -278,8 +267,7 @@ if(!isset($_SESSION['user'])){
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
-                        name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -287,8 +275,7 @@ if(!isset($_SESSION['user'])){
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
-                        name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -922,45 +909,74 @@ if(!isset($_SESSION['user'])){
     </div>
   </div>
 
-  <script>
-    $(document).ready(() => {
-      $("#search_lawyer").mousedown(() => {
-        $(".result_search").removeClass("d-none");
-      });
 
-      $("#search_lawyer").on("keyup", function () {
-        var value = $(this).val().toLowerCase();
-
-        $("#result_search a").filter(function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        });
-      });
-
-      $("#search_lawyer").blur(() => {
-        setTimeout(() => {
-          $(".result_search").addClass("d-none");
-        }, 200);
-      });
-    });
-  </script>
-
+  <script src="../Users Page/Scripts/userPage.js"></script>
   <!--  Test Data Api User If User Login  -->
   <script>
-    let myRequest = new XMLHttpRequest();
-    myRequest.onreadystatechange = function () {
-      if (this.readyState === 4 && this.status === 200) {
-        // console.log(this.responseText);
-        // console.log(this.readyState);
-        // console.log(this.status);
-        // let data = JSON.parse(this.responseText);
-        //console.log(data);
-        div = document.getElementById('data');
-        console.log(this.responseText);
+    // let myRequest = new XMLHttpRequest();
+    // myRequest.onreadystatechange = function() {
+    //   if (this.readyState === 4 && this.status === 200) {
+    // console.log(this.responseText);
+    // console.log(this.readyState);
+    // console.log(this.status);
+    // let data = JSON.parse(this.responseText);
+    //console.log(data);
+    // div = document.getElementById('data');
+    //     console.log(this.responseText);
 
+    //   }
+    // };
+    // myRequest.open('Get', 'userApi/userApi.php', 'true');
+    // myRequest.send();
+
+    $.ajax({
+      url: 'userApi/userApi.php',
+      type: "GET",
+      // data: data,
+      success: function(data) {
+        console.log("data", data[0]);
+        console.log("GET", data);
       }
-    };
-    myRequest.open('Get', 'userApi/userApi.php', 'true');
-    myRequest.send();
+    })
+
+
+
+    $(".btn-add-case").click(() => {
+      var type_case = $("#type-case").val();
+      var num_case = $("#num-case").val();
+      var location_case = $("#location-case").val();
+      var date_case = $("#date-case").val();
+      var hour_case = $("#hour-case").val();
+      var description_case = $("#description-case").val();
+      var fill_case = $("#fill-case").val();
+      var image_case = $("#image-case").val();
+
+      var data = {
+        case_Type: type_case,
+        case_Num: JSON.parse(num_case),
+        case_Location: location_case,
+        case_Date: (date_case),
+        case_Hour: hour_case,
+        description_case: description_case,
+        fill_case: fill_case,
+        image_case: image_case,
+      };
+
+      $.ajax({
+        url: 'userApi/userApi.php',
+        type: "POST",
+        data: data,
+        success: function(data) {
+          console.log("data", data);
+          console.log("POST", data);
+        }
+      })
+
+
+      // console.log(data)
+
+
+    });
   </script>
 </body>
 
