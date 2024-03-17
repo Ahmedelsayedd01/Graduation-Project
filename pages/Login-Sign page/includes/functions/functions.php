@@ -62,7 +62,7 @@ function selectData($select, $from, $check, $value)
     $statement = $con->prepare("SELECT $select FROM $from WHERE $check =?");
     $statement->execute(array($value));
     $data = $statement->fetchAll();
-    return $data;
+    return  $data;
 }
 
 
