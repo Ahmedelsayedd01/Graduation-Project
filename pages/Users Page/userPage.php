@@ -2,7 +2,7 @@
 
 session_start();
 // print_r( $_SESSION['user']);
- $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+$_SESSION['token'] = md5(uniqid(mt_rand(), true));
 
 if (!isset($_SESSION['user'])) {
   header("Location:../Login-Sign page/registration.php");
@@ -200,7 +200,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Type Case -->
                     <div class="type-case">
                       <label for="type-case">نوع القضية:</label>
-                      <select class="sel-type-case" name="type-case" id="type-case" required>
+                      <select class="sel-type-case" name="case_Type" id="type-case" required>
                         <option value="0" selected>اختر نوع القضية</option>
                         <option value="جنائى">جنائى</option>
                         <option value="مدنى">مدنى</option>
@@ -220,11 +220,10 @@ if (!isset($_SESSION['user'])) {
                           margin: 0.7rem 0;
                         " />
                     <!-- Number Case -->
-                    <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
+                    <input type="hidden" id="user_token" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="num-case" id="num-case"
-                        placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="case_Num" id="num-case" placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -234,8 +233,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="location-case" style="width: 78% !important"
-                        id="location-case" required>
+                      <select class="sel-location-case" name="case_Location" style="width: 78% !important" id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -250,11 +248,11 @@ if (!isset($_SESSION['user'])) {
                     <div class="date-case">
                       <div class="date-case-ymd">
                         <label for="date-case">ميعاد القضية:</label>
-                        <input type="date" class="sel-date-case" name="date-case" id="date-case" required />
+                        <input type="date" class="sel-date-case" name="case_Date" id="date-case" required />
                       </div>
                       <div class="date-case-mh">
                         <label for="date-case">الساعة:</label>
-                        <input type="time" class="sel-date-case" name="date-case-time" id="hour-case" required />
+                        <input type="time" class="sel-date-case" name="case_Hour" id="hour-case" required />
                       </div>
                     </div>
                     <hr style="
@@ -269,8 +267,7 @@ if (!isset($_SESSION['user'])) {
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="description-case" id="description-case" class="description-case" cols="15"
-                        rows="4"></textarea>
+                      <textarea name="case_Description" id="description-case" class="description-case" cols="15" rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -280,8 +277,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
-                        name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -289,8 +285,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
-                        name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -928,94 +923,103 @@ if (!isset($_SESSION['user'])) {
   <script src="../Users Page/Scripts/userPage.js"></script>
   <!--  Test Data Api User If User Login  -->
   <script>
-    // let myRequest = new XMLHttpRequest();
-    // myRequest.onreadystatechange = function() {
-    //   if (this.readyState === 4 && this.status === 200) {
-    // console.log(this.responseText);
-    // console.log(this.readyState);
-    // console.log(this.status);
-    // let data = JSON.parse(this.responseText);
-    //console.log(data);
-    // div = document.getElementById('data');
-    //     console.log(this.responseText);
+    $(document).ready(function() {
 
-    //   }
-    // };
-    // myRequest.open('Get', 'userApi/userApi.php', 'true');
-    // myRequest.send();
+      // let myRequest = new XMLHttpRequest();
+      // myRequest.onreadystatechange = function() {
+      //   if (this.readyState === 4 && this.status === 200) {
+      // console.log(this.responseText);
+      // console.log(this.readyState);
+      // console.log(this.status);
+      // let data = JSON.parse(this.responseText);
+      //console.log(data);
+      // div = document.getElementById('data');
+      //     console.log(this.responseText);
 
-    $.getJSON({
-      url: 'userApi/userApi.php', //get All thing Postes and data year 
-      type: "GET",
-      // data: data,
-      success: function (data) {
-        console.log("data", data.posts);
-        console.log("data", data.userData);
-        console.log("GET", data);
-      }
-    })
-
-
-
-    $(".btn-add-case").click(() => {
-      var type_case = $("#type-case").val();
-      var num_case = $("#num-case").val();
-      var location_case = $("#location-case").val();
-      var date_case = $("#date-case").val();
-      var hour_case = $("#hour-case").val();
-      var description_case = $("#description-case").val();
-      var fill_case = $("#fill-case").val();
-      var image_case = $("#image-case").val();
-
-      var data_obj = {
-        case_Type: type_case,
-        case_Num: JSON.parse(num_case),
-        case_Location: location_case,
-        case_Date: (date_case),
-        case_Hour: hour_case,
-        description_case: description_case,
-        fill_case: fill_case,
-        image_case: image_case,
-      };
-
-      // $.ajax({
-      //   // headers: {"Authorization": localStorage.getItem('token')},
-      //   url: '../Login-Sign page/includes/functions/postsValidation.php',
-      //   type: "POST",
-      //   data: JSON.stringify(data_obj),
-      //   contentType: "application/json; charset=utf-8",
-      //   crossDomain: true,
-      //   dataType: "json",
-      //   success: function(data) {
-      //     console.log(data);
-      //     alert("gooood")
       //   }
-      // })
-      $.ajax({
-        type: "POST",
-        url: '../Login-Sign page/includes/functions/postsValidation.php',
-        data: JSON.stringify(data_obj), // now data come in this function
-        // contentType: "application/json; charset=utf-8",
-        // crossDomain: true,
-        dataType: "json",
-        success: function (data, status, jqXHR) {
+      // };
+      // myRequest.open('Get', 'userApi/userApi.php', 'true');
+      // myRequest.send();
 
-          alert("success"); // write success in " "
-        },
-
-        error: function (jqXHR, status) {
-          // error handler
-          console.log(jqXHR);
-          alert('fail' + status);
-          alert('fail' + status.code);
+      $.getJSON({
+        url: 'userApi/userApi.php', //get All thing Postes and data year 
+        type: "GET",
+        // data: data,
+        success: function(data) {
+          console.log("data", data.posts);
+          console.log("data", data.userData);
+          // console.log("GET", data);
         }
+      })
+
+
+
+      $(".btn-add-case").click(() => {
+        var token_post = $("#user_token").val();
+        var type_case = $("#type-case").val();
+        var num_case = $("#num-case").val();
+        var location_case = $("#location-case").val();
+        var date_case = $("#date-case").val();
+        var hour_case = $("#hour-case").val();
+        var description_case = $("#description-case").val();
+        var fill_case = $("#fill-case").val();
+        var image_case = $("#image-case").val();
+
+        var data_obj = {
+          case_Token: token_post,
+          case_Type: type_case,
+          case_Num: JSON.parse(num_case),
+          case_Location: location_case,
+          case_Date: (date_case),
+          case_Hour: hour_case,
+          case_Description: description_case,
+          case_Fill: fill_case,
+          case_Image: image_case,
+        };
+        console.log(data_obj)
+
+        // $.ajax({
+        //   // headers: {"Authorization": localStorage.getItem('token')},
+        //   url: '../Login-Sign page/includes/functions/postsValidation.php',
+        //   type: "POST",
+        //   data: JSON.stringify(data_obj),
+        //   contentType: "application/json; charset=utf-8",
+        //   crossDomain: true,
+        //   dataType: "json",
+        //   success: function(data) {
+        //     console.log(data);
+        //     alert("gooood")
+        //   }
+        // })
+        $.ajaxSetup({
+          headers: {
+            'CSRF-TOKEN': $('user_token').val(),
+          }
+        });
+        $.ajax({
+          type: "POST",
+          url: '../Login-Sign page/includes/functions/postsValidation.php',
+          data: JSON.stringify(data_obj), // now data come in this function
+          // crossDomain: true,
+          dataType: "json",
+          success: function(data, status, jqXHR) {
+
+            alert("success"); // write success in " "
+          },
+
+          error: function(data, jqXHR, status) {
+            // error handler
+            alert("data", data);
+            alert('fail' + status.code);
+          }
+        });
+
+
+        console.log(data)
+
+
       });
-
-
-      // console.log(data)
-
-
-    });
+    })
   </script>
 </body>
 
