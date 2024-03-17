@@ -6,8 +6,8 @@ if(isset($_SESSION['user'])){
   $posts= selectData('*','posts','user_id',$user_id); //Select Data Where id = user_id
   $user = json_encode(
     [
-      'userData' => $_SESSION['user'],  // This Daata Where user Login
-      'posts'=>$posts,                 // This is Data Posts From User
+      ['userData' => $_SESSION['user']],  // This Daata Where user Login
+      ['posts'=>$posts],                 // This is Data Posts From User
     ],
     200); // Data Send Successflly 
 
