@@ -13,12 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      //          $error['numCase'] = '<h1>'. 'This Is Not Number'.'</h1>';
      //         redirectHome('This is Not Number Pls Try Again....','back', 5);
      //     }
-     $typeCase = stringCheck($_POST['type-case']);
-     $locationCase = stringCheck($_POST['location-case']);
-     $dateCase = stringCheck($_POST['date-case']);
-     $timeCase = stringCheck($_POST['date-case-time']);
-     $descriptionCase = stringCheck($_POST['description-case']);
-     $numberCase = stringCheck($_POST['num-case']);
+    echo  $typeCase = $_POST['token'];
+    echo $typeCase = stringCheck($_POST['type-case']);
+    echo $locationCase = stringCheck($_POST['location-case']);
+    echo $dateCase = stringCheck($_POST['date-case']);
+    echo $timeCase = stringCheck($_POST['date-case-time']);
+   echo $descriptionCase = stringCheck($_POST['description-case']);
+   echo $numberCase = stringCheck($_POST['num-case']);
 
      // Start Validate Image File 
      $file = $_FILES['image-case'];
@@ -110,9 +111,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           $successMesg = 'The Number Case Is Exists';
      } else {
           $insertNewPost = insertQuery('posts', $dataInsert);
-          if ($insertNewPost == true) {
-               $successMesg =  "<div class='alert alert-danger'>" . "Data Inserted Successfully" . '</div>';
-          }
+          // if ($insertNewPost == true) {
+          //      $successMesg =  "<div class='alert alert-danger'>" . "Data Inserted Successfully" . '</div>';
+          // }
      }
      redirectHome($successMesg, 'back');
 }

@@ -2,7 +2,7 @@
 
 session_start();
 // print_r( $_SESSION['user']);
-
+ $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 
 if (!isset($_SESSION['user'])) {
   header("Location:../Login-Sign page/registration.php");
@@ -213,6 +213,7 @@ if (!isset($_SESSION['user'])) {
                           margin: 0.7rem 0;
                         " />
                     <!-- Number Case -->
+                    <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
                       <input type="number" class="sel-num-case" name="num-case" id="num-case" placeholder="ادخل رقم القضية" required />
@@ -935,7 +936,7 @@ if (!isset($_SESSION['user'])) {
       url: 'userApi/userApi.php', //get All thing Postes and data year 
       type: "GET",
       // data: data,
-      success: function(data) {
+      success: function (data) {
         console.log("data", data.posts);
         console.log("data", data.userData);
         console.log("GET", data);
