@@ -22,20 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
       $dataInsert = $con->prepare("INSERT INTO `users`( `userName`, `lastName`, `email`, `phoneNumber`, `idintity`, `password`, `Role`) 
                VALUES ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role')");
-      $dataInsert->execute();
-      $_SESSION['user'] = [
-        'id' => $checkLawyer,
-        'userName' => $firstName,
-        'lastName' => $lastName,
-        'email' => $email,
-        'idintityUser' => $idintityUser,
-        'user_number' => $user_number,
-        'Role' => $role,
-        'type' => Null,
-      ];
-      header('Location:../Users Page/userPage.php');
-    }
-  }
+               $dataInsert->execute();
+      $user_id =$con->lastInsertId();
+                 $_SESSION['user'] = [
+                  'id'=>$user_id,
+                   'userName'=>$firstName,
+                   'lastName'=>$lastName,
+                   'email'=>$email,
+                   'idintityUser'=>$idintityUser,
+                   'user_number'=>$user_number,
+                   'Role'=>$role,
+                   'type'=>Null,
+               ];
+                   header('Location:../Users Page/userPage.php');
+         }
+        }
 
   // If The Register Is Lawyer
 
@@ -59,26 +60,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 `idintity`, `password`, `Role`,`type`)
                 VALUES
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
-      $dataInsert->execute();
-      $_SESSION['lawyer'] = [
-        'id' => $checkEmail['id'],
-        'userName' => $firstName,
-        'userName' => $firstName,
-        'lastName' => $lastName,
-        'email' => $email,
-        'idintityUser' => $idintityUser,
-        'user_number' => $user_number,
-        'Role' => $role,
-        'type' => $lawyer_categry,
-      ];
-      // Email :'lawyer@case.org'
-      // password: Makemesmile123
-      header('Location:../../pages/Lawyers Page/lawyers.php');
-    }
-  }
-}
+                $dataInsert->execute();
+               
+       $user_id =$con->lastInsertId($dataInsert);
+      echo ' <script>
+        alert($user_id);
+      </script>';
+                $_SESSION['lawyer'] = [
+                'user_id'=>$id,
+                'userName'=>$firstName,
+                'lastName'=>$lastName,
+                'email'=>$email,
+                'idintityUser'=>$idintityUser,
+                'user_number'=>$user_number,
+                'Role'=>$role,
+                'type'=>$lawyer_categry,
+                ];
+                // Email :'lawyer@case.org'
+                // password: Makemesmile123
+                   header('Location:../../pages/Lawyers Page/lawyers.php');
 
-?>
+           }
+                  }
+        
+
+      }
+  
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">

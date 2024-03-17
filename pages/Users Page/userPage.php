@@ -1,9 +1,11 @@
 <?php
 
 session_start();
-// print_r( $_SESSION['user']);
-if (!isset($_SESSION['user'])) {
-  header("Location:../Login-Sign page/registration.php");
+print_r( $_SESSION['user']);
+
+
+if(!isset($_SESSION['user'])){
+    header("Location:../Login-Sign page/registration.php");
 }
 ?>
 
