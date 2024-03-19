@@ -1020,7 +1020,11 @@ if (!isset($_SESSION['user'])) {
         });
 
 
+<<<<<<< HEAD
         // console.log(data_obj)
+=======
+        // console.log(data)
+>>>>>>> a2f3c32ef8891de41d945adc78b317fb31dee635
 
 
       });
