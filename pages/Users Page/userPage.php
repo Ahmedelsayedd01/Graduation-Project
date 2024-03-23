@@ -223,7 +223,8 @@ if (!isset($_SESSION['user'])) {
                     <input type="hidden" id="user_token" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="case_Num" id="num-case" placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="case_Num" id="num-case"
+                        placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -233,7 +234,8 @@ if (!isset($_SESSION['user'])) {
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="case_Location" style="width: 78% !important" id="location-case" required>
+                      <select class="sel-location-case" name="case_Location" style="width: 78% !important"
+                        id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -267,7 +269,8 @@ if (!isset($_SESSION['user'])) {
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="case_Description" id="description-case" class="description-case" cols="15" rows="4"></textarea>
+                      <textarea name="case_Description" id="description-case" class="description-case" cols="15"
+                        rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -277,7 +280,8 @@ if (!isset($_SESSION['user'])) {
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
+                        name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -285,7 +289,8 @@ if (!isset($_SESSION['user'])) {
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
+                        name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -923,7 +928,7 @@ if (!isset($_SESSION['user'])) {
   <script src="../Users Page/Scripts/userPage.js"></script>
   <!--  Test Data Api User If User Login  -->
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
       // let myRequest = new XMLHttpRequest();
       // myRequest.onreadystatechange = function() {
@@ -945,7 +950,7 @@ if (!isset($_SESSION['user'])) {
         url: 'userApi/userApi.php', //get All thing Postes and data year 
         type: "GET",
         // data: data,
-        success: function(data) {
+        success: function (data) {
           console.log("data", data.posts);
           console.log("data", data.userData);
           // console.log("GET", data);
@@ -962,7 +967,7 @@ if (!isset($_SESSION['user'])) {
         var date_case = $("#date-case").val();
         var hour_case = $("#hour-case").val();
         var description_case = $("#description-case").val();
-        var fill_case = $("#fill-case").val();
+        var fill_case = $("#fill-case");
         var image_case = $("#image-case").val();
 
         var data_obj = {
@@ -999,15 +1004,15 @@ if (!isset($_SESSION['user'])) {
         $.ajax({
           type: "POST",
           url: '../Login-Sign page/includes/functions/postsValidation.php',
-          data: JSON.stringify(data_obj), // now data come in this function
+          data: data_obj, // now data come in this function
           // crossDomain: true,
           dataType: "json",
-          success: function(data, status, jqXHR) {
+          success: function (data, status, jqXHR) {
 
             alert("success"); // write success in " "
           },
 
-          error: function(data, jqXHR, status) {
+          error: function (data, jqXHR, status) {
             // error handler
             alert("data", data);
             alert('fail' + status.code);
@@ -1015,7 +1020,11 @@ if (!isset($_SESSION['user'])) {
         });
 
 
+<<<<<<< HEAD
+        // console.log(data_obj)
+=======
         // console.log(data)
+>>>>>>> a2f3c32ef8891de41d945adc78b317fb31dee635
 
 
       });
