@@ -914,28 +914,12 @@ if (!isset($_SESSION['user'])) {
 
 
   <script src="../Users Page/Scripts/userPage.js"></script>
-  <!--  Test Data Api User If User Login  -->
-  <script>
+ 
+ <script>
     $(document).ready(function() {
 
-      // let myRequest = new XMLHttpRequest();
-      // myRequest.onreadystatechange = function() {
-      //   if (this.readyState === 4 && this.status === 200) {
-      // console.log(this.responseText);
-      // console.log(this.readyState);
-      // console.log(this.status);
-      // let data = JSON.parse(this.responseText);
-      //console.log(data);
-      // div = document.getElementById('data');
-      //     console.log(this.responseText);
-
-      //   }
-      // };
-      // myRequest.open('Get', 'userApi/userApi.php', 'true');
-      // myRequest.send();
-
       $.getJSON({
-        url: 'userApi/userApi.php', //get All thing Postes and data year 
+        url: 'userApi/userApi.php', 
         type: "GET",
         // data: data,
         success: function(data) {
@@ -971,22 +955,9 @@ if (!isset($_SESSION['user'])) {
         };
         console.log(data_obj)
 
-        // $.ajax({
-        //   // headers: {"Authorization": localStorage.getItem('token')},
-        //   url: '../Login-Sign page/includes/functions/postsValidation.php',
-        //   type: "POST",
-        //   data: JSON.stringify(data_obj),
-        //   contentType: "application/json; charset=utf-8",
-        //   crossDomain: true,
-        //   dataType: "json",
-        //   success: function(data) {
-        //     console.log(data);
-        //     alert("gooood")
-        //   }
-        // })
         $.ajaxSetup({
           headers: {
-            'CSRF-TOKEN': $('user_token').val(),
+            'CSRF-TOKEN': $('#user_token').val(),
           }
         });
         $.ajax({
@@ -999,12 +970,11 @@ if (!isset($_SESSION['user'])) {
           dataType: "json",
           success: function(data, status, jqXHR) {
 
-            alert("success"); // write success in " "
+            alert("success"); 
           },
 
           error: function(data, jqXHR, status) {
             // error handler
-            alert("data", data);
             alert('fail' + status.code);
           }
         });
