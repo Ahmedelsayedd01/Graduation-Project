@@ -42,7 +42,7 @@ if (!isset($_SESSION['user'])) {
       <div class="header-wrapper">
         <!-- right section (logo) -->
         <div class="logo">
-          <a href="userPage.html">
+          <a href="userPage.php">
             <img src="asstesUser/logo.svg" alt="lawyer Case" /></a>
         </div>
         <!-- center section (search bar about lawyer) -->
@@ -881,7 +881,7 @@ if (!isset($_SESSION['user'])) {
       <div class="menu-bottom-wrapper">
         <ul>
           <li class="active-tap">
-            <a href="userPage.html">
+            <a href="userPage.php">
               <i class="fa-solid fa-house"></i>
               <span>الرئيسية</span>
             </a>
