@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      //         redirectHome('This is Not Number Pls Try Again....','back', 5);
      //     
      echo $_REQUEST['case_Token'];
-  echo $typeCase = $_REQUEST['case_Token'];
+//   echo $typeCase = $_REQUEST['case_Token'];
   echo $typeCase = stringCheck($_REQUEST['case_Type']);
   echo $locationCase = stringCheck($_REQUEST['case_Location']);
   echo $dateCase = stringCheck($_REQUEST['case_Date']);
@@ -99,10 +99,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        'description' => $descriptionCase,
        'Date' => $dateCase,
        'numberCase' => $numberCase,
-       'fileCase' => $file_new_name,
-       'ImageCase' => $numberCase,
        'location' => $locationCase,
        'houerCase' => $timeCase,
+     //   'fileCase' => $file_new_name,
+     //   'ImageCase' => $numberCase,
        'status' => '0',
        ];
      // print_r($dataInsert);
