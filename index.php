@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lawyer Case</title>
-  <link rel="stylesheet" href="index-style.css" />
+  <link rel="stylesheet" href="./pages/home/index-style.css" />
+  <link rel="icon" href="./pages/home/asstes/logo.svg" />
   <!-- Icons Liberary -->
+  <title>Lawyer Case</title>
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,7 +20,7 @@
           <!-- Nav bar -->
           <nav class="nav-des">
             <div class="left-sid">
-              <img src="asstes/logo.svg" alt="lawyer case" />
+              <img src="./pages/home/asstes/logo.svg" alt="lawyer case" />
             </div>
             <div class="center-sid">
               <ul>
@@ -38,7 +39,7 @@
             </div>
             <div class="right-sid">
               <button>
-                <a href="../Login-Sign page/registration.php">Signup</a>
+                <a href="./pages/Login-Sign page/registration.php">Signup</a>
               </button>
             </div>
 
@@ -76,7 +77,7 @@
           <h1>هل لديك قضية و تواجه صعوبة فى اختيار المحامى ؟</h1>
           <span>ارفع قضيتك واختر محاميك الخاص الأن</span>
           <button>
-            <a href="../Login-Sign page/registration.php">سجل الأن</a>
+            <a href="./pages/home/Login-Sign page/registration.php">سجل الأن</a>
           </button>
           <div class="about-us" id="نبذة عنا"></div>
         </div>
@@ -90,9 +91,9 @@
           <div class="content-section">
             <div class="left">
               <p>
-                هدفنا الاساسى فى <a href="index.html">Lawyer Case</a> هو ايجاد
+                هدفنا الاساسى فى <a href="index.php">Lawyer Case</a> هو ايجاد
                 أفضل محامى لقضيتك فى خلال مدة زمنية قصيرة. و ايضا في
-                <a href="index.html">Lawyer Case</a> توجد الخبرة والتخصص حيث
+                <a href="index.php">Lawyer Case</a> توجد الخبرة والتخصص حيث
                 يوجد لدينا عدد كبير من المحامين ذوي المهارات العالية و
                 المتنوعة من الخبرات في مختلف مجالات الممارسة القانونية. سواء
                 كان الأمر يتعلق بقانون الشركات، أو التقاضي، أو قانون الأسرة،
@@ -103,7 +104,7 @@
             </div>
             <div class="right">
               <div class="about-img">
-                <img src="asstes/about.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/about.jpg" alt="Lawyer Case" />
               </div>
             </div>
           </div>
@@ -119,7 +120,7 @@
           <div class="content-section">
             <div class="card">
               <div class="top-card">
-                <img src="asstes/1.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/1.jpg" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون العائلة</h3>
@@ -133,14 +134,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%A3%D8%AD%D9%88%D8%A7%D9%84_%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%A3%D8%AD%D9%88%D8%A7%D9%84_%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/2.webp" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/2.webp" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون مجلس الدولة</h3>
@@ -153,14 +153,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A9_(%D9%85%D8%B5%D8%B1)#:~:text=%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B1%D9%82%D9%85%2047%20%D9%84%D8%B3%D9%86%D8%A9%201972,%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%87%D9%8A%D8%A6%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9."
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A9_(%D9%85%D8%B5%D8%B1)#:~:text=%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B1%D9%82%D9%85%2047%20%D9%84%D8%B3%D9%86%D8%A9%201972,%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%87%D9%8A%D8%A6%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9." target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/3.webp" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/3.webp" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون تجارى و شريكات</h3>
@@ -175,14 +174,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/4.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/4.jpg" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون العمال</h3>
@@ -196,14 +194,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%B9%D9%85%D9%84"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%B9%D9%85%D9%84" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/5.webp" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/5.webp" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون جنائى</h3>
@@ -218,14 +215,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%AC%D9%86%D8%A7%D8%A6%D9%8A"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%AC%D9%86%D8%A7%D8%A6%D9%8A" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/6.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/6.jpg" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون مدنى</h3>
@@ -241,14 +237,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D9%85%D8%AF%D9%86%D9%8A_(%D9%86%D8%B8%D8%A7%D9%85_%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A)"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D9%85%D8%AF%D9%86%D9%8A_(%D9%86%D8%B8%D8%A7%D9%85_%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A)" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/7.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/7.jpg" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون القضاية العسكرية</h3>
@@ -262,14 +257,13 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D9%87%D9%8A%D8%A6%D8%A9_%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D8%B9%D8%B3%D9%83%D8%B1%D9%8A_(%D9%85%D8%B5%D8%B1)"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D9%87%D9%8A%D8%A6%D8%A9_%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D8%B9%D8%B3%D9%83%D8%B1%D9%8A_(%D9%85%D8%B5%D8%B1)" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="asstes/8.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/8.jpg" alt="Lawyer Case" />
               </div>
               <div class="bottom-card">
                 <h3>قانون الجرائم الالكترونية</h3>
@@ -285,8 +279,7 @@
                   </p>
                 </div>
                 <button>
-                  <a href="https://ar.wikipedia.org/wiki/%D8%AC%D8%B1%D9%8A%D9%85%D8%A9_%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A%D8%A9"
-                    target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
+                  <a href="https://ar.wikipedia.org/wiki/%D8%AC%D8%B1%D9%8A%D9%85%D8%A9_%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A%D8%A9" target="_blank">More Details</a><i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -303,7 +296,7 @@
           <div class="content-section">
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -316,13 +309,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -335,13 +328,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -354,13 +347,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -373,13 +366,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -392,13 +385,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -411,13 +404,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -430,13 +423,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -449,13 +442,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -468,13 +461,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -487,13 +480,13 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
             <div class="card-lawyer">
               <div class="top-card">
-                <img src="asstes/lawyer3.jpg" alt="Lawyer Case" />
+                <img src="./pages/home/asstes/lawyer3.jpg" alt="Lawyer Case" />
               </div>
               <div class="content-card">
                 <h3>محمد احمد سعيد</h3>
@@ -506,7 +499,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="../Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -597,8 +590,7 @@
                 <a class="facebook" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
               </li>
               <li>
-                <a class="instagram" href="https://www.instagram.com" target="_blank"><i
-                    class="fa fa-instagram"></i></a>
+                <a class="instagram" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
               </li>
               <li>
                 <a class="twitter" href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -614,7 +606,7 @@
     </div>
   </div>
 
-  <script src="index-script.js"></script>
+  <script src="./pages/home/index-script.js"></script>
 </body>
 
 </html>
