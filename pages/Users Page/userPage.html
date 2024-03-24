@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
     <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
     <!-- Icons Liberary -->
@@ -1056,30 +1057,3 @@
     <script src="./Scripts/userPage.js"></script>
   </body>
 </html>
-
-<script>
-  $(document).ready(() => {
-    $(".btn-add-case").click(() => {
-      var type_case = $("#type-case").val();
-      var num_case = $("#num-case").val();
-      var location_case = $("#location-case").val();
-      var date_case = $("#date-case").val();
-      var hour_case = $("#hour-case").val();
-      var description_case = $("#description-case").val();
-      var fill_case = $("#fill-case").val();
-      var image_case = $("#image-case").val();
-
-      var data = {
-        case_Type: type_case,
-        case_Num: JSON.parse(num_case),
-        case_Location: location_case,
-        case_Date: (date_case),
-        case_Hour: hour_case,
-        description_case: description_case,
-        fill_case: fill_case,
-        image_case: image_case,
-      };
-      console.log("data", data);
-    });
-  });
-</script>

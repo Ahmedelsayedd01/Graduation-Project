@@ -16,6 +16,7 @@ if (!isset($_SESSION['user'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="icon" href="./asstesUser/logo.svg" />
   <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
   <!-- Icons Liberary -->
@@ -42,9 +43,6 @@ if (!isset($_SESSION['user'])) {
         <!-- right section (logo) -->
         <div class="logo">
           <a href="userPage.html">
-            <!-- Logout  -->
-            <a href="../../loguot.php">loguot</a>
-            <!-- Logout  -->
             <img src="asstesUser/logo.svg" alt="lawyer Case" /></a>
         </div>
         <!-- center section (search bar about lawyer) -->
@@ -913,13 +911,13 @@ if (!isset($_SESSION['user'])) {
   </div>
 
 
-  <script src="../Users Page/Scripts/userPage.js"></script>
- 
- <script>
+  <script src="./Scripts/userPage.js"></script>
+
+  <script>
     $(document).ready(function() {
 
       $.getJSON({
-        url: 'userApi/userApi.php', 
+        url: 'userApi/userApi.php',
         type: "GET",
         // data: data,
         success: function(data) {
@@ -947,7 +945,7 @@ if (!isset($_SESSION['user'])) {
           case_Type: type_case,
           case_Num: JSON.parse(num_case),
           case_Location: location_case,
-          case_Date: (date_case),
+          case_Date: date_case,
           case_Hour: hour_case,
           case_Description: description_case,
           case_Fill: fill_case,
@@ -970,7 +968,7 @@ if (!isset($_SESSION['user'])) {
           dataType: "json",
           success: function(data, status, jqXHR) {
 
-            alert("success"); 
+            alert("success");
           },
 
           error: function(data, jqXHR, status) {

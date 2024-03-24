@@ -384,6 +384,120 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 
 /* ////Header page */
 
+/* Content Page */
+main {
+       display: flex;
+       flex-direction: column;
+       row-gap: 15px;
+       align-items: center;
+}
+
+main .header_profile {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+main .header_profile>.profilelawyer_content {
+       position: relative;
+       padding: 15px 0;
+       width: 95%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       /* justify-content: flex-start; */
+       column-gap: 20px;
+       /* background-color: grey; */
+}
+
+main .header_profile>.profilelawyer_content .profile a>img {
+       width: 150px;
+       height: 150px;
+       object-fit: cover;
+       object-position: center;
+       cursor: pointer;
+       border-radius: 50%;
+       border: none !important;
+       padding: 0;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       row-gap: 15px;
+       margin-bottom: 80px;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
+       width: 100%;
+       font-size: 1.5rem;
+       font-family: var(--main-font);
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate>strong {
+       color: var(--main-clr);
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       column-gap: 5px;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc {
+       display: flex;
+       width: 100%;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong {
+       width: 30%;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc p {
+       width: 100%;
+       text-align: right;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
+       display: flex;
+       width: 100%;
+       /* flex-direction: column; */
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 5px;
+}
+
+.stars>i {
+       color: rgb(255, 221, 0);
+       font-size: 1.2rem;
+       margin-bottom: 5px;
+}
+
+
+
+/* ////Content page */
+
 /* Bottom Bar */
 .containerr .menu-bottom {
        position: fixed;
@@ -473,17 +587,9 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 
 /* ////Bottom Bar */
 
-@media (max-width:767px) {
-       body {
-              background-color: yellow;
-       }
-}
+@media (max-width:767px) {}
 
 @media (min-width:990px) {
-       body {
-              background-color: red;
-       }
-
        .search-bar {
               width: 50%;
               display: flex;
@@ -498,15 +604,68 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
               width: 75px;
        }
 
+       main .header_profile {
+              height: 88vh;
+              overflow: hidden;
+       }
+
+       main .header_profile>.profilelawyer_content {
+              flex-direction: row;
+              align-items: flex-start;
+              justify-content: flex-start;
+              column-gap: 50px;
+              background: #fff;
+              padding: 15px;
+              border-radius: 20px;
+       }
+
+       main .header_profile>.profilelawyer_content .profile a>img {
+              width: 200px;
+              height: 200px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info {
+              align-items: center;
+              justify-content: flex-start;
+              margin-bottom: 0px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
+              width: 100%;
+              font-size: 1.6rem;
+              font-family: var(--main-font);
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory {
+              justify-content: flex-start;
+              column-gap: 5px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc {
+              flex-direction: row;
+              justify-content: flex-start;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong {
+              width: 12%;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc p {
+              width: 80%;
+       }
+
+
        .menu-bottom {
               display: none;
        }
 
 }
 
-@media (min-width:1400px) {
-       body {
-              background-color: orange;
-       }
-
-}
+@media (min-width:1400px) {}
