@@ -6,7 +6,7 @@ session_start();
 
 //  ['type-case'];
 
-$data = json_decode($_REQUEST['data']);
+     // $data = json_decode($_REQUEST['data']);
 // print_r( $data);
 print_r($_REQUEST);
 // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -15,14 +15,14 @@ print_r($_REQUEST);
 //      //          $error['numCase'] = '<h1>'. 'This Is Not Number'.'</h1>';
 //      //         redirectHome('This is Not Number Pls Try Again....','back', 5);
 //      //     
-//      $_REQUEST['case_Token'];
-//      //   echo $typeCase = $_REQUEST['case_Token'];
-//      $typeCase = stringCheck($_REQUEST['case_Type']);
-//      $locationCase = stringCheck($_REQUEST['case_Location']);
-//      $dateCase = stringCheck($_REQUEST['case_Date']);
-//      $timeCase = stringCheck($_REQUEST['case_Hour']);
-//      $descriptionCase = stringCheck($_REQUEST['case_Description']);
-//      $numberCase = stringCheck($_REQUEST['case_Num']);
+//       $_REQUEST['case_Token'];
+// //   echo $typeCase = $_REQUEST['case_Token'];
+//    $typeCase = stringCheck($_REQUEST['case_Type']);
+//    $locationCase = stringCheck($_REQUEST['case_Location']);
+//    $dateCase = stringCheck($_REQUEST['case_Date']);
+//    $timeCase = stringCheck($_REQUEST['case_Hour']);
+//   $descriptionCase = stringCheck($_REQUEST['case_Description']);
+//   $numberCase = stringCheck($_REQUEST['case_Num']);
 
 //      // Start Validate Image File 
 //      $file = $_FILES['case_Image'];
@@ -60,7 +60,7 @@ print_r($_REQUEST);
 //      }
 //      // Start Validate Image File 
 //      // Start Validate Image File 
-
+     
 //      $file = $_FILES['case_Fill'];
 //      $f_name = $file['name'];
 //      $f_type = $file['case_Type'];
@@ -97,27 +97,27 @@ print_r($_REQUEST);
 //      // Start Validate Image File 
 
 //      $user_id =  $_SESSION['user']['id'];
-//      $dataInsert = [
-//           'user_id' => $user_id,
-//           'typeCase' => $typeCase,
-//           'description' => $descriptionCase,
-//           'Date' => $dateCase,
-//           'numberCase' => $numberCase,
-//           'location' => $locationCase,
-//           'houerCase' => $timeCase,
-//           //   'fileCase' => $file_new_name,
-//           //   'ImageCase' => $numberCase,
-//           'status' => '0',
-//      ];
+//        $dataInsert = [
+//        'user_id' => $user_id,
+//        'typeCase' => $typeCase,
+//        'description' => $descriptionCase,
+//        'Date' => $dateCase,
+//        'numberCase' => $numberCase,
+//        'location' => $locationCase,
+//        'houerCase' => $timeCase,
+//      //   'fileCase' => $file_new_name,
+//      //   'ImageCase' => $numberCase,
+//        'status' => '0',
+//        ];
 //      // print_r($dataInsert);
 //      $checkData = checkedData('numberCase', 'posts', $numberCase);
 //      if ($checkData > 0) {
-//           echo json_encode(['faild' => 'The Number Case Is Exists']);
+//           echo json_encode(['faild'=> 'The Number Case Is Exists']) ;
 //      } else {
 //           $insertNewPost = insertQuery('posts', $dataInsert);
 //           // if ($insertNewPost == true) {
 //           //      $successMesg =  "<div class='alert alert-danger'>" . "Data Inserted Successfully" . '</div>';
 //           // }
-//           echo json_encode(['success' => 'Data Inserted Successfully']);
+//           echo json_encode(['success'=> 'Data Inserted Successfully']) ;
 //      }
 // }
