@@ -977,7 +977,7 @@ if (!isset($_SESSION['user'])) {
             data: JSON.stringify(data_obj)
           }, // now data come in this function
           // processData: false,
-          contentType: "multipart/form-data",
+          // contentType: false,
           // crossDomain: true,
           dataType: "json",
           success: function (data, status, jqXHR) {
