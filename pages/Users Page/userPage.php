@@ -961,9 +961,9 @@ if (!isset($_SESSION['user'])) {
         $.ajax({
           type: "POST",
           url: '../Login-Sign page/includes/functions/postsValidation.php',
-          data: data_obj, // now data come in this function
-          processData: false,
-          contentType: false,
+          data: JSON.stringify(data_obj), // now data come in this function
+          // processData: false,
+          // contentType: false,
           // crossDomain: true,
           dataType: "json",
           success: function(data, status, jqXHR) {
