@@ -5,20 +5,24 @@ include('../functions/functions.php');
 session_start();
 
 //  ['type-case'];
+
+     $data = json_decode($_REQUEST['data']);
+// print_r( $data);
+print_r($data);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
      //     if (!is_integer($nameCase)) {
      //          $error['numCase'] = '<h1>'. 'This Is Not Number'.'</h1>';
      //         redirectHome('This is Not Number Pls Try Again....','back', 5);
      //     
-     echo $_REQUEST['case_Token'];
+      $_REQUEST['case_Token'];
 //   echo $typeCase = $_REQUEST['case_Token'];
-  echo $typeCase = stringCheck($_REQUEST['case_Type']);
-  echo $locationCase = stringCheck($_REQUEST['case_Location']);
-  echo $dateCase = stringCheck($_REQUEST['case_Date']);
-  echo $timeCase = stringCheck($_REQUEST['case_Hour']);
- echo $descriptionCase = stringCheck($_REQUEST['case_Description']);
- echo $numberCase = stringCheck($_REQUEST['case_Num']);
+   $typeCase = stringCheck($_REQUEST['case_Type']);
+   $locationCase = stringCheck($_REQUEST['case_Location']);
+   $dateCase = stringCheck($_REQUEST['case_Date']);
+   $timeCase = stringCheck($_REQUEST['case_Hour']);
+  $descriptionCase = stringCheck($_REQUEST['case_Description']);
+  $numberCase = stringCheck($_REQUEST['case_Num']);
 
      // Start Validate Image File 
      $file = $_FILES['case_Image'];
