@@ -1,5 +1,5 @@
-/* To Search About Lawyer From All Lawyers */
 $(document).ready(() => {
+  /* To Search About Lawyer From All Lawyers */
   $("#search_lawyer").mousedown(() => {
     $(".result_search").removeClass("d-none");
   });
@@ -17,5 +17,5 @@ $(document).ready(() => {
       $(".result_search").addClass("d-none");
     }, 200);
   });
+  /* //////To Search About Lawyer From All Lawyers */
 });
-/* //////To Search About Lawyer From All Lawyers */

@@ -51,7 +51,7 @@ header {
        background-color: #fff;
        padding: 10px 0;
        -webkit-box-shadow: 0px 5px 5px 1px rgba(235, 235, 235, 0.85);
-       -moz-box-shadow: 0px 5px 5px 1px+ rgba(235, 235, 235, 0.85);
+       -moz-box-shadow: 0px 5px 5px 1px rgba(235, 235, 235, 0.85);
        box-shadow: 0px 5px 5px 1px rgba(235, 235, 235, 0.85);
 }
 
@@ -384,7 +384,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 
 /* ////Header page */
 
-/* Main Page */
+/* Content Page */
 main {
        display: flex;
        flex-direction: column;
@@ -397,430 +397,106 @@ main .header_profile {
        display: flex;
        align-items: center;
        justify-content: center;
-       background-color: #cbcbcb;
-
 }
 
-main .header_profile>.user_content {
+main .header_profile>.profilelawyer_content {
        position: relative;
        padding: 15px 0;
-       width: 98%;
+       width: 95%;
        display: flex;
+       flex-direction: column;
        align-items: center;
-       justify-content: flex-start;
+       /* justify-content: flex-start; */
        column-gap: 20px;
        /* background-color: grey; */
 }
 
-main .header_profile>.user_content .profile a>img {
+main .header_profile>.profilelawyer_content .profile a>img {
        width: 150px;
        height: 150px;
        object-fit: cover;
        object-position: center;
        cursor: pointer;
        border-radius: 50%;
-       border: 3px solid var(--main-clr) !important;
-       padding: 1px;
+       border: none !important;
+       padding: 0;
 }
 
-main .header_profile>.user_content .user_info {
+main .header_profile>.profilelawyer_content .profilelawyer_info {
+       width: 100%;
        display: flex;
        flex-direction: column;
        align-items: center;
        justify-content: flex-start;
        row-gap: 15px;
-}
-
-main .header_profile>.user_content .user_info .user_name {
-       width: 100%;
-       font-size: 2rem;
-       font-family: var(--main-font);
-
-}
-
-main .header_profile>.user_content .user_info .user_location {
-       width: 100%;
-       font-size: 1.2rem;
-       font-family: var(--main-font);
-
-}
-
-main .header_profile>.user_content .user_logout {
-       position: absolute;
-       left: 2%;
-       color: var(--main-clr);
-       font-family: var(--main-font);
-       font-size: 1.2rem;
-       font-weight: 800;
-       cursor: pointer;
-       transition: all 0.3s ease-in-out;
-}
-
-main .header_profile>.user_content .user_logout:hover {
-       color: #356359;
-
-}
-
-
-main .content_profile {
-       width: 95%;
-       display: flex;
-       align-items: flex-start;
-       justify-content: space-between;
-       column-gap: 20px;
-}
-
-/* main .content_profile .right-side {
-       display: none;
-} */
-
-/* Right Side */
-.containerr main .right-side {
-       position: sticky;
-       top: 100px;
-       width: 30%;
-       display: none;
-}
-
-.containerr main .right-side .right-side-wrapper {
-       width: 100%;
-       display: flex;
-       align-items: flex-start;
-       flex-direction: column;
-       row-gap: 10px;
-}
-
-.containerr main .right-side .right-side-wrapper .header-requests {
-       width: 100%;
-       text-align: center;
-       background: #517970;
-       color: #fff;
-       padding-bottom: 17px;
-       border-radius: 20px;
-}
-
-.containerr main .right-side .right-side-wrapper .header-requests>.count-lawyer {
-       margin-right: 10px;
-       text-align: center;
-       display: inline-block;
-       padding: 6px;
-       width: 50px;
-       height: 50px;
-       border-radius: 50%;
-       font-family: var(--main-font);
-       font-weight: 600;
-       color: var(--main-clr);
-       background-color: #fff;
-}
-
-.containerr main .right-side .right-side-wrapper .header-requests span {
-       font-size: 1.7rem;
-       font-family: var(--main-font);
-       margin-top: 20px;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       row-gap: 10px;
-       margin-bottom: 10px;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request {
-       width: 100%;
-       padding: 10px;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       background-color: #fff;
-       border-radius: 20px;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .header-request {
-       position: relative;
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: flex-start;
-       column-gap: 10px;
-       /* background-color: red; */
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .header-request .profile>a>img {
-       width: 60px;
-       height: 60px;
-       border: none !important;
-       padding: 0 !important;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer {
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       row-gap: 2px;
-       max-width: 75%;
-       overflow: hidden;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer span {
-       width: 100%;
-       overflow: hidden;
-       text-overflow: ellipsis;
-       white-space: nowrap;
-       font-size: 1.3rem;
-       font-family: var(--main-font);
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .header-request .details-lawyer span:nth-child(2) {
-       font-size: 1.1rem;
-       color: #a8a8a8;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .content-request {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .content-request .details-case {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-type,
-.containerr main .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-number {
-       display: flex;
-       align-items: center;
-       column-gap: 5px;
-       font-size: 1.1rem;
-       font-family: var(--main-font);
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .content-request .details-case .details-number span:nth-child(2) {
-       padding: 6px;
-       border-radius: 8px;
-       letter-spacing: 1px;
-       color: #fff;
-       background: #517970;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       margin-top: 15px;
-       font-size: 1.2rem;
-       font-family: var(--main-font);
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span {
-       padding: 2.5% 0;
-       width: 48%;
-       text-align: center;
-       background: #1db593;
-       border-radius: 30px;
-       color: #fff;
-       cursor: pointer;
-       transition: all 0.3s ease-in-out;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(1):hover {
-       background-color: #17d0a7;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2):hover {
-       background-color: #d60000;
-}
-
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2) {
-       background: #ff0000;
-}
-
-/* Content Page User  */
-.containerr main .content-page-user {
-       width: 100%;
        margin-bottom: 80px;
 }
 
-.containerr main .content-page-user .add-post-section {
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
        width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       background-color: #fff;
-       border-radius: 20px;
-       padding: 10px 8px;
-}
-
-.containerr main .content-page-user .add-post-section>button {
-       font-size: 1.3rem;
+       font-size: 1.5rem;
        font-family: var(--main-font);
-       width: 70%;
-       color: #000;
-       text-align: start;
-       background-color: #fff;
 }
 
-/* content page -> Postes */
-.containerr main .content-page-user .postes {
-       width: 100%;
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase>strong,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate>strong {
+       color: var(--main-clr);
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory {
        display: flex;
        align-items: center;
-       justify-content: center;
-       margin-top: 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       row-gap: 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       border-radius: 20px;
-       background-color: #fff;
-       overflow: hidden;
-
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .header-post {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: start;
-       column-gap: 10px;
-       padding: 10px 10px 0 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .header-post .profile>a>img {
-       width: 70px;
-       height: 70px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .header-post .name-user>h1 {
-       font-size: 1.8rem !important;
-       font-weight: 400 !important;
-       font-family: var(--main-font);
-       margin-bottom: 0 !important;
-       line-height: 1 !important;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       row-gap: 5px;
-       padding: 0 10px 0 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: flex-start;
-       column-gap: 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case,
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case {
-       display: flex;
-       align-items: baseline;
        justify-content: center;
        column-gap: 5px;
-       font-family: var(--main-font);
 }
 
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case span,
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case span {
-       font-size: 1rem;
-       /* color: red; */
-       /* padding-right: 2px; */
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .post-date-case {
-       width: 100%;
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc {
        display: flex;
+       width: 100%;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong {
+       width: 30%;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc p {
+       width: 100%;
+       text-align: right;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
+       display: flex;
+       width: 100%;
+       /* flex-direction: column; */
        align-items: center;
        justify-content: flex-start;
-       column-gap: 20px;
-       font-family: var(--main-font);
+       column-gap: 5px;
 }
 
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .post-date-case .date-dm,
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .post-date-case .date-houre {
-       display: flex;
-       align-items: baseline;
-       justify-content: center;
-       column-gap: 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .post-description-case {
-       height: 150px;
-       padding: 0 10px;
-       overflow-y: scroll;
+.stars>i {
+       color: rgb(255, 221, 0);
+       font-size: 1.2rem;
        margin-bottom: 5px;
 }
 
-.post-description-case::-webkit-scrollbar {
-       width: 0.4rem;
-}
 
-.post-description-case::-webkit-scrollbar-track {
-       background-color: #fff;
-}
 
-.post-description-case::-webkit-scrollbar-thumb {
-       background-color: var(--main-clr);
-       border-radius: 10px;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .content-post .post-description-case p {
-       font-family: var(--main-font);
-       font-size: 1.2rem;
-       line-height: 33px;
-
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .footer-post {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .footer-post span {
-       width: 100%;
-       font-family: var(--main-font);
-       font-size: 1.5rem;
-       font-weight: 500;
-       padding: 20px;
-       text-align: center;
-       color: #fff;
-       background-color: red;
-       cursor: pointer;
-       transition: all 0.3s ease-in-out;
-}
-
-.containerr main .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
-       background-color: rgb(214, 34, 34);
-
-}
-
-/* ///content page -> Postes */
-/* /////Main Page */
+/* ////Content page */
 
 /* Bottom Bar */
 .containerr .menu-bottom {
@@ -911,21 +587,9 @@ main .content_profile {
 
 /* ////Bottom Bar */
 
-@media (max-width:767px) {
-       body {
-              background-color: yellow;
-       }
-
-       .containerr main .content-page-user .add-post-section>button {
-              width: auto;
-       }
-}
+@media (max-width:767px) {}
 
 @media (min-width:990px) {
-       body {
-              background-color: red;
-       }
-
        .search-bar {
               width: 50%;
               display: flex;
@@ -940,39 +604,68 @@ main .content_profile {
               width: 75px;
        }
 
+       main .header_profile {
+              height: 88vh;
+              overflow: hidden;
+       }
+
+       main .header_profile>.profilelawyer_content {
+              flex-direction: row;
+              align-items: flex-start;
+              justify-content: flex-start;
+              column-gap: 50px;
+              background: #fff;
+              padding: 15px;
+              border-radius: 20px;
+       }
+
+       main .header_profile>.profilelawyer_content .profile a>img {
+              width: 200px;
+              height: 200px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info {
+              align-items: center;
+              justify-content: flex-start;
+              margin-bottom: 0px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_countCase,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_rate {
+              width: 100%;
+              font-size: 1.6rem;
+              font-family: var(--main-font);
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_name,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_location,
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_catugory {
+              justify-content: flex-start;
+              column-gap: 5px;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc {
+              flex-direction: row;
+              justify-content: flex-start;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc strong {
+              width: 12%;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_desc p {
+              width: 80%;
+       }
+
+
        .menu-bottom {
               display: none;
        }
 
-       .containerr main .right-side {
-              display: flex;
-       }
-
-       .containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header {
-              flex-wrap: wrap;
-              justify-content: flex-start;
-              column-gap: 30px;
-       }
-
-       .containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case,
-       .containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case {
-              column-gap: 10px;
-       }
-
-       .containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-type-case span,
-       .containerr main .content-page-user .postes .postes-wrapper .post .content-post .content-header .post-location-case span {
-              font-size: 1.1rem;
-       }
-
 }
 
-@media (min-width:1400px) {
-       body {
-              background-color: orange;
-       }
-
-       .containerr main .content-page-user .add-post-section>button {
-              width: 65%;
-       }
-
-}
+@media (min-width:1400px) {}

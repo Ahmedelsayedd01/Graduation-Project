@@ -371,15 +371,18 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        background-color: var(--main-clr);
 }
 
-.profile a img {
+.profile img {
        width: 55px;
        height: 55px;
        object-fit: cover;
        object-position: center;
-       cursor: pointer;
+       /* cursor: pointer; */
        border-radius: 50%;
-       border: 2px dotted var(--main-clr) !important;
        padding: 3px;
+}
+
+header .profile img {
+       border: 2px dotted var(--main-clr) !important;
 }
 
 /* ////Header page */
@@ -479,7 +482,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        /* background-color: red; */
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .profile>a>img {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .profile>img {
        width: 60px;
        height: 60px;
        border: none !important;
@@ -543,8 +546,9 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 .containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request {
        width: 100%;
        display: flex;
+       flex-direction: column;
        align-items: center;
-       justify-content: space-between;
+       justify-content: center;
        margin-top: 15px;
        font-size: 1.2rem;
        font-family: var(--main-font);
@@ -552,25 +556,17 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 
 .containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span {
        padding: 2.5% 0;
-       width: 48%;
+       width: 100%;
        text-align: center;
-       background: #1db593;
+       background-color: red;
        border-radius: 30px;
        color: #fff;
        cursor: pointer;
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(1):hover {
-       background-color: #17d0a7;
-}
-
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2):hover {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:hover {
        background-color: #d60000;
-}
-
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2) {
-       background: #ff0000;
 }
 
 /* Content Page User  */
@@ -635,7 +631,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        padding: 10px 10px 0 10px;
 }
 
-.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .header-post .profile>a>img {
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .header-post .profile>img {
        width: 70px;
        height: 70px;
 }
@@ -739,13 +735,13 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        padding: 20px;
        text-align: center;
        color: #fff;
-       background-color: red;
+       background-color: var(--main-clr);
        cursor: pointer;
        transition: all 0.3s ease-in-out;
 }
 
 .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
-       background-color: rgb(214, 34, 34);
+       background-color: var(--hover-clr);
 
 }
 
@@ -810,7 +806,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        /* background-color: red; */
 }
 
-.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .profile>a>img {
+.containerr main .main-wrapper .left-side .left-side-wrapper .content-bestLawyers .bestLawyer .header-bestLawyer .profile>img {
        width: 70px;
        height: 70px;
        border: none !important;
@@ -962,20 +958,12 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 /* ////Bottom Bar */
 
 @media (max-width:767px) {
-       body {
-              background-color: yellow;
-       }
-
        .containerr main .main-wrapper .content-page-user .add-post-section>button {
               width: auto;
        }
 }
 
 @media (min-width:990px) {
-       body {
-              background-color: red;
-       }
-
        .search-bar {
               width: 50%;
               display: flex;
@@ -1024,10 +1012,6 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 }
 
 @media (min-width:1400px) {
-       body {
-              background-color: orange;
-       }
-
        .containerr main .main-wrapper .content-page-user .add-post-section>button {
               width: 65%;
        }

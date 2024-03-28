@@ -6,7 +6,7 @@ session_start();
 
 //  ['type-case'];
 
-     // $data = json_decode($_REQUEST['data']);
+// $data = json_decode($_REQUEST['data']);
 // print_r( $data);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      

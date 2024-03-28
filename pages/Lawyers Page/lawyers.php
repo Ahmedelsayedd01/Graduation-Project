@@ -15,7 +15,7 @@ header("Location:../Login-Sign page/registration.php");
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lawyer Case</title>
+  <title>Lawyer Case</title>w
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="lawyerPage.css" />
