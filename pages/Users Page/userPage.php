@@ -64,7 +64,7 @@ if (!isset($_SESSION['user'])) {
           <div class="result_search d-none" id="result_search">
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>احمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -73,7 +73,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد احمد</span>
                   <span>القضاية العسكرية </span>
@@ -82,7 +82,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -91,7 +91,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>ذياد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العامة </span>
@@ -111,7 +111,7 @@ if (!isset($_SESSION['user'])) {
             <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -120,7 +120,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -129,7 +129,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -138,7 +138,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -147,7 +147,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -156,7 +156,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -165,7 +165,7 @@ if (!isset($_SESSION['user'])) {
             </a>
             <a href="profileLawyer.html">
               <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
+                <img src="asstesUser/lawyer3.jpg" alt="lawyer" />
                 <div class="detail">
                   <span>محمد محمد</span>
                   <span>القضاية العسكرية </span>
@@ -202,7 +202,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Type Case -->
                     <div class="type-case">
                       <label for="type-case">نوع القضية:</label>
-                      <select class="sel-type-case" name="type-case" id="type-case" required>
+                      <select class="sel-type-case" name="case_Type" id="type-case" required>
                         <option value="0" selected>اختر نوع القضية</option>
                         <option value="جنائى">جنائى</option>
                         <option value="مدنى">مدنى</option>
@@ -222,6 +222,7 @@ if (!isset($_SESSION['user'])) {
                           margin: 0.7rem 0;
                         " />
                     <!-- Number Case -->
+                    <input type="hidden" id="user_token" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
                       <input type="number" class="sel-num-case" name="case_Num" id="num-case"
@@ -249,13 +250,13 @@ if (!isset($_SESSION['user'])) {
                         " />
                     <!-- Date Case -->
                     <div class="date-case">
-                      <div class="date-case-dmy">
+                      <div class="date-case-ymd">
                         <label for="date-case">ميعاد القضية:</label>
-                        <input type="date" class="sel-date-case" name="date-case" id="date-case" required />
+                        <input type="date" class="sel-date-case" name="case_Date" id="date-case" required />
                       </div>
-                      <div class="date-case-hm">
+                      <div class="date-case-mh">
                         <label for="date-case">الساعة:</label>
-                        <input type="time" class="sel-date-case" name="date-case" id="date-case" required />
+                        <input type="time" class="sel-date-case" name="case_Hour" id="hour-case" required />
                       </div>
                     </div>
                     <hr style="
@@ -309,7 +310,7 @@ if (!isset($_SESSION['user'])) {
         <!-- left section (profile user)-->
         <div class="profile">
           <a href="profileUser.html">
-            <img src="asstesUser/user.jpg" alt="user" /></a>
+            <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
         </div>
       </div>
     </header>
@@ -331,7 +332,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -370,7 +371,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -409,7 +410,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -448,7 +449,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -487,7 +488,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -527,7 +528,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -569,7 +570,7 @@ if (!isset($_SESSION['user'])) {
           <div class="add-post-section">
             <div class="profile">
               <a href="profileUser.html">
-                <img src="asstesUser/user.jpg" alt="user" /></a>
+                <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
             </div>
             <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
               نشر قضية جديدة ؟
@@ -593,7 +594,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-post">
                   <div class="profile">
                     <a href="profileUser.html">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
+                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
                     <h1>احمد احمد احمد</h1>
@@ -654,7 +655,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-post">
                   <div class="profile">
                     <a href="profileUser.html">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
+                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
                     <h1>احمد احمد احمد</h1>
@@ -715,7 +716,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-post">
                   <div class="profile">
                     <a href="profileUser.html">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
+                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
                     <h1>احمد احمد احمد</h1>
@@ -789,7 +790,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -816,7 +817,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -843,7 +844,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -870,7 +871,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileUser.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -1003,7 +1004,7 @@ if (!isset($_SESSION['user'])) {
       //           // console.log(data)
 
 
-      });
+      // });
     })
   </script>
 </body>
