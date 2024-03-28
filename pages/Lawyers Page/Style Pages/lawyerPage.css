@@ -554,7 +554,7 @@ header .profile img {
        font-family: var(--main-font);
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a {
        padding: 2.5% 0;
        width: 100%;
        text-align: center;
@@ -565,7 +565,7 @@ header .profile img {
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:hover {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:hover {
        background-color: #d60000;
 }
 
@@ -727,7 +727,7 @@ header .profile img {
        justify-content: center;
 }
 
-.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post span {
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post a {
        width: 100%;
        font-family: var(--main-font);
        font-size: 1.5rem;
@@ -740,7 +740,7 @@ header .profile img {
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover a {
        background-color: var(--hover-clr);
 
 }
