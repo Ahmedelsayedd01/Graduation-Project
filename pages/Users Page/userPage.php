@@ -349,8 +349,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -388,8 +388,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -427,8 +427,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -466,8 +466,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -506,8 +506,8 @@ if (!isset($_SESSION['user'])) {
 
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -545,8 +545,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
             </div>
@@ -577,69 +577,7 @@ if (!isset($_SESSION['user'])) {
           <!-- My Postes -->
           <div class="postes">
             <div class="postes-wrapper">
-              <!-- Post Case -->
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <!--  This Id User Delete This Post Where id = Session User id   -->
-                  <span href="#content?id=<?php echo $_SESSION['user']['id']?>">الغاء القضية</span>
-                </div>
-              </div>
+              <!-- All Postes  -->
             </div>
           </div>
         </div>
@@ -817,8 +755,8 @@ if (!isset($_SESSION['user'])) {
           console.log("post", post)
 
           $(post).each((val, el) => {
-            console.log("val", val)
-            console.log("el", el)
+            //   console.log("val", val)
+            //   console.log("el", el)
             var NewPost = `<div class="post">
                 <div class="header-post">
                   <div class="profile">
@@ -826,7 +764,7 @@ if (!isset($_SESSION['user'])) {
                       <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
+                    <h1>${user.userName +" "+ user.lastName}</h1>
                   </div>
                 </div>
                 <hr style="
@@ -869,7 +807,7 @@ if (!isset($_SESSION['user'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <span>الغاء القضية</span>
+                  <a href="#content?id=<?php echo $_SESSION['user']['id'] ?>">الغاء القضية</a>
                 </div>
               </div>`;
 

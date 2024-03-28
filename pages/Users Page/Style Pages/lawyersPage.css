@@ -551,7 +551,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        font-family: var(--main-font);
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a {
        padding: 2.5% 0;
        width: 48%;
        text-align: center;
@@ -562,15 +562,15 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(1):hover {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(1):hover {
        background-color: #17d0a7;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2):hover {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2):hover {
        background-color: #d60000;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2) {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2) {
        background: #ff0000;
 }
 
@@ -732,7 +732,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        justify-content: center;
 }
 
-.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post span {
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post a {
        width: 100%;
        font-family: var(--main-font);
        font-size: 1.5rem;
@@ -745,7 +745,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
+.containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover a {
        background-color: rgb(214, 34, 34);
 
 }

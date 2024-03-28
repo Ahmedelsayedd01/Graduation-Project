@@ -225,7 +225,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
               <!-- Request -->
@@ -263,7 +263,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
               <!-- Request -->
@@ -301,7 +301,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
               <!-- Request -->
@@ -339,7 +339,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
               <!-- Request -->
@@ -377,7 +377,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
               <!-- Request -->
@@ -415,7 +415,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>الانسحاب من القضية</span>
+                  <a>الانسحاب من القضية</a>
                 </div>
               </div>
 
@@ -501,7 +501,7 @@ if (!isset($_SESSION['user'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <span>طلب القضية</span>
+                  <a>طلب القضية</a>
                 </div>
               </div>
               <!-- Post -->
@@ -563,7 +563,7 @@ if (!isset($_SESSION['user'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <span>طلب القضية</span>
+                  <a>طلب القضية</a>
                 </div>
               </div>
               <!-- Post -->
@@ -625,7 +625,7 @@ if (!isset($_SESSION['user'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <span>طلب القضية</span>
+                  <a>طلب القضية</a>
                 </div>
               </div>
             </div>
