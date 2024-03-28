@@ -31,6 +31,7 @@ $(document).ready(() => {
       var post = data.posts;
       var user = data.userData;
       console.log("post", post);
+      $(".user_name").text(user.userName + " " + user.lastName);
 
       $(post).each((val, el) => {
         //   console.log("val", val)
@@ -85,7 +86,7 @@ $(document).ready(() => {
                 </div>
               </div>
               <div class="footer-post">
-                <a href="#content?id=<?php echo $_SESSION['user']['id'] ?>">الغاء القضية</a>
+                <a href="#content?id=<?php echo $_SESSION['user']['id'] ?>" target="_blank">الغاء القضية</a>
               </div>
             </div>`;
 
