@@ -648,7 +648,8 @@ if (!isset($_SESSION['user'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <span>الغاء القضية</span>
+                  <!--  This Id User Delete This Post Where id = Session User id   -->
+                  <span href="#content?id=<?php echo $_SESSION['user']['id']?>">الغاء القضية</span>
                 </div>
               </div>
               <div class="post">
