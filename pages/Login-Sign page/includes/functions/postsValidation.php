@@ -4,31 +4,32 @@ include('../functions/functions.php');
 
 session_start();
 
+//  ['type-case'];
 
-//  $_POST['type-case'];
+// $data = json_decode($_REQUEST['data']);
+// print_r( $data);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-     $nameCase = stringCheck($_POST['num-case']);
+     
 
      //     if (!is_integer($nameCase)) {
      //          $error['numCase'] = '<h1>'. 'This Is Not Number'.'</h1>';
      //         redirectHome('This is Not Number Pls Try Again....','back', 5);
-     //     }
-    echo  $typeCase = $_POST['token'];
-    echo $typeCase = stringCheck($_POST['type-case']);
-    echo $locationCase = stringCheck($_POST['location-case']);
-    echo $dateCase = stringCheck($_POST['date-case']);
-    echo $timeCase = stringCheck($_POST['date-case-time']);
-   echo $descriptionCase = stringCheck($_POST['description-case']);
-   echo $numberCase = stringCheck($_POST['num-case']);
+     //     
+//   echo $typeCase = $_REQUEST['case_Token'];
+   $typeCase = stringCheck($_POST['case_Type']);
+   $locationCase = stringCheck($_POST['case_Location']);
+   $dateCase = stringCheck($_POST['case_Date']);
+   $timeCase = stringCheck($_POST['case_Hour']);
+  $descriptionCase = stringCheck($_POST['case_Description']);
+  $numberCase = stringCheck($_POST['case_Num']);
 
      // Start Validate Image File 
-     $file = $_FILES['image-case'];
+     $file = $_FILES['case_Image'];
      $f_name = $file['name'];
      $f_type = $file['type'];
      $f_tmp_name = $file['tmp_name'];
      $f_error = $file['error'];
      $f_size = $file['size'];
-     // print_r($file);
      if ($f_name != '') {
           $ext = pathinfo($f_name); // Start Take Extension Image 
           // print_r($ext); Test
@@ -57,13 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      }
      // Start Validate Image File 
      // Start Validate Image File 
-     $file = $_FILES['fill-case'];
+     
+     $file = $_FILES['case_Fill'];
      $f_name = $file['name'];
      $f_type = $file['type'];
      $f_tmp_name = $file['tmp_name'];
      $f_error = $file['error'];
      $f_size = $file['size'];
-     // print_r($file);
      if ($f_name != '') {
           $ext = pathinfo($f_name); // Start Take Extension Image 
           // print_r($ext); Test
@@ -93,27 +94,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      // Start Validate Image File 
 
      $user_id =  $_SESSION['user']['id'];
-     $dataInsert = [
-          'user_id' => $user_id,
-          'typeCase' => $typeCase,
-          'description' => $descriptionCase,
-          'Date' => $dateCase,
-          'numberCase' => $numberCase,
-          'fileCase' => $file_new_name,
-          'ImageCase' => $numberCase,
-          'location' => $locationCase,
-          'houerCase' => $timeCase,
-          'status' => '0',
-     ];
+       $dataInsert = [
+       'user_id' => $user_id,
+       'typeCase' => $typeCase,
+       'description' => $descriptionCase,
+       'Date' => $dateCase,
+       'numberCase' => $numberCase,
+       'location' => $locationCase,
+       'houerCase' => $timeCase,
+       'fileCase' => $file_new_name,
+       'ImageCase' => $new_name,
+       'status' => '0',
+       ];
      // print_r($dataInsert);
      $checkData = checkedData('numberCase', 'posts', $numberCase);
      if ($checkData > 0) {
-          $successMesg = 'The Number Case Is Exists';
+          header('Location:../../../Users Page/userPage.php');
+          $_SESSION['faild'] = 'The Number Case Is Exists';
+
      } else {
           $insertNewPost = insertQuery('posts', $dataInsert);
           // if ($insertNewPost == true) {
           //      $successMesg =  "<div class='alert alert-danger'>" . "Data Inserted Successfully" . '</div>';
           // }
+          header('Location:../../../Users Page/userPage.php');
+          $_SESSION['success'] =  'post Insert Successfuly';
      }
-     redirectHome($successMesg, 'back');
 }

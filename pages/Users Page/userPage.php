@@ -7,6 +7,7 @@ $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 if (!isset($_SESSION['user'])) {
   header("Location:../Login-Sign page/registration.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -16,41 +17,35 @@ if (!isset($_SESSION['user'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="icon" href="./asstesUser/logo.svg" />
   <link rel="stylesheet" href="./Style Pages/userPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Liberary -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <!-- Jquery Liberary -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>User Page</title>
 </head>
 
 <body>
+
   <div class="containerr">
+
     <!-- Header Page (Navbar) -->
     <header>
       <div class="header-wrapper">
         <!-- right section (logo) -->
         <div class="logo">
-          <a href="userPage.html">
-            <!-- Logout  -->
-            <a href="../../loguot.php">loguot</a>
-            <!-- Logout  -->
+          <a href="userPage.php">
             <img src="asstesUser/logo.svg" alt="lawyer Case" /></a>
         </div>
         <!-- center section (search bar about lawyer) -->
@@ -180,12 +175,11 @@ if (!isset($_SESSION['user'])) {
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <!-- <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data"> -->
-                <form action="" method="" enctype="multipart/form-data">
+                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
+                  <!-- <form action="" method="" enctype="multipart/form-data"> -->
                   <!-- Header modal -->
                   <div class="modal-header">
                     <span class="modal-title-case" id="exampleModalLongTitle">
@@ -355,8 +349,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -394,8 +388,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -433,8 +427,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -472,8 +466,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -512,8 +506,8 @@ if (!isset($_SESSION['user'])) {
 
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
               <div class="request">
@@ -551,8 +545,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <!-- Footer Request -->
                 <div class="footer-request">
-                  <span>قبول</span>
-                  <span>رفض</span>
+                  <a>قبول</a>
+                  <a>رفض</a>
                 </div>
               </div>
             </div>
@@ -575,192 +569,15 @@ if (!isset($_SESSION['user'])) {
               </button>
             </div>
           </div>
+          <!-- start Incluse Message Successfully -->
+          <?php
+          include '../Login-Sign page/includes/functions/success.php';
+          ?>
+          <!-- start Incluse Message Successfully -->
           <!-- My Postes -->
           <div class="postes">
             <div class="postes-wrapper">
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <span>الغاء القضية</span>
-                </div>
-              </div>
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <span>الغاء القضية</span>
-                </div>
-              </div>
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <span>الغاء القضية</span>
-                </div>
-              </div>
+              <!-- All Postes  -->
             </div>
           </div>
         </div>
@@ -890,7 +707,7 @@ if (!isset($_SESSION['user'])) {
       <div class="menu-bottom-wrapper">
         <ul>
           <li class="active-tap">
-            <a href="userPage.html">
+            <a href="userPage.php">
               <i class="fa-solid fa-house"></i>
               <span>الرئيسية</span>
             </a>
@@ -920,105 +737,89 @@ if (!isset($_SESSION['user'])) {
   </div>
 
 
-  <script src="../Users Page/Scripts/userPage.js"></script>
-  <!--  Test Data Api User If User Login  -->
+  <script src="./Scripts/userPage.js"></script>
+
   <script>
     $(document).ready(function() {
 
-      // let myRequest = new XMLHttpRequest();
-      // myRequest.onreadystatechange = function() {
-      //   if (this.readyState === 4 && this.status === 200) {
-      // console.log(this.responseText);
-      // console.log(this.readyState);
-      // console.log(this.status);
-      // let data = JSON.parse(this.responseText);
-      //console.log(data);
-      // div = document.getElementById('data');
-      //     console.log(this.responseText);
-
-      //   }
-      // };
-      // myRequest.open('Get', 'userApi/userApi.php', 'true');
-      // myRequest.send();
-
       $.getJSON({
-        url: 'userApi/userApi.php', //get All thing Postes and data year 
+        url: 'userApi/userApi.php',
         type: "GET",
         // data: data,
         success: function(data) {
           console.log("data", data.posts);
           console.log("data", data.userData);
           // console.log("GET", data);
+          var post = data.posts;
+          var user = data.userData;
+          console.log("post", post)
+
+          $(post).each((val, el) => {
+            //   console.log("val", val)
+            //   console.log("el", el)
+            var NewPost = `<div class="post">
+                <div class="header-post">
+                  <div class="profile">
+                    <a href="profileUser.html">
+                      <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
+                  </div>
+                  <div class="name-user">
+                    <h1>${user.userName +" "+ user.lastName}</h1>
+                  </div>
+                </div>
+                <hr style="
+                      margin: 0.5rem !important;
+                      border: 1px solid #d5d5d5 !important;
+                      width: 100%;
+                    " />
+                <div class="content-post">
+                  <div class="content-header">
+                    <!-- type case -->
+                    <div class="post-type-case">
+                      <h3>نوع القضية:</h3>
+                      <span>${el.typeCase} .</span>
+                    </div>
+                    <div class="post-location-case">
+                      <h3>مكان القضية:</h3>
+                      <span>${el.location} .</span>
+                    </div>
+                  </div>
+                  <div class="post-date-case">
+                    <div class="date-dm">
+                      <h3>تاريخ القضية:</h3>
+                      <span>${el.Date}</span>
+                    </div>
+                    <span><strong>-</strong></span>
+                    <div class="date-houre">
+                      <h3>الميعاد:</h3>
+                      <span>${el.houerCase.slice(0,5)}</span>
+                    </div>
+                  </div>
+                  <hr style="
+                        margin: 0.5rem !important;
+                        border: 1px solid #d5d5d5 !important;
+                        width: 100%;
+                      " />
+                  <div class="post-description-case">
+                    <p>
+                      ${el.description}.
+                    </p>
+                  </div>
+                </div>
+                <div class="footer-post">
+                  <a href="#content?id=<?php echo $_SESSION['user']['id'] ?>">الغاء القضية</a>
+                </div>
+              </div>`;
+
+            $(".postes-wrapper").append(NewPost);
+          })
+
+
         }
       })
 
 
 
-      $(".btn-add-case").click(() => {
-        var token_post = $("#user_token").val();
-        var type_case = $("#type-case").val();
-        var num_case = $("#num-case").val();
-        var location_case = $("#location-case").val();
-        var date_case = $("#date-case").val();
-        var hour_case = $("#hour-case").val();
-        var description_case = $("#description-case").val();
-        var fill_case = $("#fill-case").val();
-        var image_case = $("#image-case").val();
-
-        var data_obj = {
-          case_Token: token_post,
-          case_Type: type_case,
-          case_Num: JSON.parse(num_case),
-          case_Location: location_case,
-          case_Date: (date_case),
-          case_Hour: hour_case,
-          case_Description: description_case,
-          case_Fill: fill_case,
-          case_Image: image_case,
-        };
-        console.log(data_obj)
-
-        // $.ajax({
-        //   // headers: {"Authorization": localStorage.getItem('token')},
-        //   url: '../Login-Sign page/includes/functions/postsValidation.php',
-        //   type: "POST",
-        //   data: JSON.stringify(data_obj),
-        //   contentType: "application/json; charset=utf-8",
-        //   crossDomain: true,
-        //   dataType: "json",
-        //   success: function(data) {
-        //     console.log(data);
-        //     alert("gooood")
-        //   }
-        // })
-        $.ajaxSetup({
-          headers: {
-            'CSRF-TOKEN': $('user_token').val(),
-          }
-        });
-        $.ajax({
-          type: "POST",
-          url: '../Login-Sign page/includes/functions/postsValidation.php',
-          data: JSON.stringify(data_obj), // now data come in this function
-          // crossDomain: true,
-          dataType: "json",
-          success: function(data, status, jqXHR) {
-
-            alert("success"); // write success in " "
-          },
-
-          error: function(data, jqXHR, status) {
-            // error handler
-            alert("data", data);
-            alert('fail' + status.code);
-          }
-        });
-
-
-        // console.log(data)
-
-
-      });
     })
   </script>
 </body>

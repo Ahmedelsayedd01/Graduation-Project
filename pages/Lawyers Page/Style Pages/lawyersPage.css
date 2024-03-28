@@ -371,15 +371,18 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        background-color: var(--main-clr);
 }
 
-.profile a img {
+.profile img {
        width: 55px;
        height: 55px;
        object-fit: cover;
        object-position: center;
-       cursor: pointer;
+       /* cursor: pointer; */
        border-radius: 50%;
-       border: 2px dotted var(--main-clr) !important;
        padding: 3px;
+}
+
+header .profile img {
+       border: 2px dotted var(--main-clr) !important;
 }
 
 /* ////Header page */
@@ -479,7 +482,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        /* background-color: red; */
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .profile>a>img {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .header-request .profile>img {
        width: 60px;
        height: 60px;
        border: none !important;
@@ -544,8 +547,9 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 .containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request {
        width: 100%;
        display: flex;
+       flex-direction: column;
        align-items: center;
-       justify-content: space-between;
+       justify-content: center;
        margin-top: 15px;
        font-size: 1.2rem;
        font-family: var(--main-font);
@@ -553,25 +557,17 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 
 .containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a {
        padding: 2.5% 0;
-       width: 48%;
+       width: 100%;
        text-align: center;
-       background: #1db593;
+       background-color: red;
        border-radius: 30px;
        color: #fff;
        cursor: pointer;
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(1):hover {
-       background-color: #17d0a7;
-}
-
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2):hover {
+.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:hover {
        background-color: #d60000;
-}
-
-.containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2) {
-       background: #ff0000;
 }
 
 /* Content Page User  */
@@ -740,13 +736,13 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        padding: 20px;
        text-align: center;
        color: #fff;
-       background-color: red;
+       background-color: var(--main-clr);
        cursor: pointer;
        transition: all 0.3s ease-in-out;
 }
 
 .containerr main .main-wrapper .content-page-user .postes .postes-wrapper .post .footer-post:hover a {
-       background-color: rgb(214, 34, 34);
+       background-color: var(--hover-clr);
 
 }
 

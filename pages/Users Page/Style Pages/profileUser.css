@@ -50,9 +50,9 @@ header {
        justify-content: center;
        background-color: #fff;
        padding: 10px 0;
-       -webkit-box-shadow: 0px 8px 16px -1px rgba(235, 235, 235, 0.85);
-       -moz-box-shadow: 0px 8px 16px -1px rgba(235, 235, 235, 0.85);
-       box-shadow: 0px 8px 16px -1px rgba(235, 235, 235, 0.85);
+       -webkit-box-shadow: 0px 5px 5px 1px rgba(235, 235, 235, 0.85);
+       -moz-box-shadow: 0px 5px 5px 1px+ rgba(235, 235, 235, 0.85);
+       box-shadow: 0px 5px 5px 1px rgba(235, 235, 235, 0.85);
 }
 
 header .header-wrapper {
@@ -448,7 +448,14 @@ main .header_profile>.user_content .user_info .user_location {
 main .header_profile>.user_content .user_logout {
        position: absolute;
        left: 2%;
-       color: var(--main-clr);
+
+}
+
+main .header_profile>.user_content .user_logout>a {
+       color: #fff;
+       background: var(--main-clr);
+       padding: 10px 20px 15px 20px;
+       border-radius: 15px;
        font-family: var(--main-font);
        font-size: 1.2rem;
        font-weight: 800;
@@ -456,9 +463,10 @@ main .header_profile>.user_content .user_logout {
        transition: all 0.3s ease-in-out;
 }
 
-main .header_profile>.user_content .user_logout:hover {
-       color: #356359;
-
+main .header_profile>.user_content .user_logout>a:hover {
+       color: var(--main-clr);
+       background: #fff;
+       outline: 3px solid var(--main-clr) !important;
 }
 
 
@@ -469,10 +477,6 @@ main .content_profile {
        justify-content: space-between;
        column-gap: 20px;
 }
-
-/* main .content_profile .right-side {
-       display: none;
-} */
 
 /* Right Side */
 .containerr main .right-side {
@@ -619,7 +623,7 @@ main .content_profile {
        font-family: var(--main-font);
 }
 
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span {
+.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request a {
        padding: 2.5% 0;
        width: 48%;
        text-align: center;
@@ -630,15 +634,15 @@ main .content_profile {
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(1):hover {
+.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(1):hover {
        background-color: #17d0a7;
 }
 
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2):hover {
+.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2):hover {
        background-color: #d60000;
 }
 
-.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request span:nth-child(2) {
+.containerr main .right-side .right-side-wrapper .content-requests .request .footer-request a:nth-child(2) {
        background: #ff0000;
 }
 
@@ -801,7 +805,7 @@ main .content_profile {
        justify-content: center;
 }
 
-.containerr main .content-page-user .postes .postes-wrapper .post .footer-post span {
+.containerr main .content-page-user .postes .postes-wrapper .post .footer-post a {
        width: 100%;
        font-family: var(--main-font);
        font-size: 1.5rem;
@@ -814,7 +818,7 @@ main .content_profile {
        transition: all 0.3s ease-in-out;
 }
 
-.containerr main .content-page-user .postes .postes-wrapper .post .footer-post:hover span {
+.containerr main .content-page-user .postes .postes-wrapper .post .footer-post:hover a {
        background-color: rgb(214, 34, 34);
 
 }
@@ -912,20 +916,12 @@ main .content_profile {
 /* ////Bottom Bar */
 
 @media (max-width:767px) {
-       body {
-              background-color: yellow;
-       }
-
        .containerr main .content-page-user .add-post-section>button {
               width: auto;
        }
 }
 
 @media (min-width:990px) {
-       body {
-              background-color: red;
-       }
-
        .search-bar {
               width: 50%;
               display: flex;
@@ -967,10 +963,6 @@ main .content_profile {
 }
 
 @media (min-width:1400px) {
-       body {
-              background-color: orange;
-       }
-
        .containerr main .content-page-user .add-post-section>button {
               width: 65%;
        }
