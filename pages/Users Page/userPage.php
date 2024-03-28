@@ -7,6 +7,7 @@ $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 if (!isset($_SESSION['user'])) {
   header("Location:../Login-Sign page/registration.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,9 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
+
   <div class="containerr">
+
     <!-- Header Page (Navbar) -->
     <header>
       <div class="header-wrapper">
@@ -182,8 +185,9 @@ if (!isset($_SESSION['user'])) {
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <!-- <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data"> -->
-                <form action="" method="" enctype="multipart/form-data">
+                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post"
+                  enctype="multipart/form-data">
+                  <!-- <form action="" method="" enctype="multipart/form-data"> -->
                   <!-- Header modal -->
                   <div class="modal-header">
                     <span class="modal-title-case" id="exampleModalLongTitle">
@@ -578,6 +582,11 @@ if (!isset($_SESSION['user'])) {
               </button>
             </div>
           </div>
+          <!-- start Incluse Message Successfully -->
+          <?php
+          include '../Login-Sign page/includes/functions/success.php';
+          ?>
+          <!-- start Incluse Message Successfully -->
           <!-- My Postes -->
           <div class="postes">
             <div class="postes-wrapper">
@@ -941,61 +950,61 @@ if (!isset($_SESSION['user'])) {
 
 
 
-      $(".btn-add-case").click(() => {
-        var token_post = $("#user_token").val();
-        var type_case = $("#type-case").val();
-        var num_case = $("#num-case").val();
-        var location_case = $("#location-case").val();
-        var date_case = $("#date-case").val();
-        var hour_case = $("#hour-case").val();
-        var description_case = $("#description-case").val();
-        var fill_case = $("#fill-case")[0].files[0];
-        var image_case = $("#image-case")[0].files[0];
+      // $(".btn-add-case").click(() => {
+      //           var token_post = $("#user_token").val();
+      //           var type_case = $("#type-case").val();
+      //           var num_case = $("#num-case").val();
+      //           var location_case = $("#location-case").val();
+      //           var date_case = $("#date-case").val();
+      //           var hour_case = $("#hour-case").val();
+      //           var description_case = $("#description-case").val();
+      //           var fill_case = $("#fill-case")[0].files[0];
+      //           var image_case = $("#image-case")[0].files[0];
 
-        var data_obj = {
-          case_Token: token_post,
-          case_Type: type_case,
-          case_Num: JSON.parse(num_case),
-          case_Location: location_case,
-          case_Date: date_case,
-          case_Hour: hour_case,
-          case_Description: description_case,
-          case_Fill: JSON.stringify(fill_case),
-          case_Image: image_case,
-        };
-        console.log(data_obj)
+      //           var data_obj = {
+      //             case_Token: token_post,
+      //             case_Type: type_case,
+      //             case_Num: JSON.parse(num_case),
+      //             case_Location: location_case,
+      //             case_Date: date_case,
+      //             case_Hour: hour_case,
+      //             case_Description: description_case,
+      //             case_Fill: JSON.stringify(fill_case),
+      //             case_Image: image_case,
+      //           };
+      //           console.log(data_obj)
 
-        $.ajaxSetup({
-          headers: {
-            'CSRF-TOKEN': $('#user_token').val(),
-          }
-        });
-        $.ajax({
-          type: "POST",
-          url: '../Login-Sign page/includes/functions/postsValidation.php',
-          data: {
-            data: JSON.stringify(data_obj)
-          }, // now data come in this function
-          // processData: false,
-          // contentType: false,
-          // crossDomain: true,
-          dataType: "json",
-          success: function (data, status, jqXHR) {
+      //           $.ajaxSetup({
+      //             headers: {
+      //               'CSRF-TOKEN': $('#user_token').val(),
+      //             }
+      //           });
+      //           $.ajax({
+      //             type: "POST",
+      //             url: '../Login-Sign page/includes/functions/postsValidation.php',
+      //             data: {
+      //               data: JSON.stringify(data_obj)
+      //             }, // now data come in this function
+      //             // processData: false,
+      //             // contentType: false,
+      //             // crossDomain: true,
+      //             dataType: "json",
+      //             success: function (data, status, jqXHR) {
 
-            alert("success");
-          },
+      //               alert("success");
+      //             },
 
-          error: function (data, jqXHR, status) {
-            // error handler
-            alert('fail' + status.code);
-          }
-        });
-
-
-        // console.log(data)
+      //             error: function (data, jqXHR, status) {
+      //               // error handler
+      //               alert('fail' + status.code);
+      //             }
+      //           });
 
 
-      });
+      //           // console.log(data)
+
+
+      // });
     })
   </script>
 </body>
