@@ -6,9 +6,9 @@ session_start();
 
 //  ['type-case'];
 
-     // $data = json_decode($_REQUEST['data']);
+// $data = json_decode($_REQUEST['data']);
 // print_r( $data);
-print_r($_REQUEST);
+print_r($_REQUEST["data"]);
 // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 //      //     if (!is_integer($nameCase)) {

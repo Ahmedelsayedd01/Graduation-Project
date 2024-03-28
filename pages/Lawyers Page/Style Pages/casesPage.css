@@ -376,7 +376,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
        height: 55px;
        object-fit: cover;
        object-position: center;
-       /* cursor: pointer; */
+       cursor: pointer;
        border-radius: 50%;
        padding: 3px;
 }
@@ -384,6 +384,7 @@ header .header-wrapper .add-post .modal .add-modal-footer button:nth-child(2):ho
 header .profile img {
        border: 2px dotted var(--main-clr) !important;
 }
+
 
 /* ////Header page */
 
@@ -410,10 +411,9 @@ header .profile img {
 
 /* Right Side */
 .containerr main .main-wrapper .right-side {
-       position: sticky;
-       top: 100px;
-       width: 25%;
-       display: none;
+       width: 100%;
+       margin-bottom: 80px;
+       /* display: none; */
 }
 
 .containerr main .main-wrapper .right-side .right-side-wrapper {
@@ -522,6 +522,7 @@ header .profile img {
 .containerr main .main-wrapper .right-side .right-side-wrapper .content-requests .request .content-request .details-case {
        width: 100%;
        display: flex;
+       flex-wrap: wrap;
        align-items: center;
        justify-content: space-between;
 }
@@ -571,7 +572,7 @@ header .profile img {
 
 /* Content Page User  */
 .containerr main .main-wrapper .content-page-user {
-       width: 100%;
+       display: none;
        margin-bottom: 80px;
 }
 
@@ -984,11 +985,18 @@ header .profile img {
 
        .containerr main .main-wrapper .content-page-user {
               width: 47%;
+              display: flex;
+              flex-direction: column;
               margin-bottom: 10px;
        }
 
 
-       .containerr main .main-wrapper .right-side,
+       .containerr main .main-wrapper .right-side {
+              position: sticky;
+              top: 100px;
+              width: 25%;
+       }
+
        .containerr main .main-wrapper .left-side {
               display: flex;
        }
