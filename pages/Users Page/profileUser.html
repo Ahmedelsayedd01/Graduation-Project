@@ -200,7 +200,12 @@
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                  <form action="post">
+                  <form
+                    action="../Login-Sign page/includes/functions/postsValidation.php"
+                    method="post"
+                    enctype="multipart/form-data"
+                  >
+                    <!-- <form action="" method="" enctype="multipart/form-data"> -->
                     <!-- Header modal -->
                     <div class="modal-header">
                       <span class="modal-title-case" id="exampleModalLongTitle">
@@ -222,7 +227,7 @@
                         <label for="type-case">نوع القضية:</label>
                         <select
                           class="sel-type-case"
-                          name="type-case"
+                          name="case_Type"
                           id="type-case"
                           required
                         >
@@ -247,12 +252,18 @@
                         "
                       />
                       <!-- Number Case -->
+                      <input
+                        type="hidden"
+                        id="user_token"
+                        name="token"
+                        value="<?php echo $_SESSION['token'] ?? '' ?>"
+                      />
                       <div class="num-case">
                         <label for="num-case">رقم القضية:</label>
                         <input
                           type="number"
                           class="sel-num-case"
-                          name="num-case"
+                          name="case_Num"
                           id="num-case"
                           placeholder="ادخل رقم القضية"
                           required
@@ -270,7 +281,7 @@
                         <label for="location-case">مكان القضية:</label>
                         <select
                           class="sel-location-case"
-                          name="location-case"
+                          name="case_Location"
                           style="width: 78% !important"
                           id="location-case"
                           required
@@ -289,23 +300,23 @@
                       />
                       <!-- Date Case -->
                       <div class="date-case">
-                        <div class="date-case-dmy">
+                        <div class="date-case-ymd">
                           <label for="date-case">ميعاد القضية:</label>
                           <input
                             type="date"
                             class="sel-date-case"
-                            name="date-case"
+                            name="case_Date"
                             id="date-case"
                             required
                           />
                         </div>
-                        <div class="date-case-hm">
+                        <div class="date-case-mh">
                           <label for="date-case">الساعة:</label>
                           <input
                             type="time"
                             class="sel-date-case"
-                            name="date-case"
-                            id="date-case"
+                            name="case_Hour"
+                            id="hour-case"
                             required
                           />
                         </div>
@@ -328,7 +339,7 @@
                       >
                         <label for="description-case">الموضوع</label>
                         <textarea
-                          name="description-case"
+                          name="case_Description"
                           id="description-case"
                           class="description-case"
                           cols="15"
@@ -349,7 +360,7 @@
                           type="file"
                           class="sel-fill-case"
                           style="width: 70% !important; direction: ltr"
-                          name="fill-case"
+                          name="case_Fill"
                           id="fill-case"
                           accept="application/pdf, application/vnd.ms-excel"
                           required
@@ -365,7 +376,7 @@
                           type="file"
                           class="sel-image-case"
                           style="width: 70% !important; direction: ltr"
-                          name="image-case"
+                          name="case_Image"
                           id="image-case"
                           accept="image/gif, image/jpeg"
                           required
