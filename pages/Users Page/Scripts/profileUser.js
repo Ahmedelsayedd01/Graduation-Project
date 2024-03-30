@@ -40,7 +40,7 @@ $(document).ready(() => {
               <div class="header-post">
                 <div class="profile">
                   <a href="profileUser.html">
-                    <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
+                    <img src="asstesUser/user.jpg" alt="user" /></a>
                 </div>
                 <div class="name-user">
                   <h1>${user.userName + " " + user.lastName}</h1>
