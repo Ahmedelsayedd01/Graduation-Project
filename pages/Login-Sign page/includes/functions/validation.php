@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'type' => $data['type'],
                   ];
 
-                   header('Location:../../../Lawyers Page/lawyers.php');
+                   header('Location:../../../Lawyers Page/lawyerPage.php');
       $dataJson = json_encode(['dataJson'=>$data]);
                      return $dataJson;
                   // Start Session With User

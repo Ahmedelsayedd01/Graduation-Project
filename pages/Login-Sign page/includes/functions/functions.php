@@ -64,6 +64,14 @@ function selectData($select, $from, $check, $value)
     $data = $statement->fetchAll();
     return  $data;
 }
+function selectAllData($select, $from)
+{
+    global $con;
+    $statement = $con->prepare("SELECT $select FROM $from ");
+    $statement->execute();
+    $data = $statement->fetchAll();
+    return  $data;
+}
 
 
 

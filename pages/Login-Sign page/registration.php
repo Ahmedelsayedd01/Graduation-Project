@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       ];
       // Email :'lawyer@case.org'
       // password: Makemesmile123
-      header('Location:../../pages/Lawyers Page/lawyers.php');
+      header('Location:../../pages/Lawyers Page/lawyerPage.php');
     }
   }
 }
@@ -116,12 +116,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <!-- Section to set First && Last Name -->
           <div class="full-name">
             <div class="user-fn-box">
-              <input type="text" maxlength="15" id="fn-btn" name="firstName" required oninvalid="this.setCustomValidity('ادخل الاسم الاول')" oninput="this,setCustomValidity('')" />
+              <input type="text" maxlength="15" id="fn-btn" name="firstName" required
+                oninvalid="this.setCustomValidity('ادخل الاسم الاول')" oninput="this,setCustomValidity('')" />
               <span id="fn-valid">ادخل الاسم الاول</span>
               <label>الاسم الاول</label>
             </div>
             <div class="user-ln-box">
-              <input type="text" maxlength="15" name="lastName" id="ln-btn" required oninvalid="this.setCustomValidity('ادخل الاسم العائلة')" oninput="this,setCustomValidity('')" />
+              <input type="text" maxlength="15" name="lastName" id="ln-btn" required
+                oninvalid="this.setCustomValidity('ادخل الاسم العائلة')" oninput="this,setCustomValidity('')" />
               <span id="ln-valid">ادخل اسم العائلة</span>
               <label>اسم العائلة</label>
             </div>
@@ -129,7 +131,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <!-- Section to set email && chose the type -->
           <div class="email-name">
             <div class="email-name-box">
-              <input type="email" name="email" id="email-btn" required oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')" oninput="this,setCustomValidity('')" />
+              <input type="email" name="email" id="email-btn" required
+                oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
+                oninput="this,setCustomValidity('')" />
               <span id="email-valid">ادخل علامة "@" بعد اسم البريد الالكترونى</span>
               <!-- This Is Error If Email Exists -->
               <?php if (isset($error['email'])) {
@@ -165,14 +169,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <!-- Section to set Mobile Number && Idintity Number  -->
           <div class="user-num">
             <div class="user-num-box">
-              <input type="text" maxlength="12" name="user_number" id="num-btn" required oninvalid="this.setCustomValidity('ادخل رقم الهاتف')" oninput="this,setCustomValidity('')" />
+              <input type="text" maxlength="12" name="user_number" id="num-btn" required
+                oninvalid="this.setCustomValidity('ادخل رقم الهاتف')" oninput="this,setCustomValidity('')" />
               <span id="num-valid">ادخل رقم الهاتف</span>
               <label>رقم الهاتف</label>
             </div>
           </div>
           <div class="user-id">
             <div class="user-id-box">
-              <input type="text" maxlength="13" name="user_idintity" id="idintity-btn" required oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')" oninput="this,setCustomValidity('')" />
+              <input type="text" maxlength="13" name="user_idintity" id="idintity-btn" required
+                oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')" oninput="this,setCustomValidity('')" />
               <span id="idintity-valid">ادخل رقم الهوية الشخصية</span>
               <label>رقم الهوية الشخصية</label>
             </div>
@@ -180,7 +186,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
           <div class="user-pass">
             <div class="user-pass-box">
-              <input type="password" minlength="8" name="password" name="user-pass-sign" id="password_sign" required oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')" oninput="this,setCustomValidity('')" />
+              <input type="password" minlength="8" name="password" name="user-pass-sign" id="password_sign" required
+                oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
+                oninput="this,setCustomValidity('')" />
               <i class="fa-regular fa-eye" id="show_pass_sign"></i>
               <i class="fa-regular fa-eye-slash" id="hide_pass_sign" style="display: none"></i>
               <span id="pass-valid">ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span>
@@ -199,7 +207,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="includes/functions/validation.php" method="POST" id="login-form">
           <div class="email-name">
             <div class="email-name-box">
-              <input type="email" name="email_login" id="email_login_btn" required oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')" oninput="this,setCustomValidity('')" />
+              <input type="email" name="email_login" id="email_login_btn" required
+                oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
+                oninput="this,setCustomValidity('')" />
               <span id="email_login_valid">ادخل علامة "@" بعد اسم البريد الالكترونى</span>
               <label>عنوان البريد الالكترونى</label>
             </div>
@@ -207,7 +217,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
           <div class="user-pass">
             <div class="user-pass-box">
-              <input type="password" minlength="8" name="password_login" id="password_login" required oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')" oninput="this,setCustomValidity('')" />
+              <input type="password" minlength="8" name="password_login" id="password_login" required
+                oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')" oninput="this,setCustomValidity('')" />
               <i class="fa-regular fa-eye" id="show_pass_login"></i>
               <i class="fa-regular fa-eye-slash" id="hide_pass_login" style="display: none"></i>
               <span id="pass_login_valid">ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span>
