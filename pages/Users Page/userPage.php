@@ -802,7 +802,7 @@ if (!isset($_SESSION['user'])) {
                       " />
                   <div class="post-description-case">
                     <p>
-                      ${el.description}.
+                      ${el.description}
                     </p>
                   </div>
                 </div>
