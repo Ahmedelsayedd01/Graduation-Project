@@ -7,19 +7,18 @@ $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 if (!isset($_SESSION['user'])) {
   header("Location:../Login-Sign page/registration.php");
 }
-if(isset($_GET['content'])){
-   if($_GET['content'] == "delete"){
+if (isset($_GET['content'])) {
+  if ($_GET['content'] == "delete") {
     include "../Login-Sign page/includes/functions/functions.php";
     $post_id = $_GET['id'];
-    $deletePost = deleteRecord('posts','id',$post_id);
-      if($deletePost){
+    $deletePost = deleteRecord('posts', 'id', $post_id);
+    if ($deletePost) {
       header('Location:userPage.php');
-      }
+    }
     echo $_GET['id'];
-   }else{
+  } else {
     echo "error 404";
-   }
-
+  }
 }
 //  This End DELETE POSTS
 ?>
@@ -37,21 +36,15 @@ if(isset($_GET['content'])){
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Liberary -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <!-- Jquery Liberary -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>User Page</title>
 </head>
@@ -195,12 +188,10 @@ if(isset($_GET['content'])){
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post"
-                  enctype="multipart/form-data">
+                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
                   <!-- <form action="" method="" enctype="multipart/form-data"> -->
                   <!-- Header modal -->
                   <div class="modal-header">
@@ -239,8 +230,7 @@ if(isset($_GET['content'])){
                     <input type="hidden" id="user_token" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="case_Num" id="num-case"
-                        placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="case_Num" id="num-case" placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -250,8 +240,7 @@ if(isset($_GET['content'])){
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="case_Location" style="width: 78% !important"
-                        id="location-case" required>
+                      <select class="sel-location-case" name="case_Location" style="width: 78% !important" id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -285,8 +274,7 @@ if(isset($_GET['content'])){
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="case_Description" id="description-case" class="description-case" cols="15"
-                        rows="4"></textarea>
+                      <textarea name="case_Description" id="description-case" class="description-case" cols="15" rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -296,8 +284,7 @@ if(isset($_GET['content'])){
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
-                        name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -305,8 +292,7 @@ if(isset($_GET['content'])){
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
-                        name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -324,7 +310,7 @@ if(isset($_GET['content'])){
         <!-- left section (profile user)-->
         <div class="profile">
           <a href="profileUser.html">
-            <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
+            <img src="asstesUser/user.jpg" alt="user" /></a>
         </div>
       </div>
     </header>
@@ -346,7 +332,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -385,7 +371,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -424,7 +410,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -463,7 +449,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -502,7 +488,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -542,7 +528,7 @@ if(isset($_GET['content'])){
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -583,8 +569,8 @@ if(isset($_GET['content'])){
         <div class="content-page-user">
           <div class="add-post-section">
             <div class="profile">
-              <a href="profileUser.html">
-                <img src="asstesUser/lawyer3.jpg" alt="user" /></a>
+              <a href="profileLawyer.html">
+                <img src="asstesUser/user.jpg" alt="user" /></a>
             </div>
             <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
               نشر قضية جديدة ؟
@@ -622,7 +608,7 @@ if(isset($_GET['content'])){
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -649,7 +635,7 @@ if(isset($_GET['content'])){
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -676,7 +662,7 @@ if(isset($_GET['content'])){
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -703,7 +689,7 @@ if(isset($_GET['content'])){
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileLawyer.html">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -767,13 +753,13 @@ if(isset($_GET['content'])){
   <script src="./Scripts/userPage.js"></script>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
 
       $.getJSON({
         url: 'userApi/userApi.php',
         type: "GET",
         // data: data,
-        success: function (data) {
+        success: function(data) {
           console.log("data", data.userData);
           // console.log("GET", data);
           var post = data.posts;
@@ -789,7 +775,7 @@ if(isset($_GET['content'])){
                 <div class="header-post">
                   <div class="profile">
                     <a href="profileUser.html">
-                      <img src="asstesUser/userImage/${el.ImageCase}" alt="user" /></a>
+                      <img src="asstesUser/user.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
                     <h1>${user.userName +" "+ user.lastName}</h1>
