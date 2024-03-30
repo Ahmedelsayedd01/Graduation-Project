@@ -111,4 +111,12 @@ function redirectHome($theErrorMsg, $url = null, $seconds = 3)
     exit();
 }
 ;
+
+
+        function deleteRecord($table,$column,$value){
+        global $con;
+            $sql = "DELETE FROM $table WHERE $column = $value";
+            $con->exec($sql);
+            return "Post Delete Successfully";
+        }
 //  Function Redirect If user Have Error in any Thing
