@@ -21,7 +21,7 @@ if(isset($_GET['content'])){
    }
 
 }
-
+//  This End DELETE POSTS
 ?>
 
 <!DOCTYPE html>
