@@ -76,7 +76,7 @@ function selectAllData($select, $from)
 
 
 function stringCheck($nameCheck)
-{
+{           
     return htmlspecialchars(strip_tags(trim($nameCheck)));
 }
 
