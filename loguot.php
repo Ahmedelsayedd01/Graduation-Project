@@ -3,7 +3,5 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location:pages/Login-Sign page/registration.php');
-
-
-?>
+// header('Location:pages/Login-Sign page/registration.php');
+echo ' Destory';

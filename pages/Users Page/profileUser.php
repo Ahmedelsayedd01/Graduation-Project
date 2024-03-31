@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+// print_r( $_SESSION['user']);
+$_SESSION['token'] = md5(uniqid(mt_rand(), true));
+
+if (!isset($_SESSION['user'])) {
+header("Location:../Login-Sign page/registration.php");
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 

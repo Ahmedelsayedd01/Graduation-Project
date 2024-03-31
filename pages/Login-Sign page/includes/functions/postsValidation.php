@@ -17,12 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      //     
 //   echo $typeCase = $_REQUEST['case_Token'];
    $typeCase = stringCheck($_POST['case_Type']);
+   // Variable
    $locationCase = stringCheck($_POST['case_Location']);
    $dateCase = stringCheck($_POST['case_Date']);
    $timeCase = stringCheck($_POST['case_Hour']);
   $descriptionCase = stringCheck($_POST['case_Description']);
   $numberCase = stringCheck($_POST['case_Num']);
-
+// ---------------STOP------------------------------
      // Start Validate Image File 
      $file = $_FILES['case_Image'];
      $f_name = $file['name'];
