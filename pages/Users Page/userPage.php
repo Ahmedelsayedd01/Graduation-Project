@@ -769,8 +769,6 @@ if (isset($_GET['content'])) {
           console.log("Image Start", post[0].fileCase)
 
           $(post).each((val, el) => {
-            //   console.log("val", val)
-            //   console.log("el", el)
             var NewPost = `<div class="post">
                 <div class="header-post">
                   <div class="profile">
@@ -831,9 +829,6 @@ if (isset($_GET['content'])) {
 
         }
       })
-
-
-
     })
   </script>
 </body>
