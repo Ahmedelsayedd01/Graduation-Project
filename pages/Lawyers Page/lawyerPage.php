@@ -665,7 +665,7 @@ if (!isset($_SESSION['lawyer'])) {
           console.log("data", data.lawyersData);
           // console.log("GET", data);
           var post = data.posts;
-          var user = data.userData;
+          var user = data.lawyersData;
           // test Log And Append Image Posts
           // console.log("Image Start", post[0].ImageCase)
           // console.log("Image Start", post[0].fileCase)
