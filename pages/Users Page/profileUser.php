@@ -1,28 +1,3 @@
-<?php
-
-session_start();
-// print_r( $_SESSION['user']);
-$_SESSION['token'] = md5(uniqid(mt_rand(), true));
-
-if (!isset($_SESSION['user'])) {
-  header("Location:../Login-Sign page/registration.php");
-}
-if (isset($_GET['content'])) {
-  if ($_GET['content'] == "delete") {
-    include "../Login-Sign page/includes/functions/functions.php";
-    $post_id = $_GET['id'];
-    $deletePost = deleteRecord('posts', 'id', $post_id);
-    if ($deletePost) {
-      header('Location:userPage.php');
-    }
-    echo $_GET['id'];
-  } else {
-    echo "error 404";
-  }
-}
-//  This End DELETE POSTS
-?>
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -30,29 +5,33 @@ if (isset($_GET['content'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="./asstesUser/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/userPage.css" />
+  <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
+  <link rel="stylesheet" href="./Style Pages/profileUser.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Liberary -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <!-- Jquery Liberary -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>User Page</title>
 </head>
 
 <body>
-
   <div class="containerr">
-
     <!-- Header Page (Navbar) -->
     <header>
       <div class="header-wrapper">
@@ -188,11 +167,12 @@ if (isset($_GET['content'])) {
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
-                  <!-- <form action="" method="" enctype="multipart/form-data"> -->
+                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post"
+                  enctype="multipart/form-data">
                   <!-- Header modal -->
                   <div class="modal-header">
                     <span class="modal-title-case" id="exampleModalLongTitle">
@@ -207,7 +187,7 @@ if (isset($_GET['content'])) {
                     <!-- Type Case -->
                     <div class="type-case">
                       <label for="type-case">نوع القضية:</label>
-                      <select class="sel-type-case" name="case_Type" id="type-case" required>
+                      <select class="sel-type-case" name="type-case" id="type-case" required>
                         <option value="0" selected>اختر نوع القضية</option>
                         <option value="جنائى">جنائى</option>
                         <option value="مدنى">مدنى</option>
@@ -227,10 +207,10 @@ if (isset($_GET['content'])) {
                           margin: 0.7rem 0;
                         " />
                     <!-- Number Case -->
-                    <input type="hidden" id="user_token" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="case_Num" id="num-case" placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="num-case" id="num-case"
+                        placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -240,7 +220,8 @@ if (isset($_GET['content'])) {
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="case_Location" style="width: 78% !important" id="location-case" required>
+                      <select class="sel-location-case" name="location-case" style="width: 78% !important"
+                        id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -253,13 +234,13 @@ if (isset($_GET['content'])) {
                         " />
                     <!-- Date Case -->
                     <div class="date-case">
-                      <div class="date-case-ymd">
+                      <div class="date-case-dmy">
                         <label for="date-case">ميعاد القضية:</label>
-                        <input type="date" class="sel-date-case" name="case_Date" id="date-case" required />
+                        <input type="date" class="sel-date-case" name="date-case" id="date-case" required />
                       </div>
-                      <div class="date-case-mh">
+                      <div class="date-case-hm">
                         <label for="date-case">الساعة:</label>
-                        <input type="time" class="sel-date-case" name="case_Hour" id="hour-case" required />
+                        <input type="time" class="sel-date-case" name="date-case" id="date-case" required />
                       </div>
                     </div>
                     <hr style="
@@ -274,7 +255,8 @@ if (isset($_GET['content'])) {
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="case_Description" id="description-case" class="description-case" cols="15" rows="4"></textarea>
+                      <textarea name="description-case" id="description-case" class="description-case" cols="15"
+                        rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -284,7 +266,8 @@ if (isset($_GET['content'])) {
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="case_Fill" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
+                        name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -292,7 +275,8 @@ if (isset($_GET['content'])) {
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="case_Image" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
+                        name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -316,8 +300,27 @@ if (isset($_GET['content'])) {
     </header>
     <!-- Content Page -->
     <main>
-      <div class="main-wrapper">
-        <!-- Request Side -->
+      <section class="header_profile">
+        <div class="user_content">
+          <div class="profile">
+            <a href="profileUser.html">
+              <img src="asstesUser/user.jpg" alt="user" /></a>
+          </div>
+
+          <div class="user_info">
+            <span class="user_name">محمد احمد</span>
+            <!-- <span class="user_location">الاسكندرية</span> -->
+          </div>
+
+          <div class="user_logout">
+            <!-- Logout  -->
+            <a href="../../loguot.php">تسجبل خروج</a>
+            <!-- Logout  -->
+          </div>
+        </div>
+      </section>
+
+      <section class="content_profile">
         <div class="right-side">
           <div class="right-side-wrapper">
             <div class="header-requests">
@@ -569,7 +572,7 @@ if (isset($_GET['content'])) {
         <div class="content-page-user">
           <div class="add-post-section">
             <div class="profile">
-              <a href="profileLawyer.html">
+              <a href="profileUser.html">
                 <img src="asstesUser/user.jpg" alt="user" /></a>
             </div>
             <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
@@ -582,144 +585,20 @@ if (isset($_GET['content'])) {
               </button>
             </div>
           </div>
-          <!-- start Incluse Message Successfully -->
-          <?php
-          include '../Login-Sign page/includes/functions/success.php';
-          ?>
-          <!-- start Incluse Message Successfully -->
           <!-- My Postes -->
           <div class="postes">
             <div class="postes-wrapper">
-              <!-- All Postes  -->
+              <!-- All Posts -->
             </div>
           </div>
         </div>
-        <!-- Best lawyer Side  -->
-        <div class="left-side">
-          <div class="left-side-wrapper">
-            <div class="header-bestLawyers">
-              <span>أفضل المحامين</span>
-            </div>
-            <!-- Content Best Lawyers -->
-            <div class="content-bestLawyers">
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.html">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
     <!-- menu-bottom -->
     <div class="menu-bottom">
       <div class="menu-bottom-wrapper">
         <ul>
-          <li class="active-tap">
+          <li>
             <a href="userPage.php">
               <i class="fa-solid fa-house"></i>
               <span>الرئيسية</span>
@@ -738,8 +617,8 @@ if (isset($_GET['content'])) {
               <span>المحامين</span>
             </a>
           </li>
-          <li>
-            <a href="profileUser.html">
+          <li class="active-tap">
+            <a href="profileLawyer.html">
               <i class="fa-solid fa-user"></i>
               <span>الحساب</span>
             </a>
@@ -748,89 +627,7 @@ if (isset($_GET['content'])) {
       </div>
     </div>
   </div>
-
-
-  <script src="./Scripts/userPage.js"></script>
-
-  <script>
-    $(document).ready(function() {
-
-      $.getJSON({
-        url: 'userApi/userApi.php',
-        type: "GET",
-        // data: data,
-        success: function(data) {
-          console.log("data", data.userData);
-          // console.log("GET", data);
-          var post = data.posts;
-          var user = data.userData;
-          // test Log And Append Image Posts
-          console.log(data.lawyers) // This Lawyer Data 
-          // console.log("Image Start", post[0].fileCase)
-
-          $(post).each((val, el) => {
-            var NewPost = `<div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>${user.userName +" "+ user.lastName}</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>${el.typeCase} .</span>
-                    </div>
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>${el.location} .</span>
-                    </div>
-                  </div>
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>${el.Date}</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>${el.houerCase.slice(0,5)}</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <div class="post-description-case">
-                    <p>
-                      ${el.description}
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <a href='userPage.php?content=delete&id=${el.id}'>الغاء القضية</a>
-                </div>
-              </div>`;
-
-            $(".postes-wrapper").append(NewPost);
-          })
-
-
-        }
-      })
-    })
-  </script>
+  <script src="./Scripts/profileUser.js"></script>
 </body>
 
 </html>

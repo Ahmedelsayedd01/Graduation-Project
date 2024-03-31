@@ -4,7 +4,7 @@ session_start();
 // print_r( $_SESSION['user']);
 $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['lawyer'])) {
   header("Location:../Login-Sign page/registration.php");
 }
 ?>
@@ -657,12 +657,12 @@ if (!isset($_SESSION['user'])) {
     $(document).ready(function() {
 
       $.getJSON({
-        url: 'userApi/userApi.php',
+        url: 'lawyerApi/lawyerApi.php',
         type: "GET",
         // data: data,
-        success: function(data) {
-          console.log("data", data.posts);
-          console.log("data", data.userData);
+        success: function (data) {
+          console.log("dataPosts", data.posts);
+          console.log("data", data.lawyersData);
           // console.log("GET", data);
           var post = data.posts;
           var user = data.userData;
