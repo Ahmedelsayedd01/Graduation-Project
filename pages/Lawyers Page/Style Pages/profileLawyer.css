@@ -494,6 +494,31 @@ main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_r
        margin-bottom: 5px;
 }
 
+main .header_profile>.profilelawyer_content .profilelawyer_info .user_logout {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .user_logout>a {
+       color: #fff;
+       background: var(--main-clr);
+       padding: 10px 20px 15px 20px;
+       border-radius: 15px;
+       font-family: var(--main-font);
+       font-size: 1.2rem;
+       font-weight: 800;
+       cursor: pointer;
+       transition: all 0.3s ease-in-out;
+}
+
+main .header_profile>.profilelawyer_content .profilelawyer_info .user_logout>a:hover {
+       color: var(--main-clr);
+       background: #fff;
+       outline: 3px solid var(--main-clr) !important;
+}
 
 
 /* ////Content page */
@@ -664,6 +689,13 @@ main .header_profile>.profilelawyer_content .profilelawyer_info .profilelawyer_r
 
        .menu-bottom {
               display: none;
+       }
+
+       main .header_profile>.profilelawyer_content .profilelawyer_info .user_logout {
+              position: absolute;
+              width: auto;
+              left: 3%;
+              top: 5%;
        }
 
 }
