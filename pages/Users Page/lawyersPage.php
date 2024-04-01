@@ -48,116 +48,7 @@
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>احمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد احمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>ذياد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العامة </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesUser/user.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
+            <!-- Fetch Lawyer Here -->
           </div>
         </div>
         <!-- center section in mobile and left start from taplate to post case -->
@@ -167,11 +58,10 @@
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <form action="post">
+                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
                   <!-- Header modal -->
                   <div class="modal-header">
                     <span class="modal-title-case" id="exampleModalLongTitle">
@@ -208,8 +98,7 @@
                     <!-- Number Case -->
                     <div class="num-case">
                       <label for="num-case">رقم القضية:</label>
-                      <input type="number" class="sel-num-case" name="num-case" id="num-case"
-                        placeholder="ادخل رقم القضية" required />
+                      <input type="number" class="sel-num-case" name="num-case" id="num-case" placeholder="ادخل رقم القضية" required />
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -219,8 +108,7 @@
                     <!-- Location Case -->
                     <div class="location-case">
                       <label for="location-case">مكان القضية:</label>
-                      <select class="sel-location-case" name="location-case" style="width: 78% !important"
-                        id="location-case" required>
+                      <select class="sel-location-case" name="location-case" style="width: 78% !important" id="location-case" required>
                         <option value="0" selected>اختر مكان القضية</option>
                         <option value="الاسكندرية">الاسكندرية</option>
                         <option value="القاهرة">القاهرة</option>
@@ -254,8 +142,7 @@
                           row-gap: 10px !important;
                         ">
                       <label for="description-case">الموضوع</label>
-                      <textarea name="description-case" id="description-case" class="description-case" cols="15"
-                        rows="4"></textarea>
+                      <textarea name="description-case" id="description-case" class="description-case" cols="15" rows="4"></textarea>
                     </div>
                     <hr style="
                           border: 1px solid #d5d5d5 !important;
@@ -265,8 +152,7 @@
                     <!-- Fill Case -->
                     <div class="fill-case">
                       <label for="fill-case">ارفاق ملف للقضية:</label>
-                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr"
-                        name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
+                      <input type="file" class="sel-fill-case" style="width: 70% !important; direction: ltr" name="fill-case" id="fill-case" accept="application/pdf, application/vnd.ms-excel" required />
                     </div>
                     <!-- <hr
                       style="border: 1px solid #d5d5d5 !important; width: 100%"
@@ -274,8 +160,7 @@
                     <!-- Image Case -->
                     <div class="image-case mt-3">
                       <label for="image-case">ارفاق صور للقضية:</label>
-                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr"
-                        name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
+                      <input type="file" class="sel-image-case" style="width: 70% !important; direction: ltr" name="image-case" id="image-case" accept="image/gif, image/jpeg" required />
                     </div>
                   </div>
                   <!-- Footer Modal -->
@@ -568,189 +453,7 @@
           <!-- My Postes -->
           <div class="postes">
             <div class="postes-wrapper">
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.php">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <a>الغاء القضية</a>
-                </div>
-              </div>
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.php">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <span>الغاء القضية</span>
-                </div>
-              </div>
-              <div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                    <a href="profileUser.php">
-                      <img src="asstesUser/user.jpg" alt="user" /></a>
-                  </div>
-                  <div class="name-user">
-                    <h1>احمد احمد احمد</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>تجاري و شركات .</span>
-                    </div>
-                    <!-- location case -->
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>الاسكندرية .</span>
-                    </div>
-                  </div>
-                  <!-- date case -->
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>01/12/2024</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>3:30</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <!-- description case -->
-                  <div class="post-description-case">
-                    <p>
-                      تقوم جريمة السرقة فى حق مرتكبيها بتوافر القصد الجنائي فى
-                      الفعل المؤثم؛بعلمه وقت ارتكاب الفعل بأنه يختلس منقولًا
-                      مملوكًا للغير من غير رضاه بنية تملكه. وتختلف جريمة
-                      السرقة العادية عن جريمة السرقة بالإكراه، إذ أن جريمة
-                      السرقة تكون عن طريق الغفلة، أما جريمة السرقة بالإكراه
-                      يُستخدم فيها إحدى أدوات الإكراه لسرقة المجني عليه.
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <span>الغاء القضية</span>
-                </div>
-              </div>
+              <!-- Fetch All Posts Here -->
             </div>
           </div>
         </div>
@@ -762,114 +465,7 @@
             </div>
             <!-- Content Best Lawyers -->
             <div class="content-bestLawyers">
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.php">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.php">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.php">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyer.php">
-                      <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
+              <!-- Fetch All Lawyer Here -->
             </div>
           </div>
         </div>
