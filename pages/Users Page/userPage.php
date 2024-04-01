@@ -621,7 +621,7 @@ if (isset($_GET['content'])) {
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.php">
+                    <a href="profileLawyer.php/${ele.id}">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->

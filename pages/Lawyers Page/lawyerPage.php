@@ -53,121 +53,12 @@ if (!isset($_SESSION['lawyer'])) {
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>احمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد احمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>ذياد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العامة </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
-            <a href="profileLawyerFriend.html">
-              <div class="res_lawyer">
-                <img src="./asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>محمد محمد</span>
-                  <span>القضاية العسكرية </span>
-                </div>
-              </div>
-            </a>
+            <!-- Lawyer Fetch here -->
           </div>
         </div>
         <!-- left section (profile user)-->
         <div class="profile">
-          <a href="profileLawyer.html">
+          <a href="profileLawyer.php">
             <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
         </div>
       </div>
@@ -421,7 +312,7 @@ if (!isset($_SESSION['lawyer'])) {
         <div class="content-page-user">
           <!-- <div class="add-post-section">
             <div class="profile">
-              <a href="profileUser.html">
+              <a href="profileUser.php">
                 <img src="asstesLawyer/user.jpg" alt="user" /></a>
             </div>
             <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
@@ -449,168 +340,7 @@ if (!isset($_SESSION['lawyer'])) {
             </div>
             <!-- Content Best Lawyers -->
             <div class="content-bestLawyers">
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
-              <!-- Lawyer -->
-              <div class="bestLawyer">
-                <!-- Header Request -->
-                <div class="header-bestLawyer">
-                  <!-- Photo lawyer Request -->
-                  <div class="profile">
-                    <a href="profileLawyerFriend.html">
-                      <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                  </div>
-                  <!-- Details lawyer Request -->
-                  <div class="details-lawyer">
-                    <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <span class="title-lawyer">محامى تجاري و شركات .</span>
-                    <div class="stars">
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="loca-lawyer">
-                      <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Content Requestttt-->
-              </div>
+              <!-- Lawyers Fetch Here -->
             </div>
           </div>
         </div>
@@ -627,20 +357,20 @@ if (!isset($_SESSION['lawyer'])) {
             </a>
           </li>
           <li class="request-tap">
-            <a href="casesPage.html">
+            <a href="casesPage.php">
               <i style="transform: rotate(90deg)" class="fa-solid fa-arrow-right-arrow-left"></i>
-              <span>الطلبات</span>
+              <span>القواضى</span>
               <span class="count-request">10</span>
             </a>
           </li>
           <li>
-            <a href="lawyersPage.html">
+            <a href="lawyersPage.php">
               <i class="fa-solid fa-users"></i>
               <span>المحامين</span>
             </a>
           </li>
           <li>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <i class="fa-solid fa-user"></i>
               <span>الحساب</span>
             </a>
@@ -660,25 +390,24 @@ if (!isset($_SESSION['lawyer'])) {
         url: 'lawyerApi/lawyerApi.php',
         type: "GET",
         // data: data,
-        success: function (data) {
-          console.log("dataPosts", data.posts);
-          console.log("data", data.lawyersData);
+        success: function(data) {
           // console.log("GET", data);
-          var post = data.posts;
+          var posts = data.posts;
           var user = data.lawyersData;
-          // test Log And Append Image Posts
-          // console.log("Image Start", post[0].ImageCase)
-          // console.log("Image Start", post[0].fileCase)
+          var lawyers = data.lawyers;
+          /* Show All Data */
+          console.log("data posts", posts);
+          console.log("data user", user);
+          console.log("data lawyers", lawyers);
 
-          $(post).each((val, el) => {
+          $(posts).each((val, el) => {
             var NewPost = `<div class="post">
                 <div class="header-post">
                   <div class="profile">
-                    <a href="profileUser.html">
-                      <img src="asstesLawyer/user.jpg" alt="user" /></a>
+                      <img src="asstesLawyer/user.jpg" alt="user" />
                   </div>
                   <div class="name-user">
-                    <h1>${user.userName +" "+ user.lastName}</h1>
+                    <h1>اسم المواطن</h1>
                   </div>
                 </div>
                 <hr style="
@@ -726,7 +455,50 @@ if (!isset($_SESSION['lawyer'])) {
               </div>`;
 
             $(".postes-wrapper").append(NewPost);
-          })
+          });
+          /* Fetch All Lawyers */
+          $(lawyers).each((val, ele) => {
+            /* Lawyer */
+            var lawyer = `<div class="bestLawyer">
+              <!-- Header Request -->
+              <div class="header-bestLawyer">
+                <!-- Photo lawyer Request -->
+                <div class="profile">
+                  <a href="profileLawyer.php">
+                    <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
+                </div>
+                <!-- Details lawyer Request -->
+                <div class="details-lawyer">
+                  <span>${ele.userName + " " + ele.lastName + "."}</span>
+                  <span class="title-lawyer">${ele.type + "."}</span>
+                  <div class="stars">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  </div>
+                  <div class="loca-lawyer">
+                    <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Content Requestttt-->
+            </div>`;
+            $(".content-bestLawyers").append(lawyer);
+
+            /* Lawyer Search */
+            var lawyerSearch = `<a href="profileLawyer.php">
+              <div class="res_lawyer">
+                <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" />
+                <div class="detail">
+                  <span>${ele.userName + " " + ele.lastName + "."}</span>
+                  <span>${ele.type + "."}</span>
+                </div>
+              </div>
+            </a>`;
+            $("#result_search").append(lawyerSearch);
+          });
         }
       })
 
