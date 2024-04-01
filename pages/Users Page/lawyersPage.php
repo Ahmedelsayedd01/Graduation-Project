@@ -48,7 +48,7 @@
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -57,7 +57,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -66,7 +66,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -75,7 +75,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -84,7 +84,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -95,7 +95,7 @@
             </a>
 
             <!-- <span class="d-none" id="noFound">لا يوجد نتائج</span> -->
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -104,7 +104,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -113,7 +113,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -122,7 +122,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -131,7 +131,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -140,7 +140,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -149,7 +149,7 @@
                 </div>
               </div>
             </a>
-            <a href="profileLawyer.html">
+            <a href="profileLawyer.php">
               <div class="res_lawyer">
                 <img src="asstesUser/user.jpg" alt="lawyer" />
                 <div class="detail">
@@ -292,7 +292,7 @@
         </div>
         <!-- left section (profile user)-->
         <div class="profile">
-          <a href="profileUser.html">
+          <a href="profileUser.php">
             <img src="asstesUser/user.jpg" alt="user" /></a>
         </div>
       </div>
@@ -315,7 +315,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -354,7 +354,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -393,7 +393,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -432,7 +432,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -471,7 +471,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -511,7 +511,7 @@
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -552,7 +552,7 @@
         <div class="content-page-user">
           <div class="add-post-section">
             <div class="profile">
-              <a href="profileUser.html">
+              <a href="profileUser.php">
                 <img src="asstesUser/user.jpg" alt="user" /></a>
             </div>
             <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
@@ -571,7 +571,7 @@
               <div class="post">
                 <div class="header-post">
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileUser.php">
                       <img src="asstesUser/user.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
@@ -632,7 +632,7 @@
               <div class="post">
                 <div class="header-post">
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileUser.php">
                       <img src="asstesUser/user.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
@@ -693,7 +693,7 @@
               <div class="post">
                 <div class="header-post">
                   <div class="profile">
-                    <a href="profileUser.html">
+                    <a href="profileUser.php">
                       <img src="asstesUser/user.jpg" alt="user" /></a>
                   </div>
                   <div class="name-user">
@@ -768,7 +768,7 @@
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -795,7 +795,7 @@
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -822,7 +822,7 @@
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -849,7 +849,7 @@
                 <div class="header-bestLawyer">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <a href="profileLawyer.html">
+                    <a href="profileLawyer.php">
                       <img src="asstesUser/lawyer3.jpg" alt="lawyer" /></a>
                   </div>
                   <!-- Details lawyer Request -->
@@ -886,20 +886,20 @@
             </a>
           </li>
           <li class="request-tap">
-            <a href="requstPage.html">
+            <a href="requstPage.php">
               <i style="transform: rotate(90deg)" class="fa-solid fa-arrow-right-arrow-left"></i>
               <span>الطلبات</span>
               <span class="count-request">10</span>
             </a>
           </li>
           <li class="active-tap">
-            <a href="lawyersPage.html">
+            <a href="lawyersPage.php">
               <i class="fa-solid fa-users"></i>
               <span>المحامين</span>
             </a>
           </li>
           <li>
-            <a href="profileuser.html">
+            <a href="profileuser.php">
               <i class="fa-solid fa-user"></i>
               <span>الحساب</span>
             </a>
