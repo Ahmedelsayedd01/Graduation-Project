@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/profileLawyerFriend.css" />
+  <link rel="stylesheet" href="./Style Pages/profileLawyer.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
@@ -95,6 +95,11 @@
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
+            </div>
+            <div class="user_logout">
+              <!-- Logout  -->
+              <a href="../../loguot.php">تسجبل خروج</a>
+              <!-- Logout  -->
             </div>
           </div>
         </div>
