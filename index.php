@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./pages/home/index-style.css" />
-  <link rel="icon" href="./pages/home/asstes/logo.svg" />
+  <link rel="icon" href="./asstes/Imges/logo.svg" />
   <!-- Icons Liberary -->
   <title>Lawyer Case</title>
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
