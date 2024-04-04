@@ -12,7 +12,6 @@ if(isset($_SESSION['lawyer'])){
       'lawyersData' => $_SESSION['lawyer'], // This Daata Where lawyers Login
       'posts'=>$posts,                 // This is Data Posts From lawyers
       'lawyers'=>$lawyers, // This is Data Posts From lawyers
-      'data'=>$posts, // This is Data Posts From lawyers
     ],
     200); // Data Send Successflly 
 
