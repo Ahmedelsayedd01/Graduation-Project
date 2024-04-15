@@ -397,7 +397,7 @@ if (!isset($_SESSION['lawyer'])) {
         type: "GET",
         // data: data,
         success: function (data) {
-          // console.log("GET", data);
+          console.log("GET", data);
           var posts = data.posts;
           var user = data.lawyersData;
           var lawyers = data.lawyers;
