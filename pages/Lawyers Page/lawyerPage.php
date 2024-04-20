@@ -42,7 +42,9 @@ if (!isset($_SESSION['lawyer'])) {
 </head>
 
 <body>
+
   <div class="containerr">
+
     <!-- Header Page (Navbar) -->
     <header>
       <div class="header-wrapper">
@@ -332,6 +334,9 @@ if (!isset($_SESSION['lawyer'])) {
             </div>
           </div> -->
           <!-- My Postes -->
+          <?php
+          include '../Login-Sign page/includes/functions/success.php';
+          ?>
           <div class="postes">
             <div class="postes-wrapper">
               <!-- Post -->
@@ -426,7 +431,7 @@ if (!isset($_SESSION['lawyer'])) {
                     <!-- type case -->
                     <div class="post-type-case">
                       <h3>نوع القضية:</h3>
-                      <span>${el.typeCase} .</span>
+                      <span>${el.id} .</span>
                     </div>
                     <div class="post-location-case">
                       <h3>مكان القضية:</h3>
@@ -456,7 +461,9 @@ if (!isset($_SESSION['lawyer'])) {
                   </div>
                 </div>
                 <div class="footer-post">
-                  <a>طلب القضية</a>
+                  <a
+                    href='../Login-Sign page/includes/requestCases.php?requestNewCase&post_id=${el[0]}&lawyers_id=${user.id}&user_id=${el.user_id}'>طلب
+                    القضية</a>
                 </div>
               </div>`;
 

@@ -5,6 +5,22 @@ if(isset($_SESSION['lawyer'])){
   $sql = $con->prepare( "SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE users.Role='user'");
   $sql->execute();
   $posts = $sql->fetchAll();
+
+
+    // $query = $con->prepare( "SELECT users.userName ,users.Role ,users.phoneNumber,users.email,posts.id FROM cases,posts
+    // INNER JOIN users ON cases.user_id = users.id 
+    // INNER JOIN posts ON posts.user_id = users.id 
+    // ");
+    // $query->execute();
+    // $cases = $query->fetchAll();
+  // print_r($cases);
+  //   for ($i=0; $i <count($cases) ; $i++) {
+  //   echo  $cases[$i];
+
+  //   $array = [
+  //     'userName' => $cases[$i]['userName'],
+  //   ];
+  //   }
   $lawyers_id = $_SESSION['lawyer']['id']; // Take The Id In Session
   $lawyers= selectAllData('*','lawyer'); //Select Data Where id = lawyers_id
   $lawyers = json_encode(
@@ -14,8 +30,6 @@ if(isset($_SESSION['lawyer'])){
       'lawyers'=>$lawyers, // This is Data Posts From lawyers
     ],
     200); // Data Send Successflly 
-
-  
   echo $lawyers;
 
 }
