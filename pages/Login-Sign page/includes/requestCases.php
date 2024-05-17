@@ -15,16 +15,17 @@
    'post_id'=>$post_id,
    ];
    if(!empty($dataRequests)){
-        $checkLawyer = selectData('*', 'users', 'id',$lawyer_id);
-        if($checkLawyer){
-            if($checkLawyer[0]['Role'] == 'lawyer'){
+        $checkLawyer = selectData('*', 'cases', 'user_id',$user_id);
+        if(!$checkLawyer){
             insertQuery('cases',$dataRequests);
              header('Location:../../Lawyers Page/lawyerPage.php');
              $_SESSION['success'] = 'case Request Successfully';
 
-            }else{
-            redirectHome('this is Not Lawyer', '', 5);
-            }
+        }
+        else{
+            header('Location:../../Lawyers Page/lawyerPage.php');
+            $_SESSION['faild'] = 'You Send Request from This User Befor';
+        // redirectHome('You Send Request from This User Befor ', '', 5);
         }
         }
 

@@ -6,6 +6,15 @@ if(isset($_SESSION['lawyer'])){
   $sql->execute();
   $posts = $sql->fetchAll();
 
+$query = $con->prepare( "SELECT lastName,email,idintity,lawyer_id,phoneNumber,cases.id,description as description_post FROM cases
+    JOIN users 
+    ON user_id = users.id
+    JOIN 
+    posts ON cases.post_id = posts.id
+WHERE
+users.Role='user'");
+$query->execute();
+$cases = $query->fetchAll();
 
     // $query = $con->prepare( "SELECT users.userName ,users.Role ,users.phoneNumber,users.email,posts.id FROM cases,posts
     // INNER JOIN users ON cases.user_id = users.id 
@@ -28,6 +37,7 @@ if(isset($_SESSION['lawyer'])){
       'lawyersData' => $_SESSION['lawyer'], // This Daata Where lawyers Login
       'posts'=>$posts,                 // This is Data Posts From lawyers
       'lawyers'=>$lawyers, // This is Data Posts From lawyers
+      'cases'=>$cases, // This is Data Posts From lawyers
     ],
     200); // Data Send Successflly 
   echo $lawyers;

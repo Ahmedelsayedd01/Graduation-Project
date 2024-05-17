@@ -406,10 +406,12 @@ if (!isset($_SESSION['lawyer'])) {
           var posts = data.posts;
           var user = data.lawyersData;
           var lawyers = data.lawyers;
+          var cases = data.cases; // This About All Cases The Lawyer Requests to user
           /* Show All Data */
           console.log("data posts", posts);
           console.log("data user", user);
           console.log("data lawyers", lawyers);
+          console.log("data cases", cases);
 
           $(posts).each((val, el) => {
             var NewPost = `<div class="post">
