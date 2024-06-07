@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // If The Register Is Lawyer
 
   if (isset($_POST['lawyer'])) {
+ 
     $role = $_POST['lawyer'];
     $firstName = htmlspecialchars($_POST['firstName']);
     $lastName = htmlspecialchars($_POST['lastName']);
@@ -49,10 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_number = htmlspecialchars($_POST['user_number']);
     $lawyer_categry = $_POST['lawyer-categry'];
     $password = htmlspecialchars(md5($_POST['password']));
-    $checkEmail = checkedData('email', 'users', $email);
 
-
-    if ($checkEmail) {
+   $checkEmail = checkedData('email', 'users', $email);
+ 
+ 
+    if ($checkEmail ) {
       $error['email'] = 'This Email Is Exist ';
     } else {
       $lawyer_categry;
@@ -62,12 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role','$lawyer_categry')");
       $dataInsert->execute();
 
-      $user_id = $con->lastInsertId($dataInsert);
+      $user_id = $con->lastInsertId();
       echo ' <script>
         alert($user_id);
       </script>';
       $_SESSION['lawyer'] = [
-        'user_id' => $id,
+        'user_id' => $user_id,
         'userName' => $firstName,
         'lastName' => $lastName,
         'email' => $email,
