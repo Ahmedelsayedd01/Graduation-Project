@@ -31,9 +31,10 @@ $(document).ready(() => {
       var lawyers = data.lawyers;
       /* Show All Data */
       console.log("data posts", posts);
-      console.log("data user", user);
+      console.log("data user", user.userName);
       console.log("data lawyers", lawyers)
 
+      $(".user_name").text($(user.userName) + $(user.lastName))
       /* Fetch All Posts */
       $(posts).each((val, el) => {
         /* post */

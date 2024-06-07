@@ -1,14 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['lawyer'])) {
-  $dataJson =  json_encode(['data', $_SESSION['lawyer']]);
-} else { // This Else IF Any One Don't Login Redirect Login
-  header("Location:../Login-Sign page/registration.php");
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -17,7 +6,7 @@ if (isset($_SESSION['lawyer'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/profileLawyer.css" />
+  <link rel="stylesheet" href="./StylePages/profileLawyerFriend.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
@@ -50,7 +39,7 @@ if (isset($_SESSION['lawyer'])) {
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <!-- Fetch All Lawyers -->
+            <!-- Fetch Lawyers Here -->
           </div>
         </div>
         <!-- left section (profile user)-->
@@ -65,23 +54,23 @@ if (isset($_SESSION['lawyer'])) {
       <section class="header_profile">
         <div class="profilelawyer_content">
           <div class="profile">
-            <a href="profileLawyer.php">
+            <a href="profilelawyerFriend.php">
               <img src="asstesLawyer/lawyer3.jpg" alt="profilelawyer" /></a>
           </div>
 
           <div class="profilelawyer_info">
             <div class="profilelawyer_name">
-              <strong>الاسم:</strong><span class="lawyerName"> محمد احمد .</span>
+              <strong>الاسم:</strong> محمد احمد .
             </div>
             <div class="profilelawyer_location">
-              <strong>العنوان:</strong><span class="lawyerLocation"> الاسكندرية .</span>
+              <strong>العنوان:</strong> الاسكندرية .
             </div>
             <div class="profilelawyer_catugory">
-              <strong>التخصص:</strong><span class="lawyerCatagory"> تجارى و شريكات .</span>
+              <strong>التخصص:</strong> تجارى و شريكات .
             </div>
             <div class="profilelawyer_desc">
-              <strong>نبذة عنك:</strong>
-              <p class="lawyerDescraption">
+              <strong>عن المحامى:</strong>
+              <p>
                 تأسس المكتب عام 2002 و يعمل بالعديد من التخصصات وكافة افرع
                 القانون ونجحنا في بناء قاعدة عريضة من العملاء افراد و مؤسسات
                 وشركات ويرجع هذا لانه لدينا افضل الخبرات والمهارات والكفاءات
@@ -94,7 +83,7 @@ if (isset($_SESSION['lawyer'])) {
             </div>
 
             <div class="profilelawyer_countCase">
-              <strong>عدد القواضى التى قمت بها:</strong><span class="lawyerCountCase"> 456 قضية .</span>
+              <strong>عدد القواضى التى قام بها:</strong> 456 قضية .
             </div>
 
             <div class="profilelawyer_rate">
@@ -106,11 +95,6 @@ if (isset($_SESSION['lawyer'])) {
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
-            </div>
-            <div class="user_logout">
-              <!-- Logout  -->
-              <a href="../../loguot.php">تسجبل خروج</a>
-              <!-- Logout  -->
             </div>
           </div>
         </div>
@@ -139,7 +123,7 @@ if (isset($_SESSION['lawyer'])) {
               <span>المحامين</span>
             </a>
           </li>
-          <li class="active-tap">
+          <li>
             <a href="profileLawyer.php">
               <i class="fa-solid fa-user"></i>
               <span>الحساب</span>
@@ -149,7 +133,7 @@ if (isset($_SESSION['lawyer'])) {
       </div>
     </div>
   </div>
-  <script src="./Scripts/profileLawyer.js"></script>
+  <script src="./Scripts/profileLawyerFriend.js"></script>
 </body>
 
 </html>

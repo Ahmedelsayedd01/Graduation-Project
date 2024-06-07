@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['lawyer'])) {
+  $dataJson =  json_encode(['data', $_SESSION['lawyer']]);
+} else { // This Else IF Any One Don't Login Redirect Login
+  header("Location:../Login-SignPage/registration.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -6,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/profileLawyerFriend.css" />
+  <link rel="stylesheet" href="./StylePages/profileLawyer.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
@@ -39,7 +50,7 @@
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <!-- Fetch Lawyers Here -->
+            <!-- Fetch All Lawyers -->
           </div>
         </div>
         <!-- left section (profile user)-->
@@ -54,23 +65,23 @@
       <section class="header_profile">
         <div class="profilelawyer_content">
           <div class="profile">
-            <a href="profilelawyerFriend.php">
+            <a href="profileLawyer.php">
               <img src="asstesLawyer/lawyer3.jpg" alt="profilelawyer" /></a>
           </div>
 
           <div class="profilelawyer_info">
             <div class="profilelawyer_name">
-              <strong>الاسم:</strong> محمد احمد .
+              <strong>الاسم:</strong><span class="lawyerName"> محمد احمد .</span>
             </div>
             <div class="profilelawyer_location">
-              <strong>العنوان:</strong> الاسكندرية .
+              <strong>العنوان:</strong><span class="lawyerLocation"> الاسكندرية .</span>
             </div>
             <div class="profilelawyer_catugory">
-              <strong>التخصص:</strong> تجارى و شريكات .
+              <strong>التخصص:</strong><span class="lawyerCatagory"> تجارى و شريكات .</span>
             </div>
             <div class="profilelawyer_desc">
-              <strong>عن المحامى:</strong>
-              <p>
+              <strong>نبذة عنك:</strong>
+              <p class="lawyerDescraption">
                 تأسس المكتب عام 2002 و يعمل بالعديد من التخصصات وكافة افرع
                 القانون ونجحنا في بناء قاعدة عريضة من العملاء افراد و مؤسسات
                 وشركات ويرجع هذا لانه لدينا افضل الخبرات والمهارات والكفاءات
@@ -83,7 +94,7 @@
             </div>
 
             <div class="profilelawyer_countCase">
-              <strong>عدد القواضى التى قام بها:</strong> 456 قضية .
+              <strong>عدد القواضى التى قمت بها:</strong><span class="lawyerCountCase"> 456 قضية .</span>
             </div>
 
             <div class="profilelawyer_rate">
@@ -95,6 +106,11 @@
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
+            </div>
+            <div class="user_logout">
+              <!-- Logout  -->
+              <a href="../../loguot.php">تسجبل خروج</a>
+              <!-- Logout  -->
             </div>
           </div>
         </div>
@@ -123,7 +139,7 @@
               <span>المحامين</span>
             </a>
           </li>
-          <li>
+          <li class="active-tap">
             <a href="profileLawyer.php">
               <i class="fa-solid fa-user"></i>
               <span>الحساب</span>
@@ -133,7 +149,7 @@
       </div>
     </div>
   </div>
-  <script src="./Scripts/profileLawyerFriend.js"></script>
+  <script src="./Scripts/profileLawyer.js"></script>
 </body>
 
 </html>

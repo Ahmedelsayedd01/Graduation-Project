@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['lawyer'])){
-  include('../../Login-Sign page/includes/functions/functions.php');
+  include('../../Login-SignPage/includes/functions/functions.php');
   $sql = $con->prepare( "SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE users.Role='user'");
   $sql->execute();
   $posts = $sql->fetchAll();

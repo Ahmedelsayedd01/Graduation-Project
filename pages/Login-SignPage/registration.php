@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'Role' => $role,
         'type' => Null,
       ];
-      header('Location:../Users Page/userPage.php');
+      header('Location:../UsersPage/userPage.php');
     }
   }
 
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       ];
       // Email :'lawyer@case.org'
       // password: Makemesmile123
-      header('Location:../../pages/Lawyers Page/lawyerPage.php');
+      header('Location:../../pages/LawyersPage/lawyerPage.php');
     }
   }
 }

@@ -1,14 +1,3 @@
-<?php
-
-session_start();
-// print_r( $_SESSION['user']);
-$_SESSION['token'] = md5(uniqid(mt_rand(), true));
-
-if (!isset($_SESSION['lawyer'])) {
-  header("Location:../Login-Sign page/registration.php");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -16,35 +5,24 @@ if (!isset($_SESSION['lawyer'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="./asstesLawyer/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/lawyerPage.css" />
+  <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
+  <link rel="stylesheet" href="./StylePages/casesPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Liberary -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- Jquery Liberary -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>Lawyer Page</title>
 </head>
 
 <body>
-
   <div class="containerr">
-
     <!-- Header Page (Navbar) -->
     <header>
       <div class="header-wrapper">
@@ -61,7 +39,7 @@ if (!isset($_SESSION['lawyer'])) {
           </button>
 
           <div class="result_search d-none" id="result_search">
-            <!-- Lawyer Fetch here -->
+            <!-- Fetch All Lawyers -->
           </div>
         </div>
         <!-- left section (profile user)-->
@@ -78,7 +56,7 @@ if (!isset($_SESSION['lawyer'])) {
         <div class="right-side">
           <div class="right-side-wrapper">
             <div class="header-requests">
-              <span>القواضى </span>
+              <span>القواضى</span>
               <span class="count-lawyer">6</span>
             </div>
             <!-- Content Requestssss -->
@@ -89,12 +67,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -127,12 +104,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -165,12 +141,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -203,12 +178,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -241,12 +215,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -279,12 +252,11 @@ if (!isset($_SESSION['lawyer'])) {
                 <div class="header-request">
                   <!-- Photo lawyer Request -->
                   <div class="profile">
-                    <img src="asstesLawyer/user.jpg" alt="user" />
+                    <img src="asstesLawyer/user.jpg" alt="User" />
                   </div>
                   <!-- Details lawyer Request -->
                   <div class="details-lawyer">
                     <span>احمد محمد احمد ششششششششششششششششش</span>
-                    <!-- <span>محامى تجاري و شركات .</span> -->
                   </div>
                 </div>
                 <hr style="
@@ -311,8 +283,6 @@ if (!isset($_SESSION['lawyer'])) {
                   <a>الانسحاب من القضية</a>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -334,12 +304,9 @@ if (!isset($_SESSION['lawyer'])) {
             </div>
           </div> -->
           <!-- My Postes -->
-          <?php
-          include '../Login-Sign page/includes/functions/success.php';
-          ?>
           <div class="postes">
             <div class="postes-wrapper">
-              <!-- Post -->
+              <!-- Fetch All Postes -->
             </div>
           </div>
         </div>
@@ -351,7 +318,7 @@ if (!isset($_SESSION['lawyer'])) {
             </div>
             <!-- Content Best Lawyers -->
             <div class="content-bestLawyers">
-              <!-- Lawyers Fetch Here -->
+              <!-- Fetch All Lawyer -->
             </div>
           </div>
         </div>
@@ -361,17 +328,16 @@ if (!isset($_SESSION['lawyer'])) {
     <div class="menu-bottom">
       <div class="menu-bottom-wrapper">
         <ul>
-          <li class="active-tap">
+          <li>
             <a href="lawyerPage.php">
               <i class="fa-solid fa-house"></i>
               <span>الرئيسية</span>
             </a>
           </li>
-          <li class="request-tap">
+          <li class="active-tap">
             <a href="casesPage.php">
               <i style="transform: rotate(90deg)" class="fa-solid fa-arrow-right-arrow-left"></i>
               <span>القواضى</span>
-              <span class="count-request">10</span>
             </a>
           </li>
           <li>
@@ -390,135 +356,7 @@ if (!isset($_SESSION['lawyer'])) {
       </div>
     </div>
   </div>
-
-
-  <script src="./Scripts/lawyerPage.js"></script>
-
-  <script>
-    $(document).ready(function () {
-
-      $.getJSON({
-        url: 'lawyerApi/lawyerApi.php',
-        type: "GET",
-        // data: data,
-        success: function (data) {
-          console.log("GET", data);
-          var posts = data.posts;
-          var user = data.lawyersData;
-          var lawyers = data.lawyers;
-          var cases = data.cases; // This About All Cases The Lawyer Requests to user
-          /* Show All Data */
-          console.log("data posts", posts);
-          console.log("data user", user);
-          console.log("data lawyers", lawyers);
-          console.log("data cases", cases);
-
-          $(posts).each((val, el) => {
-            var NewPost = `<div class="post">
-                <div class="header-post">
-                  <div class="profile">
-                      <img src="asstesLawyer/user.jpg" alt="user" />
-                  </div>
-                  <div class="name-user">
-                    <h1>${el.userName + ' ' + el.lastName }</h1>
-                  </div>
-                </div>
-                <hr style="
-                      margin: 0.5rem !important;
-                      border: 1px solid #d5d5d5 !important;
-                      width: 100%;
-                    " />
-                <div class="content-post">
-                  <div class="content-header">
-                    <!-- type case -->
-                    <div class="post-type-case">
-                      <h3>نوع القضية:</h3>
-                      <span>${el.id} .</span>
-                    </div>
-                    <div class="post-location-case">
-                      <h3>مكان القضية:</h3>
-                      <span>${el.location} .</span>
-                    </div>
-                  </div>
-                  <div class="post-date-case">
-                    <div class="date-dm">
-                      <h3>تاريخ القضية:</h3>
-                      <span>${el.Date}</span>
-                    </div>
-                    <span><strong>-</strong></span>
-                    <div class="date-houre">
-                      <h3>الميعاد:</h3>
-                      <span>${el.houerCase.slice(0,5)}</span>
-                    </div>
-                  </div>
-                  <hr style="
-                        margin: 0.5rem !important;
-                        border: 1px solid #d5d5d5 !important;
-                        width: 100%;
-                      " />
-                  <div class="post-description-case">
-                    <p>
-                      ${el.description}
-                    </p>
-                  </div>
-                </div>
-                <div class="footer-post">
-                  <a
-                    href='../Login-Sign page/includes/requestCases.php?requestNewCase&post_id=${el[0]}&lawyers_id=${user.id}&user_id=${el.user_id}'>طلب
-                    القضية</a>
-                </div>
-              </div>`;
-
-            $(".postes-wrapper").append(NewPost);
-          });
-          /* Fetch All Lawyers */
-          $(lawyers).each((val, ele) => {
-            /* Lawyer */
-            var lawyer = `<div class="bestLawyer">
-              <!-- Header Request -->
-              <div class="header-bestLawyer">
-                <!-- Photo lawyer Request -->
-                <div class="profile">
-                  <a href="profileLawyer.php/${ele.id}">
-                    <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" /></a>
-                </div>
-                <!-- Details lawyer Request -->
-                <div class="details-lawyer">
-                  <span>${ele.userName + " " + ele.lastName + "."}</span>
-                  <span class="title-lawyer">${ele.type + "."}</span>
-                  <div class="stars">
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star" aria-hidden="true"></i>
-                  </div>
-                  <div class="loca-lawyer">
-                    <i class="fa-solid fa-location-dot"></i><span>الاسكندرية</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Content Requestttt-->
-            </div>`;
-            $(".content-bestLawyers").append(lawyer);
-
-            /* Lawyer Search */
-            var lawyerSearch = `<a href="profileLawyer.php">
-              <div class="res_lawyer">
-                <img src="asstesLawyer/lawyer3.jpg" alt="lawyer" />
-                <div class="detail">
-                  <span>${ele.userName + " " + ele.lastName + "."}</span>
-                  <span>${ele.type + "."}</span>
-                </div>
-              </div>
-            </a>`;
-            $("#result_search").append(lawyerSearch);
-          });
-        }
-      })
-
-    })
-  </script>
+  <script src="./Scripts/casesPage.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/lawyersPage.css" />
+  <link rel="stylesheet" href="./StylePages/lawyersPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
@@ -839,7 +839,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/lawyersPage.css" />
+  <link rel="stylesheet" href="./StylePages/lawyersPage.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="../../asstes/Imges/logo.svg" />
-  <link rel="stylesheet" href="./Style Pages/profileLawyer.css" />
+  <link rel="stylesheet" href="./StylePages/profileLawyer.css" />
 
   <!-- Icons Liberary -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
@@ -52,7 +52,7 @@
           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <form action="../Login-Sign page/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
+                <form action="../Login-SignPage/includes/functions/postsValidation.php" method="post" enctype="multipart/form-data">
                   <!-- <form action="" method="" enctype="multipart/form-data"> -->
                   <!-- Header modal -->
                   <div class="modal-header">
