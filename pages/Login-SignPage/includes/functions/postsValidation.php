@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                if ($f_error === 0) { // If This image Don;t Have any error 
                     if ($f_size < 50000) {
                          $new_name = uniqid('', true) . "." . $original_ext;
-                         $destnation = "../../../Users Page/asstesUser/userImage/" . $new_name;
+                         $destnation = "../../../UsersPage/asstesUser/userImage/" . $new_name;
                          move_uploaded_file($f_tmp_name, $destnation);
                          $new_name; // This Is New Name Validate Image
                     } else {
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                if ($f_error === 0) { // If This image Don;t Have any error 
                     if ($f_size < 500000) {
                          $file_new_name = uniqid('', true) . "." . $original_ext;
-                         $destnation = "../../../Users Page/asstesUser/userFileCase/" . $file_new_name;
+                         $destnation = "../../../UsersPage/asstesUser/userFileCase/" . $file_new_name;
                          move_uploaded_file($f_tmp_name, $destnation);
                          $file_new_name; // This Is New Name Validate File Pdf Cases
                     } else {
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      // print_r($dataInsert);
      $checkData = checkedData('numberCase', 'posts', $numberCase);
      if ($checkData > 0) {
-          header('Location:../../../Users Page/userPage.php');
+          header('Location:../../../UsersPage/userPage.php');
           $_SESSION['faild'] = 'The Number Case Is Exists';
 
      } else {
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           // if ($insertNewPost == true) {
           //      $successMesg =  "<div class='alert alert-danger'>" . "Data Inserted Successfully" . '</div>';
           // }
-          header('Location:../../../Users Page/userPage.php');
+          header('Location:../../../UsersPage/userPage.php');
           $_SESSION['success'] =  'post Insert Successfuly';
      }
 }

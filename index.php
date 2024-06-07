@@ -39,7 +39,7 @@
             </div>
             <div class="right-sid">
               <button>
-                <a href="./pages/Login-Sign page/registration.php">Signup</a>
+                <a href="./pages/Login-SignPage/registration.php">Signup</a>
               </button>
             </div>
 
@@ -77,7 +77,7 @@
           <h1>هل لديك قضية و تواجه صعوبة فى اختيار المحامى ؟</h1>
           <span>ارفع قضيتك واختر محاميك الخاص الأن</span>
           <button>
-            <a href="./pages/home/Login-Sign page/registration.php">سجل الأن</a>
+            <a href="./pages/home/Login-SignPage/registration.php">سجل الأن</a>
           </button>
           <div class="about-us" id="نبذة عنا"></div>
         </div>
@@ -309,7 +309,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -328,7 +328,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -347,7 +347,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -366,7 +366,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -385,7 +385,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -404,7 +404,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -423,7 +423,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -442,7 +442,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -461,7 +461,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -480,7 +480,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>
@@ -499,7 +499,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <button>
-                  <a href="./pages/home/Login-Sign page/registration.php">تواصل معى</a>
+                  <a href="./pages/home/Login-SignPage/registration.php">تواصل معى</a>
                 </button>
               </div>
             </div>

@@ -5,7 +5,7 @@ if(isset($_SESSION['lawyer'])){
 } 
 
 else{ // This Else IF Any One Don't Login Redirect Login
-header("Location:../Login-Sign page/registration.php");
+header("Location:../Login-SignPage/registration.php");
 }
 ?>
 

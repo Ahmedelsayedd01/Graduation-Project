@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'Role' => $data['Role'],
       ];
                 
-                   header('Location:../../../Users Page/userPage.php');
+                   header('Location:../../../UsersPage/userPage.php');
                   // Start Session With User
               
             }
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'type' => $data['type'],
                   ];
 
-                   header('Location:../../../Lawyers Page/lawyerPage.php');
+                   header('Location:../../../LawyersPage/lawyerPage.php');
       $dataJson = json_encode(['dataJson'=>$data]);
                      return $dataJson;
                   // Start Session With User

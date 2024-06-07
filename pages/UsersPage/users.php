@@ -53,6 +53,6 @@ if(isset($_SESSION['user'])){
 }else{
   echo "Not User  Login";
 
-    header("Location:../Login-Sign page/registration.php");
+    header("Location:../Login-SignPage/registration.php");
 }
 ?>

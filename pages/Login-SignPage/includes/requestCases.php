@@ -18,12 +18,12 @@
         $checkLawyer = selectData('*', 'cases', 'user_id',$user_id);
         if(!$checkLawyer){
             insertQuery('cases',$dataRequests);
-             header('Location:../../Lawyers Page/lawyerPage.php');
+             header('Location:../../LawyersPage/lawyerPage.php');
              $_SESSION['success'] = 'case Request Successfully';
 
         }
         else{
-            header('Location:../../Lawyers Page/lawyerPage.php');
+            header('Location:../../LawyersPage/lawyerPage.php');
             $_SESSION['faild'] = 'You Send Request from This User Befor';
         // redirectHome('You Send Request from This User Befor ', '', 5);
         }
